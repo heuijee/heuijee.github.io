@@ -1,0 +1,128 @@
+/* Publications page specific styles */
+.publications-section {
+    padding: 40px 0;
+}
+
+.publications-section h1 {
+    font-size: 2.5em;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+}
+
+/* Publication filters */
+.publication-filters {
+    margin-bottom: 40px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    background: none;
+    color: var(--primary-color);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.filter-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Publications list */
+.publications-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.publication-item {
+    display: flex;
+    gap: 30px;
+    padding: 25px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.publication-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.pub-year {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: var(--secondary-color);
+    min-width: 80px;
+}
+
+.pub-content {
+    flex: 1;
+}
+
+.pub-content h3 {
+    font-size: 1.3em;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.authors {
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.venue {
+    color: #888;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.pub-links {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.pub-links .btn {
+    padding: 5px 15px;
+    background-color: var(--secondary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.pub-links .btn:hover {
+    background-color: var(--primary-color);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .publication-item {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .pub-year {
+        font-size: 1.2em;
+    }
+
+    .pub-content h3 {
+        font-size: 1.2em;
+    }
+
+    .pub-links {
+        justify-content: flex-start;
+    }
+} 

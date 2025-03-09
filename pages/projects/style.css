@@ -1,0 +1,142 @@
+/* Projects page specific styles */
+.projects-section {
+    padding: 40px 0;
+}
+
+.projects-section h1 {
+    font-size: 2.5em;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+}
+
+/* Project filters */
+.project-filters {
+    margin-bottom: 40px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    background: none;
+    color: var(--primary-color);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.filter-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Projects grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.05);
+}
+
+.project-content {
+    padding: 20px;
+}
+
+.project-content h3 {
+    font-size: 1.4em;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.project-description {
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* Project technologies */
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.tech-tag {
+    padding: 4px 10px;
+    background-color: var(--secondary-color);
+    color: white;
+    border-radius: 15px;
+    font-size: 0.9em;
+}
+
+/* Project links */
+.project-links {
+    display: flex;
+    gap: 10px;
+}
+
+.project-links .btn {
+    padding: 8px 15px;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.project-links .btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-image {
+        height: 180px;
+    }
+
+    .project-content h3 {
+        font-size: 1.3em;
+    }
+} 

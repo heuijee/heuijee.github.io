@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Your Name</title>
+    <link rel="stylesheet" href="/assets/styles/common.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Include Header -->
+    <div id="header-placeholder"></div>
+
+    <main class="main-content">
+        <div class="container">
+            <section class="blog-section">
+                <h1>Blog Posts</h1>
+
+                <div class="blog-categories">
+                    <button class="category-btn active" data-category="all">All</button>
+                    <button class="category-btn" data-category="research">Research</button>
+                    <button class="category-btn" data-category="tech">Tech</button>
+                    <button class="category-btn" data-category="personal">Personal</button>
+                </div>
+
+                <div class="blog-grid">
+                    <article class="blog-card research">
+                        <div class="blog-image">
+                            <img src="/assets/images/blog1.jpg" alt="Blog Post 1">
+                            <div class="blog-category">Research</div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="date">March 10, 2024</span>
+                                <span class="read-time">5 min read</span>
+                            </div>
+                            <h2>Research Blog Title 1</h2>
+                            <p>Brief description of the research blog post content...</p>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                    </article>
+
+                    <article class="blog-card tech">
+                        <div class="blog-image">
+                            <img src="/assets/images/blog2.jpg" alt="Blog Post 2">
+                            <div class="blog-category">Tech</div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="date">March 5, 2024</span>
+                                <span class="read-time">3 min read</span>
+                            </div>
+                            <h2>Tech Blog Title 1</h2>
+                            <p>Brief description of the tech blog post content...</p>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                    </article>
+
+                    <article class="blog-card personal">
+                        <div class="blog-image">
+                            <img src="/assets/images/blog3.jpg" alt="Blog Post 3">
+                            <div class="blog-category">Personal</div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="date">March 1, 2024</span>
+                                <span class="read-time">4 min read</span>
+                            </div>
+                            <h2>Personal Blog Title 1</h2>
+                            <p>Brief description of the personal blog post content...</p>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="pagination">
+                    <a href="#" class="page-btn active">1</a>
+                    <a href="#" class="page-btn">2</a>
+                    <a href="#" class="page-btn">3</a>
+                    <span class="page-dots">...</span>
+                    <a href="#" class="page-btn">10</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Include Footer -->
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // Load header and footer
+        fetch('/components/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+
+        fetch('/components/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+
+        // Blog category filters
+        document.querySelectorAll('.category-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const category = button.dataset.category;
+                
+                // Update active button
+                document.querySelectorAll('.category-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                button.classList.add('active');
+
+                // Filter blog posts
+                document.querySelectorAll('.blog-card').forEach(item => {
+                    if (category === 'all' || item.classList.contains(category)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html> 
