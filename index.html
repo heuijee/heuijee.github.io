@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heuijee Yun</title>
+    <style>
+        @font-face {
+            font-family: 'Aileron';
+            src: url('fonts/Aileron-Regular.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: 'Aileron';
+            src: url('fonts/Aileron-Bold.otf') format('opentype');
+            font-weight: bold;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: 'Aileron';
+            src: url('fonts/Aileron-Light.otf') format('opentype');
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Aileron', sans-serif;
+        }
+
+        body {
+            color: #000;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header styles */
+        header {
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 300;
+            text-decoration: none;
+            color: #000;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #000;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #555;
+        }
+
+        .cv-button {
+            display: inline-block;
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            margin-left: 30px;
+        }
+
+        /* Main content */
+        .main-content {
+            display: flex;
+            padding: 60px 0;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .profile-image {
+            width: 35%;
+            padding-right: 40px;
+        }
+
+        .profile-image img {
+            width: 100%;
+            display: block;
+        }
+
+        .profile-info {
+            width: 65%;
+        }
+
+        .profile-info h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            font-weight: normal;
+        }
+
+        .profile-info p {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+        }
+
+        .highlight {
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        .emphasis {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        /* Buttons */
+        .action-buttons {
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 25px;
+            border: 1px solid #000;
+            border-radius: 30px;
+            text-decoration: none;
+            color: #000;
+            margin-right: 15px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #000;
+            color: #fff;
+        }
+
+        /* Name section */
+        .name-section {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .name-section h2 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .name-section p {
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        /* Social icons */
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            gap: 15px;
+        }
+
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+        }
+
+        /* Footer */
+        footer {
+            padding: 20px 0;
+            border-top: 1px solid #eee;
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .copyright {
+            font-size: 1rem;
+        }
+
+        .contact-info {
+            display: flex;
+            gap: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">Heuijee Yun</a>
+                <ul class="nav-links">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Research</a></li>
+                    <li><a href="#">Publications</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Blogs</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <a href="#" class="cv-button">Download CV</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="main-content">
+            <div class="profile-image">
+                <img src="images/profile.jpg" alt="Heuijee Yun">
+            </div>
+            <div class="profile-info">
+                <h1>Hello my name is Heuijee Yun</h1>
+                <p>I am a phd student and my research interest is in</p>
+                <p class="highlight">autonomous driving with Deep learning accelerator.</p>
+                <p>I am currently looking for a research intern.</p>
+                <p class="emphasis">NO FUNDINGS NEEDED</p>
+                <p class="emphasis">ALL I NEED IS A CHAIR AND A DESK</p>
+                <div class="action-buttons">
+                    <a href="#" class="btn">About</a>
+                    <a href="#" class="btn">Contact me!</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="name-section">
+            <h2>Heuijee Yun</h2>
+            <p>Ph.D Student</p>
+            <div class="social-icons">
+                <a href="#" class="social-icon">T</a>
+                <a href="#" class="social-icon">in</a>
+                <a href="#" class="social-icon">P</a>
+                <a href="#" class="social-icon">G</a>
+                <a href="#" class="social-icon">M</a>
+                <a href="#" class="social-icon">ID</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="container">
+        <div class="copyright">© 2025 Heuijee Yun</div>
+        <div class="contact-info">
+            <div>
+                <p>Phone</p>
+                <p>053-950-5548</p>
+            </div>
+            <div>
+                <p>email</p>
+                <p>Heuijee@knu.ac.kr</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 
