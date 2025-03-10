@@ -4,11 +4,11 @@ body.homepage {
 }
 
 body.homepage main {
-    padding: 40px;
+    padding: 0;
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    gap: 40px;
+    gap: 60px;
 }
 
 .left-column {
@@ -16,11 +16,13 @@ body.homepage main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #ffffff;
+    max-width: 350px;
 }
 
 .right-column {
     flex: 2;
-    padding-top: 20px;
+    padding-top: 0;
 }
 
 .profile-photo {
@@ -33,17 +35,18 @@ body.homepage main {
     height: auto;
     object-fit: cover;
     display: block;
+    border-radius: 0;
 }
 
 .name {
-    font-size: 28px;
+    font-size: 36px;
     font-weight: 700;
     text-align: center;
     margin-bottom: 5px;
 }
 
 .title {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 400;
     color: #000000;
     text-align: center;
@@ -53,26 +56,26 @@ body.homepage main {
 .social-icons {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 10px;
     margin-bottom: 30px;
 }
 
 .social-icon {
     font-size: 18px;
-    color: #000000;
+    color: #ffffff;
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: #ffffff;
+    background-color: #000000;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #000000;
+    border: none;
     transition: all 0.3s;
 }
 
 .social-icon:hover {
-    background-color: #000000;
+    background-color: #333333;
     color: #ffffff;
 }
 

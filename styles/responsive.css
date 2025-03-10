@@ -4,7 +4,7 @@
 @media (max-width: 900px) {
     /* Header responsive */
     header {
-        padding: 20px;
+        padding: 20px 0;
     }
     
     .main-menu ul {
@@ -19,13 +19,13 @@
     .download-cv {
         position: absolute;
         top: 80px;
-        right: 20px;
+        right: 0;
     }
     
     /* Main layout responsive */
     body.homepage main {
         flex-direction: column;
-        padding: 100px 20px 20px;
+        padding: 100px 0 20px;
     }
     
     .left-column {
@@ -40,7 +40,7 @@
     /* About page responsive */
     .about-main {
         flex-direction: column;
-        padding: 100px 20px 20px;
+        padding: 100px 0 20px;
     }
     
     .sidebar, .content {
@@ -62,12 +62,12 @@
         flex-direction: column;
         gap: 10px;
         text-align: center;
-        padding: 15px 20px;
+        padding: 15px 0;
     }
     
     /* Contact page responsive */
     body.contact-page .contact-form-container {
-        padding: 20px;
+        padding: 20px 0;
         margin-top: 60px;
     }
 }
@@ -82,7 +82,7 @@
     header {
         flex-direction: column;
         gap: 15px;
-        padding: 15px 20px;
+        padding: 15px 0;
         align-items: flex-start;
     }
     
@@ -104,17 +104,23 @@
         position: relative;
         top: 0;
         right: 0;
-        margin: 20px 0 0 20px;
+        margin: 20px 0 0 0;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .cv-button {
+        width: 100%;
     }
     
     /* Main layout responsive */
     body.homepage main {
-        padding: 20px;
+        padding: 20px 0;
     }
     
     /* About page responsive */
     .about-main {
-        padding: 20px;
+        padding: 20px 0;
     }
     
     .page-title {
@@ -138,7 +144,7 @@
     
     /* Footer responsive */
     footer {
-        padding: 10px 15px;
+        padding: 10px 0;
     }
     
     /* Contact info responsive */
@@ -154,7 +160,7 @@
     
     /* Contact page responsive */
     body.contact-page .contact-form-container {
-        padding: 15px;
-        margin: 0 10px;
+        padding: 15px 0;
+        margin: 0;
     }
 } 

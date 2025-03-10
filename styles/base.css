@@ -44,6 +44,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    letter-spacing: -0.03em;
 }
 
 /* 링크 기본 스타일 재정의 */
@@ -61,9 +62,12 @@ html, body {
 body {
     background-color: #ffffff;
     color: #000000;
-    line-height: 1.6;
+    line-height: 1.4;
     font-weight: 400;
     font-size: 16px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
 }
 
 /* Header styles */
@@ -71,7 +75,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
+    padding: 20px 0;
     background-color: #ffffff;
     border-bottom: 1px solid #000000;
     position: relative;
@@ -119,7 +123,7 @@ header {
     font-size: 18px;
     color: #000000;
     text-transform: none;
-    letter-spacing: 0.5px;
+    letter-spacing: 0px;
     transition: color 0.3s;
 }
 
@@ -135,11 +139,12 @@ header {
 /* Footer styles */
 footer {
     background-color: #ffffff;
-    padding: 20px 40px;
+    padding: 20px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-top: 1px solid #000000;
+    margin-top: 60px;
 }
 
 .copyright {
@@ -149,7 +154,7 @@ footer {
 
 /* Common layout elements */
 .content, .right-column, .sidebar, .left-column, .projects-grid, .publications-content, .contact-main {
-    padding: 20px;
+    padding: 0;
 }
 
 /* Scrollbar styling */
@@ -220,7 +225,7 @@ footer {
 .download-cv {
     position: absolute;
     top: 80px;
-    right: 40px;
+    right: 0;
     z-index: 10;
 }
 
@@ -234,6 +239,7 @@ footer {
     text-transform: uppercase;
     border: none;
     transition: background-color 0.3s;
+    border-radius: 0;
 }
 
 .cv-button:hover {
