@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     // 헤더 스타일 변경을 위한 스크롤 이벤트 리스너
     window.addEventListener('scroll', function() {
-        var header = document.querySelector('header');
+        var header = document.querySelector('.site-header');
         if (header && window.scrollY > 50) {
             header.classList.add('scrolled');
         } else if (header) {
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // 페이지 로드 시 요소 페이드인 효과
-    const fadeElements = document.querySelectorAll('.page-title, .publication-item, .project-item, .cv-item, .blog-item');
+    const fadeElements = document.querySelectorAll('.section-title, .publications-list li, .highlight-card, .project-card, .cv-item');
     
     if (fadeElements.length > 0) {
         const observer = new IntersectionObserver((entries) => {
@@ -39,33 +39,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // 홈페이지가 아닌 곳에서는 프로필 요소 애니메이션을 별도로 처리
-    if (!document.body.classList.contains('homepage')) {
-        // 애니메이션 클래스 적용
-        setTimeout(() => {
-            const profileElements = document.querySelectorAll('.animate-profile');
-            profileElements.forEach(el => {
-                el.style.opacity = '1';
-            });
-            
-            const titleElement = document.querySelector('.animate-title');
-            if (titleElement) {
-                titleElement.style.opacity = '1';
-            }
-            
-            setTimeout(() => {
-                const contentElement = document.querySelector('.animate-content');
-                if (contentElement) {
-                    contentElement.style.opacity = '1';
-                }
-            }, 300);
-        }, 100);
-    }
-
-    // 컨택트 폼 제출 처리
+    // 컨택트 폼 제출 처리 (실제 제출 기능은 구현되지 않음)
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
-        // 이미 HTML에 인라인 이벤트 핸들러가 있으므로 여기서는 필요하지 않음
-        // handleSubmit 함수는 contact.html에 정의되어 있습니다
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('메시지가 전송되었습니다. (데모용 알림)');
+            contactForm.reset();
+        });
     }
 }); 

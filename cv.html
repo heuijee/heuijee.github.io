@@ -4,136 +4,114 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV - Heuijee Yun</title>
-    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body class="cv-page">
-    <header>
-        <div class="site-name"><a href="index.html">Heuijee Yun</a></div>
-        <nav class="main-menu">
-            <ul>
-                <li><a href="about.html">About</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="publications.html">Publications</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="blogs.html">Blogs</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="cv.html" class="active">CV</a></li>
-            </ul>
-        </nav>
-        <div class="header-line"></div>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <h1 class="site-title"><a href="index.html">Heuijee Yun</a></h1>
+            <nav class="main-nav">
+                <div class="nav-container">
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="research.html">Research</a></li>
+                        <li><a href="publications.html">Publications</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="cv.html" class="active">CV</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
     </header>
 
-    <div class="download-cv">
-        <a href="cv.pdf" class="cv-button">Download CV</a>
-    </div>
-    
-    <main class="about-main">
-        <div class="sidebar">
-            <div class="profile-photo animate-profile">
-                <img src="images/profile.jpg" alt="Heuijee Yun" class="profile-image">
-            </div>
-            <h2 class="sidebar-name animate-profile">Heuijee Yun</h2>
-            <p class="sidebar-title animate-profile">Ph.D Student</p>
-            <div class="social-icons animate-profile">
-                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-pinterest-p"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-google"></i></a>
-                <a href="#" class="social-icon"><i class="fas fa-laptop-code"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-orcid"></i></a>
-            </div>
-        </div>
-        
-        <div class="content">
-            <h1 class="page-title animate-title">Curriculum Vitae</h1>
-            <div class="cv-content animate-content">
+    <section class="page-section cv">
+        <div class="container">
+            <h2 class="section-title">Curriculum Vitae</h2>
+            <div class="cv-content">
+                <div class="cv-download">
+                    <a href="#" class="btn btn-large"><i class="fas fa-download"></i> Download CV (PDF)</a>
+                </div>
+                
                 <div class="cv-section">
-                    <h3 class="cv-section-title">Education</h3>
+                    <h3>Education</h3>
                     <div class="cv-item">
-                        <h4 class="cv-item-title">Ph.D. in Computer Science</h4>
-                        <p class="cv-item-subtitle">University Name, Department, Location</p>
-                        <p class="cv-item-date">2020 - Present</p>
-                        <div class="cv-item-description">
-                            <p>Thesis: "Title of Your Thesis"</p>
-                            <p>Advisor: Prof. Name</p>
+                        <div class="cv-item-header">
+                            <h4>Ph.D. in Computer Science</h4>
+                            <span class="cv-date">2020 - Present</span>
                         </div>
+                        <p>University Name, Department, Location</p>
+                        <p>Thesis: "Title of Your Thesis"</p>
+                        <p>Advisor: Prof. Name</p>
                     </div>
                     
                     <div class="cv-item">
-                        <h4 class="cv-item-title">M.S. in Computer Science</h4>
-                        <p class="cv-item-subtitle">University Name, Department, Location</p>
-                        <p class="cv-item-date">2018 - 2020</p>
-                        <div class="cv-item-description">
-                            <p>Thesis: "Title of Your Master's Thesis"</p>
+                        <div class="cv-item-header">
+                            <h4>M.S. in Computer Science</h4>
+                            <span class="cv-date">2018 - 2020</span>
                         </div>
+                        <p>University Name, Department, Location</p>
+                        <p>Thesis: "Title of Your Master's Thesis"</p>
                     </div>
                     
                     <div class="cv-item">
-                        <h4 class="cv-item-title">B.S. in Computer Science</h4>
-                        <p class="cv-item-subtitle">University Name, Department, Location</p>
-                        <p class="cv-item-date">2014 - 2018</p>
+                        <div class="cv-item-header">
+                            <h4>B.S. in Computer Science</h4>
+                            <span class="cv-date">2014 - 2018</span>
+                        </div>
+                        <p>University Name, Department, Location</p>
                     </div>
                 </div>
                 
                 <div class="cv-section">
-                    <h3 class="cv-section-title">Professional Experience</h3>
+                    <h3>Professional Experience</h3>
                     <div class="cv-item">
-                        <h4 class="cv-item-title">Research Assistant</h4>
-                        <p class="cv-item-subtitle">Laboratory Name, University, Location</p>
-                        <p class="cv-item-date">2020 - Present</p>
-                        <div class="cv-item-description">
-                            <ul class="cv-item-list">
-                                <li>Research project 1 description</li>
-                                <li>Research project 2 description</li>
-                                <li>Research project 3 description</li>
-                            </ul>
+                        <div class="cv-item-header">
+                            <h4>Research Assistant</h4>
+                            <span class="cv-date">2020 - Present</span>
                         </div>
+                        <p>Laboratory Name, University, Location</p>
+                        <ul>
+                            <li>Research project 1 description</li>
+                            <li>Research project 2 description</li>
+                            <li>Research project 3 description</li>
+                        </ul>
                     </div>
                     
                     <div class="cv-item">
-                        <h4 class="cv-item-title">Teaching Assistant</h4>
-                        <p class="cv-item-subtitle">Department, University, Location</p>
-                        <p class="cv-item-date">2018 - 2020</p>
-                        <div class="cv-item-description">
-                            <ul class="cv-item-list">
-                                <li>Course 1: Course Name</li>
-                                <li>Course 2: Course Name</li>
-                                <li>Course 3: Course Name</li>
-                            </ul>
+                        <div class="cv-item-header">
+                            <h4>Teaching Assistant</h4>
+                            <span class="cv-date">2018 - 2020</span>
                         </div>
+                        <p>Department, University, Location</p>
+                        <ul>
+                            <li>Course 1: Course Name</li>
+                            <li>Course 2: Course Name</li>
+                            <li>Course 3: Course Name</li>
+                        </ul>
                     </div>
                 </div>
                 
                 <div class="cv-section">
-                    <h3 class="cv-section-title">Skills</h3>
-                    <div class="cv-item">
-                        <div class="cv-item-description">
-                            <p>Python, Java, C++, Machine Learning, Data Analysis, Web Development, Project Management</p>
-                        </div>
+                    <h3>Skills</h3>
+                    <div class="skills-list cv-skills">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">Machine Learning</span>
+                        <span class="skill-tag">Data Analysis</span>
+                        <span class="skill-tag">Web Development</span>
+                        <span class="skill-tag">Project Management</span>
                     </div>
-                </div>
-                
-                <div class="cv-download-button">
-                    <a href="cv.pdf" class="download-button">Download Full CV</a>
                 </div>
             </div>
         </div>
-    </main>
-    
+    </section>
+
     <footer>
-        <div class="copyright">
-            <p>&copy; 2025 Heuijee Yun</p>
-        </div>
-        <div class="contact-info">
-            <div class="contact-item">
-                <span class="contact-label">Phone</span>
-                <span class="contact-value">053-950-5548</span>
-            </div>
-            <div class="contact-item">
-                <span class="contact-label">email</span>
-                <span class="contact-value">Heuijee@knu.ac.kr</span>
-            </div>
+        <div class="container">
+            <p>&copy; 2023 Heuijee Yun. All Rights Reserved.</p>
         </div>
     </footer>
 
