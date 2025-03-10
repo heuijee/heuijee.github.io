@@ -9,6 +9,7 @@ body.homepage main {
     margin: 0 auto;
     display: flex;
     gap: 60px;
+    margin-top: 80px;
 }
 
 .left-column {
@@ -17,7 +18,7 @@ body.homepage main {
     flex-direction: column;
     align-items: center;
     background-color: #ffffff;
-    max-width: 350px;
+    max-width: 400px;
 }
 
 .right-column {
@@ -46,7 +47,7 @@ body.homepage main {
 }
 
 .title {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 400;
     color: #000000;
     text-align: center;
@@ -86,27 +87,31 @@ body.homepage main {
 .intro-headline {
     font-size: 32px;
     font-weight: 700;
-    line-height: 1.2;
+    line-height: 1.3;
     margin-bottom: 20px;
     color: #000000;
 }
 
 .intro-detail {
-    font-size: 18px;
-    line-height: 1.6;
+    font-size: 22px;
+    line-height: 1.4;
     margin-bottom: 10px;
     color: #000000;
 }
 
 .intro-emphasis {
+    font-size: 22px;
     font-weight: 700;
     font-style: italic;
     color: #000000;
-    display: inline-block;
+    display: block;
     position: relative;
+    line-height: 1.4;
+    margin-bottom: 10px;
 }
 
 .intro-highlight {
+    font-size: 22px;
     font-weight: 700;
     text-transform: uppercase;
     padding: 2px 0;
@@ -128,7 +133,7 @@ body.homepage main {
     color: #000000;
     border: 1px solid #000000;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 18px;
     text-align: center;
     border-radius: 30px;
     transition: all 0.3s;

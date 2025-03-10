@@ -15,6 +15,10 @@
         margin: 0 10px;
     }
     
+    .main-menu ul li a {
+        font-size: 18px;
+    }
+    
     /* Download CV button responsive */
     .download-cv {
         position: absolute;
@@ -22,10 +26,16 @@
         right: 0;
     }
     
+    .cv-button {
+        font-size: 20px;
+        padding: 10px 20px;
+    }
+    
     /* Main layout responsive */
     body.homepage main {
         flex-direction: column;
         padding: 60px 0 20px;
+        margin-top: 60px;
     }
     
     .left-column {
@@ -102,21 +112,31 @@
     
     /* Download CV button responsive */
     .download-cv {
-        position: relative;
-        top: auto;
-        right: auto;
-        margin-top: 15px;
+        position: static;
+        margin-top: 30px;
         width: 100%;
     }
     
     .cv-button {
         width: 100%;
         text-align: center;
+        font-size: 18px;
+        padding: 10px 20px;
     }
     
     /* Main layout responsive */
     body.homepage main {
         padding: 20px 0;
+        margin-top: 30px;
+    }
+    
+    /* Text sizes responsive */
+    .intro-headline {
+        font-size: 26px;
+    }
+    
+    .intro-detail, .intro-emphasis, .intro-highlight {
+        font-size: 18px;
     }
     
     /* About page responsive */
