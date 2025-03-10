@@ -1,0 +1,223 @@
+/* Aileron 글꼴 정의 */
+@font-face {
+    font-family: 'Aileron';
+    src: url('../fonts/Aileron-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Aileron';
+    src: url('../fonts/Aileron-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Aileron';
+    src: url('../fonts/Aileron-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Aileron';
+    src: url('../fonts/Aileron-Black.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Aileron';
+    src: url('../fonts/Aileron-Italic.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* 기본 리셋 및 설정 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 링크 기본 스타일 재정의 */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* HTML and Body styles */
+html, body {
+    font-family: 'Aileron', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.header-line {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #333;
+    animation: drawLine 1.5s forwards;
+}
+
+@keyframes drawLine {
+    to { width: 100%; }
+}
+
+.site-name {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.site-name a {
+    color: #333;
+    transition: color 0.3s;
+}
+
+.site-name a:hover {
+    color: #0078ff;
+}
+
+.main-menu ul {
+    display: flex;
+    list-style: none;
+}
+
+.main-menu ul li {
+    position: relative;
+}
+
+.main-menu ul li:not(:last-child)::after {
+    content: '•';
+    margin: 0 10px;
+    color: #ccc;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 12px;
+}
+
+.main-menu ul li a {
+    font-size: 16px;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: color 0.3s;
+}
+
+.main-menu ul li a:hover {
+    color: #0078ff;
+}
+
+.main-menu ul li a.active {
+    color: #0078ff;
+    font-weight: 700;
+}
+
+/* Footer styles */
+footer {
+    background-color: #ffffff;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.copyright {
+    font-size: 14px;
+}
+
+/* Common layout elements */
+.content, .right-column, .sidebar, .left-column, .projects-grid, .publications-content, .contact-main {
+    padding: 20px;
+}
+
+/* Scrollbar styling */
+.content::-webkit-scrollbar, 
+.right-column::-webkit-scrollbar, 
+.sidebar::-webkit-scrollbar, 
+.left-column::-webkit-scrollbar {
+    width: 8px;
+}
+
+.content::-webkit-scrollbar-track, 
+.right-column::-webkit-scrollbar-track,
+.sidebar::-webkit-scrollbar-track,
+.left-column::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.content::-webkit-scrollbar-thumb, 
+.right-column::-webkit-scrollbar-thumb,
+.sidebar::-webkit-scrollbar-thumb,
+.left-column::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+}
+
+/* Animation keyframes */
+@keyframes slideFromLeft {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInFast {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Common animations */
+.animate-title {
+    animation: slideFromLeft 0.8s ease-out forwards;
+}
+
+.animate-content {
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
+} 

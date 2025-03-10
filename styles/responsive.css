@@ -1,0 +1,111 @@
+/* Responsive styles for all pages */
+
+/* Tablet responsive styles */
+@media (max-width: 900px) {
+    /* About page responsive */
+    .about-main {
+        flex-direction: column;
+    }
+    
+    .sidebar, .content {
+        max-height: none;
+    }
+    
+    .sidebar {
+        position: relative;
+    }
+    
+    .page-title {
+        font-size: 28px;
+    }
+    
+    /* Header responsive */
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 20px;
+    }
+    
+    .main-menu ul {
+        flex-wrap: wrap;
+    }
+    
+    .main-menu ul li:not(:last-child)::after {
+        margin: 0 5px;
+    }
+    
+    .download-cv {
+        margin-left: 0;
+        margin-top: 15px;
+    }
+    
+    /* Main layout responsive */
+    main {
+        padding: 20px;
+    }
+    
+    .left-column, .right-column {
+        flex: auto;
+    }
+    
+    .right-column {
+        margin-top: 20px;
+    }
+    
+    .profile-photo {
+        margin-bottom: 15px;
+    }
+    
+    /* Footer responsive */
+    footer {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        padding: 15px 20px;
+    }
+    
+    /* Contact page responsive */
+    body.contact-page .contact-form-container {
+        padding: 20px;
+    }
+}
+
+/* Mobile responsive styles */
+@media (max-width: 600px) {
+    /* About page responsive */
+    .page-title {
+        font-size: 24px;
+    }
+    
+    .about-content p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+    
+    /* Action buttons responsive */
+    .action-buttons {
+        flex-direction: column;
+    }
+    
+    /* Footer responsive */
+    footer {
+        padding: 10px 15px;
+    }
+    
+    /* Contact info responsive */
+    .contact-info {
+        flex-direction: column;
+    }
+    
+    .contact-item {
+        margin-bottom: 5px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    /* Contact page responsive */
+    body.contact-page .contact-form-container {
+        padding: 15px;
+        margin: 0 10px;
+    }
+} 

@@ -1,0 +1,17 @@
+/* Main CSS file that imports all other stylesheets */
+
+/* Import base styles */
+@import 'base.css';
+
+/* Import page-specific styles */
+@import 'home.css';
+@import 'about.css';
+@import 'contact.css';
+@import 'research.css';
+@import 'publications.css';
+@import 'projects.css';
+@import 'blogs.css';
+@import 'cv.css';
+
+/* Import responsive styles */
+@import 'responsive.css'; 

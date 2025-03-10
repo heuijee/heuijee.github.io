@@ -1,0 +1,113 @@
+/* Homepage specific styles */
+body.homepage {
+    background-color: #f9f9f9;
+    background-image: linear-gradient(to bottom, #f5f5f5, #fff);
+}
+
+body.homepage main {
+    padding: 0 40px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.intro {
+    margin: 60px 0;
+    max-width: 800px;
+}
+
+.intro-headline {
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.intro-detail {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    max-width: 600px;
+}
+
+.intro-emphasis {
+    font-weight: 700;
+    color: #0078ff;
+    display: inline-block;
+    position: relative;
+}
+
+.intro-highlight {
+    background: linear-gradient(to right, transparent 0%, rgba(0, 120, 255, 0.2) 100%);
+    padding: 2px 4px;
+    border-radius: 3px;
+    position: relative;
+}
+
+.action-buttons {
+    margin-top: 40px;
+    display: flex;
+    gap: 20px;
+}
+
+.action-button {
+    padding: 12px 24px;
+    background-color: #0078ff;
+    color: #fff;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(0, 120, 255, 0.3);
+}
+
+.action-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 120, 255, 0.4);
+}
+
+.download-cv {
+    margin-left: auto;
+}
+
+.cv-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition: all 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cv-button:hover {
+    background-color: #0078ff;
+    transform: translateY(-2px);
+}
+
+/* Homepage animation effects */
+@keyframes highlightSweep {
+    0% { background-position: -100% 0; }
+    100% { background-position: 200% 0; }
+}
+
+.intro-detail:nth-child(4) {
+    animation: slideFromLeft 0.8s ease-out forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+}
+
+.intro-highlight:first-of-type {
+    animation: fadeIn 1s ease-out forwards, highlightSweep 2s 1s ease-in-out infinite;
+    animation-delay: 0.4s;
+    opacity: 0;
+}
+
+.intro-highlight:last-of-type {
+    animation: fadeIn 1s ease-out forwards, highlightSweep 2s 1.5s ease-in-out infinite;
+    animation-delay: 0.6s;
+    opacity: 0;
+} 
