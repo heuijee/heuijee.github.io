@@ -100,7 +100,7 @@
             justify-content: space-between;
         }
 
-        .profile-column {
+        .profile-image {
             width: 35%;
             padding-right: 40px;
         }
@@ -108,27 +108,10 @@
         .profile-image img {
             width: 100%;
             display: block;
-            margin-bottom: 20px;
         }
 
         .profile-info {
             width: 65%;
-        }
-        
-        .profile-name-section {
-            margin-bottom: 30px;
-        }
-
-        .profile-name-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-
-        .profile-name-section p {
-            font-size: 1.2rem;
-            color: #333;
-            margin-bottom: 15px;
         }
 
         .profile-info h1 {
@@ -174,76 +157,51 @@
             color: #fff;
         }
 
+        /* Name section */
+        .name-section {
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        .name-section h2 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .name-section p {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
         /* Social icons */
         .social-icons {
             display: flex;
-            margin-top: 10px;
-            gap: 10px;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
         }
 
         .social-icon {
-            width: 40px;
-            height: 40px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
-            background-color: #f5f5f5;
+            background-color: #fff;
             display: flex;
             justify-content: center;
             align-items: center;
-            color: #333;
+            color: black;
             text-decoration: none;
-            font-size: 0.9rem;
-            border: 1px solid #ddd;
-            transition: all 0.3s ease;
-        }
-        
-        .social-icon:hover {
-            background-color: #e0e0e0;
-        }
-        
-        .social-icon.linkedin {
-            background-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="%230077B5" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>');
-            background-size: 60%;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-        
-        .social-icon.clarivate {
-            font-weight: bold;
-        }
-        
-        .social-icon.scholar {
-            background-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="%234285F4" d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>');
-            background-size: 60%;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-        
-        .social-icon.researchgate {
-            background-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="%2300CCBB" d="M19.586 0c-.818 0-1.508.19-2.073.565-.563.377-.97.936-1.213 1.68a3.193 3.193 0 0 0-.112.437 8.365 8.365 0 0 0-.078.53 9 9 0 0 0-.05.727c-.01.282-.013.621-.013 1.016a31.121 31.121 0 0 0 .014 1.017 9 9 0 0 0 .05.727 7.946 7.946 0 0 0 .077.53h-.005a3.334 3.334 0 0 0 .113.438c.245.743.65 1.303 1.214 1.68.565.376 1.256.564 2.075.564.8 0 1.536-.213 2.105-.603.57-.39.94-.916 1.175-1.65.076-.235.135-.558.177-.93.043-.372.064-.773.064-1.202 0-.429-.021-.83-.064-1.203-.042-.372-.101-.694-.177-.929-.234-.735-.603-1.261-1.175-1.65C21.122.212 20.385 0 19.586 0z"/><path fill="%2300CCBB" d="M7.842 16.94d.62c-.16.157-.16.376 0 .652a22.5 22.5 0 0 1-.398 2.117 22.149 22.149 0 0 1-.448 1.613 16.61 16.61 0 0 1-.476 1.35 8.539 8.539 0 0 1-.493 1.003c-.169.282-.34.509-.515.684a1 1 0 0 1-.63.31.916.916 0 0 1-.728-.295c-.2-.197-.3-.433-.3-.709 0-.58.032-.15.025-.304 0-.125.06-.276.066-.427a15.8 15.8 0 0 1 .414-2.083c.193-.775.453-1.612.787-2.523zm15.794-11.566l-.196.415c-.146.285-.23.544-.319.745a20.415 20.415 0 0 0-2.228-.15 17.095 17.095 0 0 0-2.153.14l-.746-1.858c-.32-.801-.815-1.21-1.488-1.21-.62 0-1.195.372-1.195 1.524v.887c-2.332.663-5.05 2.455-5.05 6.182 0 3.321 2.414 4.662 2.677 4.823-.094.416-.206.913-.304 1.423-.16.81-.314 1.58-.34 2.368-.06.147.028.291.028.439 0 1.219.731 1.81 1.683 1.86 1.056.019 1.502-.765 1.861-1.316.26-.495.498-1.019.704-1.562.276-.714.51-1.433.698-2.144.698-.127 1.204-.244 1.63-.346.733-.18 1.112-.335 1.743-.516l.812 2.006c.298.735.776 1.04 1.446 1.04.697 0 1.286-.382 1.794-1.137l3.977-6.416c.252-.415.376-.824.376-1.227 0-.405-.114-.76-.343-1.065zm-9.192.652v-.823c0-.302.122-.453.366-.453.313 0 .5.21.61.631l.722 1.741a32.267 32.267 0 0 0-1.698.209V6.026zm2.424 7.736c-.34.087-.775.19-1.246.283l.606-3.5a23.903 23.903 0 0 1 1.849.4zm4.494-7.225l.4.987-2.968 4.7-.428-1.146zm1.127 2.67l2.783-4.401c.098-.155.175-.21.317-.21.227 0 .34.146.34.44 0 .198-.07.428-.211.687z"/></svg>');
-            background-size: 60%;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-        
-        .social-icon.orcid {
-            background-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="%23A6CE39" d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-2.016-1.284-3.722-4.097-3.722h-2.222z"/></svg>');
-            background-size: 60%;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-        
-        .social-icon.butterfly {
-            background-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="%23000000" d="M12 4.879c.825-1.746 2.473-3.288 4.33-3.788-.367 1.5-.838 2.906-1.481 4.175 2.206.125 4.218.92 5.895 2.182-1.699.073-3.315-.096-4.815-.5.748 1.373 1.252 2.891 1.481 4.475-1.284-.598-2.487-1.472-3.578-2.599.033 1.8-.278 3.454-.927 4.908-1.049-1.196-1.825-2.724-2.331-4.465-1.342 1.459-3.152 2.258-5.158 2.42.748-1.402 1.92-2.599 3.46-3.499C7.019 7.504 5.436 7.131 3.62 7.31c1.139-1.127 2.581-1.899 4.14-2.239C6.93 3.722 6.355 2.226 6.188.49c1.49.63 2.818 1.796 3.951 3.468.403-1.366 1.031-2.569 1.861-3.567.331 1.543.362 3.125.09 4.692-.032-.07-.06-.137-.09-.204z"/></svg>');
-            background-size: 60%;
-            background-repeat: no-repeat;
-            background-position: center;
+            font-size: 1.2rem;
+            border: 1px solid #e0e0e0;
         }
 
         /* Footer */
         footer {
             padding: 20px 0;
             border-top: 1px solid #eee;
-            margin-top: 30px;
+            margin-top: 0;
             display: flex;
             justify-content: space-between;
         }
@@ -255,6 +213,13 @@
         .contact-info {
             display: flex;
             gap: 30px;
+        }
+
+        .horizontal-line {
+            width: 100%;
+            height: 1px;
+            background-color: #eee;
+            margin: 0 auto;
         }
     </style>
 </head>
@@ -278,22 +243,8 @@
 
     <main class="container">
         <section class="main-content">
-            <div class="profile-column">
-                <div class="profile-image">
-                    <img src="images/profile.jpg" alt="Heuijee Yun">
-                </div>
-                <div class="profile-name-section">
-                    <h2>Heuijee Yun</h2>
-                    <p>Ph.D Student</p>
-                    <div class="social-icons">
-                        <a href="#" class="social-icon butterfly" title="Butterfly"></a>
-                        <a href="#" class="social-icon linkedin" title="LinkedIn"></a>
-                        <a href="#" class="social-icon clarivate" title="Clarivate">P</a>
-                        <a href="#" class="social-icon scholar" title="Google Scholar"></a>
-                        <a href="#" class="social-icon researchgate" title="ResearchGate"></a>
-                        <a href="#" class="social-icon orcid" title="ORCID"></a>
-                    </div>
-                </div>
+            <div class="profile-image">
+                <img src="images/profile.jpg" alt="Heuijee Yun">
             </div>
             <div class="profile-info">
                 <h1>Hello my name is Heuijee Yun</h1>
@@ -308,7 +259,34 @@
                 </div>
             </div>
         </section>
+
+        <section class="name-section">
+            <h2>Heuijee Yun</h2>
+            <p>Ph.D Student</p>
+            <div class="social-icons">
+                <a href="#" class="social-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+                </a>
+                <a href="#" class="social-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a>
+                <a href="#" class="social-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.372-12 12 0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146 1.124.347 2.317.535 3.554.535 6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/></svg>
+                </a>
+                <a href="#" class="social-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7 11v2.4h3.97c-.16 1.029-1.2 3.02-3.97 3.02-2.39 0-4.34-1.979-4.34-4.42 0-2.44 1.95-4.42 4.34-4.42 1.36 0 2.27.58 2.79 1.08l1.9-1.83c-1.22-1.14-2.8-1.83-4.69-1.83-3.87 0-7 3.13-7 7s3.13 7 7 7c4.04 0 6.721-2.84 6.721-6.84 0-.46-.051-.81-.111-1.16h-6.61zm0 0 17 2h-3v3h-2v-3h-3v-2h3v-3h2v3h3v2z" fill-rule="evenodd" clip-rule="evenodd"/></svg>
+                </a>
+                <a href="#" class="social-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19.589 6.686a4.793 4.793 0 0 0-3.77-4.245V3h-3.445v-.6a1.371 1.371 0 0 0 0-2.742 1.371 1.371 0 0 0 0 2.742V3H9.043a5.08 5.08 0 0 0-5.04 5.138v3.704a8.11 8.11 0 0 1-1.98 5.238v.656a5.06 5.06 0 0 0 2.264 4.221 6.744 6.744 0 0 0 3.55 1.023A9.407 9.407 0 0 0 17 19.728a9.397 9.397 0 0 0 0-13.043 9.036 9.036 0 0 0-.434-.446 7.347 7.347 0 0 1 3.022.447z"/></svg>
+                </a>
+                <a href="#" class="social-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-2.016-1.284-3.722-4.097-3.722h-2.222z"/></svg>
+                </a>
+            </div>
+        </section>
     </main>
+
+    <div class="horizontal-line"></div>
 
     <footer class="container">
         <div class="copyright">© 2025 Heuijee Yun</div>
