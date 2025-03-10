@@ -221,9 +221,9 @@ body.homepage {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    max-width: 1720px;
+    max-width: 1700px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 10px;
     border-left: 0px solid #eee;
     border-right: 0px solid #eee;
 }
@@ -1024,7 +1024,7 @@ body.contact-page .form-group {
 /* Contact 페이지 푸터 스타일 */
 body.contact-page footer {
     width: 100%;
-    max-width: 1400px; /* 최대 너비 추가 */
+    max-width: none; /* 최대 너비 추가 */
     margin: 50px auto 0;
     display: flex;
     justify-content: space-between;
@@ -1128,39 +1128,41 @@ body.contact-page .send-button-container {
     opacity: 0;
 }
 
+
 /* 형광펜 효과 애니메이션 */
-@keyframes highlightSweep {
+
+
+@keyframes highlightFadeIn {
     0% {
-        background-position: -100% 0;
+        width: 0;
     }
     100% {
-        background-position: 200% 0;
+        width: 100%;
     }
 }
 
-/* 인턴 찾는다는 문장에 형광펜 효과 */
-.intro-detail:nth-child(4) {
+.highlight {
     position: relative;
-    background-image: linear-gradient(to right, transparent 0%, transparent 35%, rgba(255, 255, 100, 0.6) 35%, rgba(255, 255, 100, 0.6) 65%, transparent 65%, transparent 100%);
-    background-size: 200% 100%;
-    background-repeat: no-repeat;
-    animation: highlightSweep 1.5s ease-in-out 1s forwards;
+    display: inline-block;
+    padding: 2px 5px;
 }
 
-/* NO FUNDINGS NEEDED 텍스트에 형광펜 효과 */
-.intro-highlight:first-of-type {
-    position: relative;
-    background-image: linear-gradient(to right, transparent 0%, transparent 35%, rgba(255, 255, 100, 0.6) 35%, rgba(255, 255, 100, 0.6) 65%, transparent 65%, transparent 100%);
-    background-size: 200% 100%;
-    background-repeat: no-repeat;
-    animation: highlightSweep 1.5s ease-in-out 2s forwards;
+.highlight::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 50%;
+    background-color: rgba(255, 255, 100, 0.6); /* 연한 노란색 형광펜 */
+    z-index: -1;
+    animation: highlightFadeIn 1.5s ease-in-out forwards;
 }
 
-/* 의자와 책상만 필요하다는 문장에 형광펜 효과 */
-.intro-highlight:last-of-type {
-    position: relative;
-    background-image: linear-gradient(to right, transparent 0%, transparent 35%, rgba(255, 255, 100, 0.6) 35%, rgba(255, 255, 100, 0.6) 65%, transparent 65%, transparent 100%);
-    background-size: 200% 100%;
-    background-repeat: no-repeat;
-    animation: highlightSweep 1.5s ease-in-out 3s forwards;
-} 
+.delay1::before {
+    animation-delay: 0.5s;
+}
+
+.delay2::before {
+    animation-delay: 1s;
+}
