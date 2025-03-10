@@ -1,46 +1,116 @@
 /* Homepage specific styles */
 body.homepage {
-    background-color: #f9f9f9;
-    background-image: linear-gradient(to bottom, #f5f5f5, #fff);
+    background-color: #ffffff;
 }
 
 body.homepage main {
-    padding: 0 40px 40px;
+    padding: 40px;
     max-width: 1200px;
     margin: 0 auto;
+    display: flex;
+    gap: 40px;
+}
+
+.left-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right-column {
+    flex: 2;
+    padding-top: 20px;
+}
+
+.profile-photo {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.profile-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.name {
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.social-icon {
+    font-size: 18px;
+    color: #000000;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000000;
+    transition: all 0.3s;
+}
+
+.social-icon:hover {
+    background-color: #000000;
+    color: #ffffff;
 }
 
 .intro {
-    margin: 60px 0;
-    max-width: 800px;
+    margin-bottom: 40px;
 }
 
 .intro-headline {
-    font-size: 48px;
-    font-weight: 900;
+    font-size: 32px;
+    font-weight: 700;
     line-height: 1.2;
     margin-bottom: 20px;
+    color: #000000;
 }
 
 .intro-detail {
     font-size: 18px;
     line-height: 1.6;
     margin-bottom: 10px;
-    max-width: 600px;
+    color: #000000;
 }
 
 .intro-emphasis {
     font-weight: 700;
-    color: #0078ff;
+    font-style: italic;
+    color: #000000;
     display: inline-block;
     position: relative;
 }
 
 .intro-highlight {
-    background: linear-gradient(to right, transparent 0%, rgba(0, 120, 255, 0.2) 100%);
-    padding: 2px 4px;
-    border-radius: 3px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 2px 0;
+    margin: 10px 0;
+    color: #000000;
     position: relative;
+    display: block;
 }
 
 .action-buttons {
@@ -50,20 +120,20 @@ body.homepage main {
 }
 
 .action-button {
-    padding: 12px 24px;
-    background-color: #0078ff;
-    color: #fff;
-    border-radius: 30px;
-    font-weight: 700;
+    padding: 10px 30px;
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #000000;
+    font-weight: 400;
     font-size: 16px;
-    letter-spacing: 0.5px;
+    text-align: center;
+    border-radius: 30px;
     transition: all 0.3s;
-    box-shadow: 0 4px 15px rgba(0, 120, 255, 0.3);
 }
 
 .action-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0, 120, 255, 0.4);
+    background-color: #000000;
+    color: #ffffff;
 }
 
 .download-cv {

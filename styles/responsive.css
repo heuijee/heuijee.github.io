@@ -2,9 +2,45 @@
 
 /* Tablet responsive styles */
 @media (max-width: 900px) {
+    /* Header responsive */
+    header {
+        padding: 20px;
+    }
+    
+    .main-menu ul {
+        margin-right: 0;
+    }
+    
+    .main-menu ul li {
+        margin: 0 10px;
+    }
+    
+    /* Download CV button responsive */
+    .download-cv {
+        position: absolute;
+        top: 80px;
+        right: 20px;
+    }
+    
+    /* Main layout responsive */
+    body.homepage main {
+        flex-direction: column;
+        padding: 100px 20px 20px;
+    }
+    
+    .left-column {
+        max-width: 300px;
+        margin: 0 auto 40px;
+    }
+    
+    .right-column {
+        width: 100%;
+    }
+    
     /* About page responsive */
     .about-main {
         flex-direction: column;
+        padding: 100px 20px 20px;
     }
     
     .sidebar, .content {
@@ -13,47 +49,12 @@
     
     .sidebar {
         position: relative;
+        max-width: 300px;
+        margin: 0 auto 40px;
     }
     
     .page-title {
         font-size: 28px;
-    }
-    
-    /* Header responsive */
-    header {
-        flex-direction: column;
-        gap: 15px;
-        padding: 15px 20px;
-    }
-    
-    .main-menu ul {
-        flex-wrap: wrap;
-    }
-    
-    .main-menu ul li:not(:last-child)::after {
-        margin: 0 5px;
-    }
-    
-    .download-cv {
-        margin-left: 0;
-        margin-top: 15px;
-    }
-    
-    /* Main layout responsive */
-    main {
-        padding: 20px;
-    }
-    
-    .left-column, .right-column {
-        flex: auto;
-    }
-    
-    .right-column {
-        margin-top: 20px;
-    }
-    
-    .profile-photo {
-        margin-bottom: 15px;
     }
     
     /* Footer responsive */
@@ -67,12 +68,55 @@
     /* Contact page responsive */
     body.contact-page .contact-form-container {
         padding: 20px;
+        margin-top: 60px;
     }
 }
 
 /* Mobile responsive styles */
 @media (max-width: 600px) {
+    /* Header responsive */
+    .site-name {
+        font-size: 24px;
+    }
+    
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 20px;
+        align-items: flex-start;
+    }
+    
+    .main-menu ul {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    
+    .main-menu ul li {
+        margin: 5px 15px 5px 0;
+    }
+    
+    .main-menu ul li a {
+        font-size: 16px;
+    }
+    
+    /* Download CV button responsive */
+    .download-cv {
+        position: relative;
+        top: 0;
+        right: 0;
+        margin: 20px 0 0 20px;
+    }
+    
+    /* Main layout responsive */
+    body.homepage main {
+        padding: 20px;
+    }
+    
     /* About page responsive */
+    .about-main {
+        padding: 20px;
+    }
+    
     .page-title {
         font-size: 24px;
     }
@@ -85,6 +129,11 @@
     /* Action buttons responsive */
     .action-buttons {
         flex-direction: column;
+        gap: 10px;
+    }
+    
+    .action-button {
+        text-align: center;
     }
     
     /* Footer responsive */
