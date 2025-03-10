@@ -96,11 +96,11 @@
         .main-content {
             display: flex;
             padding: 60px 0;
-            align-items: center;
+            align-items: flex-start;
             justify-content: space-between;
         }
 
-        .profile-image {
+        .profile-column {
             width: 35%;
             padding-right: 40px;
         }
@@ -108,10 +108,27 @@
         .profile-image img {
             width: 100%;
             display: block;
+            margin-bottom: 20px;
         }
 
         .profile-info {
             width: 65%;
+        }
+        
+        .profile-name-section {
+            margin-bottom: 30px;
+        }
+
+        .profile-name-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .profile-name-section p {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 15px;
         }
 
         .profile-info h1 {
@@ -157,42 +174,69 @@
             color: #fff;
         }
 
-        /* Name section */
-        .name-section {
-            text-align: center;
-            padding: 40px 0;
-        }
-
-        .name-section h2 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
-
-        .name-section p {
-            font-size: 1.5rem;
-            color: #333;
-        }
-
         /* Social icons */
         .social-icons {
             display: flex;
-            justify-content: center;
-            margin-top: 30px;
-            gap: 15px;
+            margin-top: 10px;
+            gap: 10px;
         }
 
         .social-icon {
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
-            background-color: #000;
+            background-color: #f5f5f5;
             display: flex;
             justify-content: center;
             align-items: center;
-            color: white;
+            color: #333;
             text-decoration: none;
-            font-size: 1.5rem;
+            font-size: 0.9rem;
+            border: 1px solid #ddd;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            background-color: #e0e0e0;
+        }
+        
+        .social-icon.linkedin {
+            background-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="%230077B5" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>');
+            background-size: 60%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        
+        .social-icon.clarivate {
+            font-weight: bold;
+        }
+        
+        .social-icon.scholar {
+            background-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="%234285F4" d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>');
+            background-size: 60%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        
+        .social-icon.researchgate {
+            background-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="%2300CCBB" d="M19.586 0c-.818 0-1.508.19-2.073.565-.563.377-.97.936-1.213 1.68a3.193 3.193 0 0 0-.112.437 8.365 8.365 0 0 0-.078.53 9 9 0 0 0-.05.727c-.01.282-.013.621-.013 1.016a31.121 31.121 0 0 0 .014 1.017 9 9 0 0 0 .05.727 7.946 7.946 0 0 0 .077.53h-.005a3.334 3.334 0 0 0 .113.438c.245.743.65 1.303 1.214 1.68.565.376 1.256.564 2.075.564.8 0 1.536-.213 2.105-.603.57-.39.94-.916 1.175-1.65.076-.235.135-.558.177-.93.043-.372.064-.773.064-1.202 0-.429-.021-.83-.064-1.203-.042-.372-.101-.694-.177-.929-.234-.735-.603-1.261-1.175-1.65C21.122.212 20.385 0 19.586 0z"/><path fill="%2300CCBB" d="M7.842 16.94d.62c-.16.157-.16.376 0 .652a22.5 22.5 0 0 1-.398 2.117 22.149 22.149 0 0 1-.448 1.613 16.61 16.61 0 0 1-.476 1.35 8.539 8.539 0 0 1-.493 1.003c-.169.282-.34.509-.515.684a1 1 0 0 1-.63.31.916.916 0 0 1-.728-.295c-.2-.197-.3-.433-.3-.709 0-.58.032-.15.025-.304 0-.125.06-.276.066-.427a15.8 15.8 0 0 1 .414-2.083c.193-.775.453-1.612.787-2.523zm15.794-11.566l-.196.415c-.146.285-.23.544-.319.745a20.415 20.415 0 0 0-2.228-.15 17.095 17.095 0 0 0-2.153.14l-.746-1.858c-.32-.801-.815-1.21-1.488-1.21-.62 0-1.195.372-1.195 1.524v.887c-2.332.663-5.05 2.455-5.05 6.182 0 3.321 2.414 4.662 2.677 4.823-.094.416-.206.913-.304 1.423-.16.81-.314 1.58-.34 2.368-.06.147.028.291.028.439 0 1.219.731 1.81 1.683 1.86 1.056.019 1.502-.765 1.861-1.316.26-.495.498-1.019.704-1.562.276-.714.51-1.433.698-2.144.698-.127 1.204-.244 1.63-.346.733-.18 1.112-.335 1.743-.516l.812 2.006c.298.735.776 1.04 1.446 1.04.697 0 1.286-.382 1.794-1.137l3.977-6.416c.252-.415.376-.824.376-1.227 0-.405-.114-.76-.343-1.065zm-9.192.652v-.823c0-.302.122-.453.366-.453.313 0 .5.21.61.631l.722 1.741a32.267 32.267 0 0 0-1.698.209V6.026zm2.424 7.736c-.34.087-.775.19-1.246.283l.606-3.5a23.903 23.903 0 0 1 1.849.4zm4.494-7.225l.4.987-2.968 4.7-.428-1.146zm1.127 2.67l2.783-4.401c.098-.155.175-.21.317-.21.227 0 .34.146.34.44 0 .198-.07.428-.211.687z"/></svg>');
+            background-size: 60%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        
+        .social-icon.orcid {
+            background-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="%23A6CE39" d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-2.016-1.284-3.722-4.097-3.722h-2.222z"/></svg>');
+            background-size: 60%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        
+        .social-icon.butterfly {
+            background-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="%23000000" d="M12 4.879c.825-1.746 2.473-3.288 4.33-3.788-.367 1.5-.838 2.906-1.481 4.175 2.206.125 4.218.92 5.895 2.182-1.699.073-3.315-.096-4.815-.5.748 1.373 1.252 2.891 1.481 4.475-1.284-.598-2.487-1.472-3.578-2.599.033 1.8-.278 3.454-.927 4.908-1.049-1.196-1.825-2.724-2.331-4.465-1.342 1.459-3.152 2.258-5.158 2.42.748-1.402 1.92-2.599 3.46-3.499C7.019 7.504 5.436 7.131 3.62 7.31c1.139-1.127 2.581-1.899 4.14-2.239C6.93 3.722 6.355 2.226 6.188.49c1.49.63 2.818 1.796 3.951 3.468.403-1.366 1.031-2.569 1.861-3.567.331 1.543.362 3.125.09 4.692-.032-.07-.06-.137-.09-.204z"/></svg>');
+            background-size: 60%;
+            background-repeat: no-repeat;
+            background-position: center;
         }
 
         /* Footer */
@@ -234,8 +278,22 @@
 
     <main class="container">
         <section class="main-content">
-            <div class="profile-image">
-                <img src="images/profile.jpg" alt="Heuijee Yun">
+            <div class="profile-column">
+                <div class="profile-image">
+                    <img src="images/profile.jpg" alt="Heuijee Yun">
+                </div>
+                <div class="profile-name-section">
+                    <h2>Heuijee Yun</h2>
+                    <p>Ph.D Student</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon butterfly" title="Butterfly"></a>
+                        <a href="#" class="social-icon linkedin" title="LinkedIn"></a>
+                        <a href="#" class="social-icon clarivate" title="Clarivate">P</a>
+                        <a href="#" class="social-icon scholar" title="Google Scholar"></a>
+                        <a href="#" class="social-icon researchgate" title="ResearchGate"></a>
+                        <a href="#" class="social-icon orcid" title="ORCID"></a>
+                    </div>
+                </div>
             </div>
             <div class="profile-info">
                 <h1>Hello my name is Heuijee Yun</h1>
@@ -248,19 +306,6 @@
                     <a href="#" class="btn">About</a>
                     <a href="#" class="btn">Contact me!</a>
                 </div>
-            </div>
-        </section>
-
-        <section class="name-section">
-            <h2>Heuijee Yun</h2>
-            <p>Ph.D Student</p>
-            <div class="social-icons">
-                <a href="#" class="social-icon">T</a>
-                <a href="#" class="social-icon">in</a>
-                <a href="#" class="social-icon">P</a>
-                <a href="#" class="social-icon">G</a>
-                <a href="#" class="social-icon">M</a>
-                <a href="#" class="social-icon">ID</a>
             </div>
         </section>
     </main>
