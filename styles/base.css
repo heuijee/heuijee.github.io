@@ -64,7 +64,7 @@ body {
     color: #000000;
     line-height: 1.4;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 20px;
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 40px;
@@ -92,8 +92,8 @@ header {
 }
 
 .site-name {
-    font-size: 28px;
-    font-weight: 400;
+    font-size: 30px;
+    font-weight: 600;
 }
 
 .site-name a {
@@ -217,7 +217,7 @@ footer {
 }
 
 .animate-content {
-    animation: fadeIn 1s ease-out forwards;
+    animation: fadeIn 2s ease-out forwards;
     animation-delay: 0.3s;
     opacity: 0;
 }
@@ -228,16 +228,16 @@ footer {
     top: 100%;
     right: 0;
     z-index: 10;
-    margin-top: 5px;
+    margin-top: 45px;
 }
 
 .cv-button {
     display: inline-block;
-    padding: 15px 30px;
+    padding: 5px 20px;
     background-color: #000000;
     color: #ffffff;
-    font-size: 16px;
-    font-weight: 400;
+    font-size: 25px;
+    font-weight: 600;
     text-transform: uppercase;
     border: none;
     transition: background-color 0.3s;
