@@ -39,25 +39,28 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // 애니메이션 클래스 적용
-    setTimeout(() => {
-        const profileElements = document.querySelectorAll('.animate-profile');
-        profileElements.forEach(el => {
-            el.style.opacity = '1';
-        });
-        
-        const titleElement = document.querySelector('.animate-title');
-        if (titleElement) {
-            titleElement.style.opacity = '1';
-        }
-        
+    // 홈페이지가 아닌 곳에서는 프로필 요소 애니메이션을 별도로 처리
+    if (!document.body.classList.contains('homepage')) {
+        // 애니메이션 클래스 적용
         setTimeout(() => {
-            const contentElement = document.querySelector('.animate-content');
-            if (contentElement) {
-                contentElement.style.opacity = '1';
+            const profileElements = document.querySelectorAll('.animate-profile');
+            profileElements.forEach(el => {
+                el.style.opacity = '1';
+            });
+            
+            const titleElement = document.querySelector('.animate-title');
+            if (titleElement) {
+                titleElement.style.opacity = '1';
             }
-        }, 300);
-    }, 100);
+            
+            setTimeout(() => {
+                const contentElement = document.querySelector('.animate-content');
+                if (contentElement) {
+                    contentElement.style.opacity = '1';
+                }
+            }, 300);
+        }, 100);
+    }
 
     // 컨택트 폼 제출 처리
     const contactForm = document.getElementById('contact-form');
