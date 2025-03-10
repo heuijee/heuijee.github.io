@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heuijee Yun</title>
+    <title>Blogs - Heuijee Yun</title>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body class="homepage">
+<body class="blogs-page">
     <header>
         <div class="site-name"><a href="index.html">Heuijee Yun</a></div>
         <nav class="main-menu">
@@ -16,7 +16,7 @@
                 <li><a href="research.html">Research</a></li>
                 <li><a href="publications.html">Publications</a></li>
                 <li><a href="projects.html">Projects</a></li>
-                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="blogs.html" class="active">Blogs</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
@@ -27,14 +27,14 @@
         <a href="cv.pdf" class="cv-button">Download CV</a>
     </div>
     
-    <main>
-        <div class="left-column">
-            <div class="profile-photo">
+    <main class="about-main">
+        <div class="sidebar">
+            <div class="profile-photo animate-profile">
                 <img src="images/profile.jpg" alt="Heuijee Yun" class="profile-image">
             </div>
-            <h1 class="name">Heuijee Yun</h1>
-            <p class="title">Ph.D Student</p>
-            <div class="social-icons">
+            <h2 class="sidebar-name animate-profile">Heuijee Yun</h2>
+            <p class="sidebar-title animate-profile">Ph.D Student</p>
+            <div class="social-icons animate-profile">
                 <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
                 <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
                 <a href="#" class="social-icon"><i class="fab fa-pinterest-p"></i></a>
@@ -44,19 +44,36 @@
             </div>
         </div>
         
-        <div class="right-column">
-            <div class="intro">
-                <p class="intro-headline">Hello my name is Heuijee Yun</p>
-                <p class="intro-detail">I am a phd student and my research interest is in</p>
-                <p class="intro-emphasis">autonomous driving with Deep learning accelerator.</p>
-                <p class="intro-detail">I am currently looking for a research intern.</p>
-                <p class="intro-highlight">NO FUNDINGS NEEDED</p>
-                <p class="intro-highlight">ALL I NEED IS A CHAIR AND A DESK</p>
-            </div>
-            
-            <div class="action-buttons">
-                <a href="about.html" class="action-button">About</a>
-                <a href="contact.html" class="action-button">Contact me!</a>
+        <div class="content">
+            <h1 class="page-title animate-title">Blogs</h1>
+            <div class="blogs-content animate-content">
+                <a href="#" class="blog-link">
+                    <div class="blog-item">
+                        <p class="blog-date">Mar 22, 2025</p>
+                        <h3 class="blog-title">Optimization of the Hypervisor</h3>
+                    </div>
+                </a>
+                
+                <a href="#" class="blog-link">
+                    <div class="blog-item">
+                        <p class="blog-date">Mar 22, 2025</p>
+                        <h3 class="blog-title">Optimization of the Hypervisor</h3>
+                    </div>
+                </a>
+                
+                <a href="#" class="blog-link">
+                    <div class="blog-item">
+                        <p class="blog-date">Mar 22, 2025</p>
+                        <h3 class="blog-title">Optimization of the Hypervisor</h3>
+                    </div>
+                </a>
+                
+                <a href="#" class="blog-link">
+                    <div class="blog-item">
+                        <p class="blog-date">Mar 22, 2025</p>
+                        <h3 class="blog-title">Optimization of the Hypervisor</h3>
+                    </div>
+                </a>
             </div>
         </div>
     </main>

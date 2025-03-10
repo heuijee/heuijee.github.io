@@ -1,0 +1,1166 @@
+/* Aileron 글꼴 정의 */
+@font-face {
+    font-family: 'Aileron';
+    src: url('../fonts/Aileron-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Aileron';
+    src: url('../fonts/Aileron-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Aileron';
+    src: url('../fonts/Aileron-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Aileron';
+    src: url('../fonts/Aileron-Black.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Aileron';
+    src: url('../fonts/Aileron-Italic.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* 기본 리셋 및 설정 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 링크 기본 스타일 재정의 */
+a {
+    text-decoration: none;
+}
+
+/* 전체 레이아웃 통일 */
+main {
+    display: flex;
+    flex: 1;
+    padding: 0;
+    gap: 50px;
+    overflow: hidden;
+}
+
+/* 왼쪽 컬럼 통일 */
+.left-column, .sidebar {
+    flex-basis: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 중앙 정렬 추가 */
+    align-items: center;
+    text-align: center;
+    overflow-y: auto;
+    padding: 20px 0;
+    height: calc(100vh - 200px);
+}
+
+/* 오른쪽 컬럼 통일 */
+.right-column, .content {
+    flex-basis: 65%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    height: calc(100vh - 200px);
+    padding: 20px 20px 20px 0;
+}
+
+/* 페이지 제목 스타일 - 텍스트 너비에 맞는 밑줄 */
+.page-title, .contact-title {
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    letter-spacing: -0.03em;
+    display: inline-block; /* 텍스트 너비에 맞게 설정 */
+    border-bottom: 1px solid #000; /* 1px 밑줄 추가 */
+    padding-bottom: 5px;
+    width: auto; /* 자동 너비 설정으로 텍스트에 맞춤 */
+}
+
+/* 모든 페이지 메인 영역 스타일 통일 */
+.about-main, .contact-main, main {
+    display: flex;
+    gap: 50px;
+    padding: 0;
+    flex: 1;
+    overflow: hidden;
+}
+
+/* 모든 페이지의 중앙 콘텐츠 영역 통일 */
+.content, .contact-form-container {
+    flex-basis: 65%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    padding: 20px 20px 20px 0;
+    height: calc(100vh - 200px);
+}
+
+/* contact 페이지 조정 */
+.contact-form-container {
+    max-width: none;
+    width: 100%;
+    margin: 0;
+}
+
+/* Contact 페이지 제목 조정 */
+.contact-title {
+    text-align: center;
+    margin-bottom: 30px;
+    display: inline-block;
+    width: auto;
+}
+
+/* about 페이지 레이아웃 조정 */
+.about-main {
+    display: flex;
+    gap: 50px;
+    padding: 0;
+    flex: 1;
+    overflow: hidden;
+}
+
+/* 프로필 사진 스타일 통일 */
+.profile-photo, .sidebar .profile-photo {
+    width: 85%;
+    max-width: 250px;
+    margin: 0 auto 20px;
+}
+
+.profile-image, .sidebar .profile-image {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* 이름 스타일 통일 */
+.name, .sidebar-name {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 5px 0;
+    letter-spacing: -0.02em;
+}
+
+/* 직함 스타일 통일 */
+.title, .sidebar-title {
+    font-size: 18px;
+    color: #333;
+    margin: 5px 0 15px;
+    letter-spacing: -0.01em;
+}
+
+/* 소셜 아이콘 스타일 통일 */
+.social-icons, .sidebar .social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+    justify-content: center;
+}
+
+.social-icon, .sidebar .social-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+/* 기본 리셋 및 설정 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 링크 기본 스타일 재정의 */
+a {
+    text-decoration: none;
+}
+
+/* 전체 레이아웃 고정 */
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    padding: 0 60px;
+}
+
+body {
+    font-family: 'Aileron', sans-serif;
+    font-weight: 400;
+    color: #000;
+    background-color: #fff;
+    letter-spacing: -0.01em;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+}
+
+body.homepage {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: 1900px;
+    margin: 0 auto;
+    padding: 0 10px;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+}
+
+/* 헤더 스타일 */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+    position: relative;
+    flex-shrink: 0;
+}
+
+/* 상단 헤더 아래 애니메이션 라인 추가 */
+.header-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    background-color: #000;
+    width: 0; /* 초기 너비는 0 */
+    animation: drawLine 1.2s ease-out forwards; /* 1.5초 동안 선이 그려지는 애니메이션 */
+}
+
+/* 선이 그려지는 애니메이션 정의 */
+@keyframes drawLine {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* 사이트 이름 스타일 */
+.site-name {
+    font-size: 29px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.site-name a {
+    text-decoration: none;
+    color: #000;
+    transition: opacity 0.2s ease;
+}
+
+.site-name a:hover {
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+.main-menu ul {
+    display: flex;
+    list-style: none;
+}
+
+.main-menu ul li {
+    position: relative;
+}
+
+.main-menu ul li:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 90%;
+    width: 1px;
+    background-color: #333;
+}
+
+.main-menu ul li a {
+    text-decoration: none;
+    color: #000;
+    padding: 0 15px;
+    font-size: 27px;
+    letter-spacing: -0.02em;
+    transition: font-weight 0.1s ease; /* 글꼴 두께 변화에 애니메이션 적용 */
+}
+
+.main-menu ul li a:hover {
+    text-decoration: none; /* 밑줄 제거 */
+    font-weight: 800; /* 호버 시 볼드체로 변경 */
+}
+
+/* 다운로드 CV 버튼 */
+.download-cv {
+    position: absolute;
+    top: 120px;
+    right: 190px;
+}
+
+.cv-button {
+    display: inline-block;
+    padding: 8px 15px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #000;
+    border: 2px solid #000;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    font-size: 21px;
+    transition: all 0.3s ease;
+}
+
+.cv-button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* 홈페이지 스크롤 조정 */
+.intro {
+    margin-bottom: 30px;
+    overflow-y: auto;
+    padding-right: 15px;
+}
+
+.intro-headline {
+    font-size: 33px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    letter-spacing: -0.03em;
+}
+
+.intro-detail {
+    font-size: 27px;
+    margin-bottom: 10px;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+}
+
+.intro-emphasis {
+    font-size: 27px;
+    margin-bottom: 15px;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+    font-style: italic;
+}
+
+.intro-highlight {
+    font-size: 27px;
+    font-weight: 700;
+    margin: 10px 0;
+    letter-spacing: -0.03em;
+}
+
+/* 액션 버튼 위치 조정 */
+.action-buttons {
+    display: flex;
+    gap: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.action-button {
+    display: inline-block;
+    padding: 10px 25px;
+    text-decoration: none;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 50px;
+    font-weight: 400;
+    font-size: 21px;
+    letter-spacing: -0.02em;
+    transition: all 0.3s ease;
+}
+
+.action-button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* 푸터 */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-top: 1px solid #000; /* 상단에 선 추가 */
+    margin-top: 0;
+    flex-shrink: 0;
+    color: #666;
+}
+
+.copyright {
+    color: #666;
+}
+
+.contact-info {
+    display: flex;
+    gap: 30px;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.contact-label {
+    font-weight: 400;
+    font-size: 19px;
+}
+
+.contact-value {
+    color: #666;
+    font-size: 19px;
+}
+
+/* 현재 메뉴 활성화 스타일 */
+.main-menu ul li a.active {
+    font-weight: 700;
+}
+
+/* Research 페이지 스타일 */
+.research-content {
+    line-height: 1.6;
+}
+
+.research-section {
+    margin-bottom: 30px;
+}
+
+.research-subtitle {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    letter-spacing: -0.02em;
+    color: #000;
+}
+
+.research-text {
+    margin-bottom: 10px;
+    font-size: 18px;
+    letter-spacing: -0.01em;
+    line-height: 1.5;
+    padding-left: 10px;
+}
+
+/* Publications 페이지 스타일 */
+.publications-content {
+    line-height: 1.6;
+    overflow-y: auto;
+    padding-right: 15px;
+}
+
+.publication-item {
+    margin-bottom: 35px;
+}
+
+.publication-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+}
+
+.publication-authors {
+    font-size: 18px;
+    margin-bottom: 10px;
+    letter-spacing: -0.01em;
+}
+
+.publication-abstract {
+    font-size: 18px;
+    margin-bottom: 10px;
+    letter-spacing: -0.01em;
+    line-height: 1.5;
+}
+
+.publication-links {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.pub-link {
+    display: inline-block;
+    margin-right: 10px;
+    color: #000;
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.pub-link:hover {
+    opacity: 0.7;
+}
+
+/* Projects 페이지 스타일 */
+.projects-grid {
+    width: 100%;
+    overflow-y: auto;
+    padding-right: 15px;
+}
+
+.project-row {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.project-item {
+    display: flex;
+    width: 100%;
+    gap: 15px;
+}
+
+.project-image {
+    width: 140px;
+    height: 140px;
+    border: 1px solid #000;
+    flex-shrink: 0;
+}
+
+.project-info {
+    flex-grow: 1;
+}
+
+.project-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+}
+
+.project-description {
+    font-size: 18px;
+    letter-spacing: -0.01em;
+    line-height: 1.5;
+}
+
+/* 반응형 스타일 추가 */
+@media (max-width: 768px) {
+    .project-row {
+        flex-direction: column;
+    }
+}
+
+/* Contact 페이지 스타일 */
+.contact-main {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    flex: 1;
+    overflow: hidden; /* 스크롤 제거 */
+}
+
+.contact-form-container {
+    max-width: 600px;
+    width: 100%;
+    margin: 30px auto;
+    padding-right: 0; /* 오른쪽 패딩 제거 */
+    overflow-y: hidden; /* 스크롤 제거 */
+    height: auto; /* 자동 높이 설정 */
+    flex-basis: auto; /* 기본 너비 설정 제거 */
+}
+
+.contact-title {
+    font-size: 40px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 40px;
+    letter-spacing: -0.03em;
+    border-bottom: 1px solid #000;
+    padding-bottom: 5px;
+    display: block; /* 블록 요소로 전체 너비 차지 */
+}
+
+.contact-form {
+    width: 100%;
+}
+
+.form-group {
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #000;
+}
+
+.form-group label {
+    width: 120px;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 12px 15px;
+    background-color: #fff;
+    border-right: 1px solid #000;
+    display: flex;
+    align-items: center;
+}
+
+.form-group input,
+.form-group textarea {
+    flex: 1;
+    padding: 12px 15px;
+    font-size: 18px;
+    border: none;
+    font-family: 'Aileron', sans-serif;
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: none; /* 리사이즈 비활성화 */
+}
+
+.submit-button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    font-family: 'Aileron', sans-serif;
+    transition: opacity 0.3s;
+}
+
+.submit-button:hover {
+    opacity: 0.8;
+}
+
+.contact-footer {
+    padding: 20px 0;
+    border-top: 1px solid #000;
+}
+
+.contact-copyright {
+    text-align: left;
+    font-size: 18px;
+    color: #000;
+    letter-spacing: -0.01em;
+}
+
+/* 반응형 스타일 추가 */
+@media (max-width: 768px) {
+    .form-group {
+        display: block;
+    }
+    
+    .form-group label {
+        display: block;
+        width: 100%;
+        border-right: 1px solid #000;
+        border-bottom: none;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        display: block;
+        width: 100%;
+    }
+}
+
+/* 스크롤바 스타일 */
+.content, .right-column, .sidebar, .left-column, .projects-grid, .publications-content, .contact-main {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
+}
+
+.content::-webkit-scrollbar, 
+.right-column::-webkit-scrollbar, 
+.sidebar::-webkit-scrollbar, 
+.left-column::-webkit-scrollbar,
+.projects-grid::-webkit-scrollbar,
+.publications-content::-webkit-scrollbar,
+.contact-main::-webkit-scrollbar {
+    width: 6px;
+}
+
+.content::-webkit-scrollbar-track, 
+.right-column::-webkit-scrollbar-track, 
+.sidebar::-webkit-scrollbar-track, 
+.left-column::-webkit-scrollbar-track,
+.projects-grid::-webkit-scrollbar-track,
+.publications-content::-webkit-scrollbar-track,
+.contact-main::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.content::-webkit-scrollbar-thumb, 
+.right-column::-webkit-scrollbar-thumb, 
+.sidebar::-webkit-scrollbar-thumb, 
+.left-column::-webkit-scrollbar-thumb,
+.projects-grid::-webkit-scrollbar-thumb,
+.publications-content::-webkit-scrollbar-thumb,
+.contact-main::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+}
+
+/* 본문 여백 조정 */
+.about-content, .research-content, .publications-content, .projects-grid, .blogs-content {
+    padding-right: 15px;
+    padding-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* Blogs 페이지 스타일 */
+.blogs-content {
+    width: 100%;
+    overflow-y: auto;
+    padding-right: 15px;
+}
+
+.blog-item {
+    border: 1px solid #000;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.blog-item:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.blog-date {
+    font-size: 18px;
+    margin-bottom: 10px;
+    letter-spacing: -0.01em;
+}
+
+.blog-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: -0.02em;
+}
+
+.blog-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.blog-link:hover {
+    text-decoration: none;
+}
+
+/* Send 버튼 스타일 */
+.send-button-container {
+    width: 100%;
+    margin-top: 20px;
+    border: none;
+}
+
+.send-button {
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    padding: 15px 0;
+    font-size: 20px;
+    font-weight: 700;
+    border: none;
+}
+
+/* 폼 제출 결과 영역 */
+.form-result {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #000;
+    display: none;
+}
+
+.form-result:not(:empty) {
+    display: block;
+}
+
+.submission-success {
+    line-height: 1.6;
+}
+
+.submission-success h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    letter-spacing: -0.02em;
+}
+
+.submission-success p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    letter-spacing: -0.01em;
+}
+
+/* 애니메이션 효과 */
+@keyframes slideFromLeft {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-profile {
+    animation: slideFromLeft 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+.sidebar-name.animate-profile {
+    animation-delay: 0.2s;
+}
+.sidebar-title.animate-profile {
+    animation-delay: 0.3s;
+}
+.social-icons.animate-profile {
+    animation-delay: 0.4s;
+}
+.animate-title {
+    animation: fadeIn 0.7s ease-out forwards;
+    animation-delay: 0.6s;
+    opacity: 0;
+}
+.animate-content {
+    animation: fadeIn 0.7s ease-out forwards;
+    animation-delay: 0.9s;
+    opacity: 0;
+}
+
+/* 반응형 레이아웃 */
+@media (max-width: 900px) {
+    .about-main {
+        flex-direction: column;
+    }
+    
+    .sidebar, .content {
+        flex-basis: 100%;
+    }
+    
+    .sidebar {
+        margin-bottom: 30px;
+    }
+    
+    .page-title {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 600px) {
+    .page-title {
+        font-size: 28px;
+    }
+    
+    .about-content p {
+        font-size: 16px;
+    }
+}
+
+/* 반응형 스타일 */
+@media (max-width: 900px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .main-menu ul {
+        flex-wrap: wrap;
+    }
+    
+    .main-menu ul li:not(:last-child)::after {
+        display: none;
+    }
+    
+    .download-cv {
+        position: static;
+        margin: 20px auto;
+        text-align: center;
+    }
+    
+    main {
+        flex-direction: column;
+        padding: 30px 0;
+        align-items: center;
+    }
+    
+    .left-column, .right-column {
+        flex-basis: 100%;
+        text-align: center;
+    }
+    
+    .right-column {
+        margin-top: 40px;
+    }
+    
+    .profile-photo {
+        width: 70%; /* 모바일에서는 더 작게 */
+        max-width: 250px;
+    }
+    
+    footer {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .action-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    footer {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .contact-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .contact-item {
+        align-items: flex-start;
+    }
+}
+
+/* index 페이지와 콘텐츠 페이지 통일 */
+body.homepage main {
+    padding: 0;
+}
+
+/* 모든 페이지에서 프로필 사진, 이름, 직함 통일 */
+.profile-photo, .sidebar .profile-photo {
+    width: 85%;
+    max-width: 250px;
+    margin: 0 auto 20px;
+}
+
+/* index 페이지 오른쪽 컬럼 정렬 */
+.right-column {
+    justify-content: center;
+    padding-top: 0;
+}
+
+/* 모든 페이지 본문 스타일 통일 */
+.intro-headline, .intro-detail, .intro-emphasis, .intro-highlight {
+    letter-spacing: -0.01em;
+    line-height: 1.6;
+}
+
+/* Contact 페이지 전용 레이아웃 */
+body.contact-page main.contact-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: visible;
+    max-width: 100%;
+    width: 100%;
+    margin: 30px auto;
+    padding: 0;
+}
+
+body.contact-page .contact-form-container {
+    max-width: 800px; /* 너비 증가 */
+    width: 80%; /* 화면 비율에 맞게 설정 */
+    margin: 0 auto;
+    padding: 0;
+    overflow: visible;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Contact 페이지 제목 스타일 */
+body.contact-page .contact-title {
+    font-size: 40px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 40px;
+    letter-spacing: -0.03em;
+    border-bottom: 1px solid #000;
+    padding-bottom: 5px;
+    display: inline-block;
+    width: auto;
+}
+
+/* Contact 페이지 폼 요소 스타일 */
+body.contact-page .form-group {
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #000;
+}
+
+/* Contact 페이지 푸터 스타일 */
+body.contact-page footer {
+    width: 100%;
+    max-width: 1400px; /* 최대 너비 추가 */
+    margin: 50px auto 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-top: 1px solid #000;
+}
+
+/* 반응형 조정 */
+@media (max-width: 900px) {
+    body.contact-page .contact-form-container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 600px) {
+    body.contact-page .contact-form-container {
+        width: 95%;
+    }
+}
+
+/* Contact 폼 스타일 개선 */
+body.contact-page .contact-form {
+    width: 100%;
+    background-color: #fff;
+    padding: 20px 0;
+}
+
+/* Send 버튼 스타일 개선 */
+body.contact-page .send-button-container {
+    width: 100%;
+    margin-top: 30px;
+    border: none;
+}
+
+body.contact-page .send-button {
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    padding: 15px 0;
+    font-size: 20px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+body.contact-page .send-button:hover {
+    opacity: 0.8;
+}
+
+/* Contact 페이지 전용 애니메이션 */
+@keyframes fadeInFast {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Contact 페이지의 애니메이션 속도 조정 */
+body.contact-page .contact-title {
+    animation: fadeInFast 0.4s ease-out forwards;
+    animation-delay: 0.1s;
+    opacity: 0;
+}
+
+body.contact-page .contact-form-container {
+    animation: none; /* 기본 애니메이션 제거 */
+}
+
+body.contact-page .contact-form {
+    animation: fadeInFast 0.4s ease-out forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
+}
+
+body.contact-page .form-group {
+    animation: fadeInFast 0.4s ease-out forwards;
+    opacity: 0;
+}
+
+body.contact-page .form-group:nth-child(1) {
+    animation-delay: 0.4s;
+}
+
+body.contact-page .form-group:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+body.contact-page .form-group:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+body.contact-page .send-button-container {
+    animation: fadeInFast 0.4s ease-out forwards;
+    animation-delay: 0.7s;
+    opacity: 0;
+}
+
+/* 형광펜 효과 애니메이션 */
+@keyframes highlightSweep {
+    0% {
+        background-position: -100% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+/* 인턴 찾는다는 문장에 형광펜 효과 */
+.intro-detail:nth-child(4) {
+    position: relative;
+    background-image: linear-gradient(to right, transparent 0%, transparent 35%, rgba(255, 255, 100, 0.6) 35%, rgba(255, 255, 100, 0.6) 65%, transparent 65%, transparent 100%);
+    background-size: 200% 100%;
+    background-repeat: no-repeat;
+    animation: highlightSweep 1.5s ease-in-out 1s forwards;
+}
+
+/* NO FUNDINGS NEEDED 텍스트에 형광펜 효과 */
+.intro-highlight:first-of-type {
+    position: relative;
+    background-image: linear-gradient(to right, transparent 0%, transparent 35%, rgba(255, 255, 100, 0.6) 35%, rgba(255, 255, 100, 0.6) 65%, transparent 65%, transparent 100%);
+    background-size: 200% 100%;
+    background-repeat: no-repeat;
+    animation: highlightSweep 1.5s ease-in-out 2s forwards;
+}
+
+/* 의자와 책상만 필요하다는 문장에 형광펜 효과 */
+.intro-highlight:last-of-type {
+    position: relative;
+    background-image: linear-gradient(to right, transparent 0%, transparent 35%, rgba(255, 255, 100, 0.6) 35%, rgba(255, 255, 100, 0.6) 65%, transparent 65%, transparent 100%);
+    background-size: 200% 100%;
+    background-repeat: no-repeat;
+    animation: highlightSweep 1.5s ease-in-out 3s forwards;
+} 

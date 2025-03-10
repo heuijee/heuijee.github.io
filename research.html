@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heuijee Yun</title>
+    <title>Research - Heuijee Yun</title>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body class="homepage">
+<body class="research-page">
     <header>
         <div class="site-name"><a href="index.html">Heuijee Yun</a></div>
         <nav class="main-menu">
             <ul>
                 <li><a href="about.html">About</a></li>
-                <li><a href="research.html">Research</a></li>
+                <li><a href="research.html" class="active">Research</a></li>
                 <li><a href="publications.html">Publications</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="blogs.html">Blogs</a></li>
@@ -27,14 +27,14 @@
         <a href="cv.pdf" class="cv-button">Download CV</a>
     </div>
     
-    <main>
-        <div class="left-column">
-            <div class="profile-photo">
+    <main class="about-main">
+        <div class="sidebar">
+            <div class="profile-photo animate-profile">
                 <img src="images/profile.jpg" alt="Heuijee Yun" class="profile-image">
             </div>
-            <h1 class="name">Heuijee Yun</h1>
-            <p class="title">Ph.D Student</p>
-            <div class="social-icons">
+            <h2 class="sidebar-name animate-profile">Heuijee Yun</h2>
+            <p class="sidebar-title animate-profile">Ph.D Student</p>
+            <div class="social-icons animate-profile">
                 <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
                 <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
                 <a href="#" class="social-icon"><i class="fab fa-pinterest-p"></i></a>
@@ -44,19 +44,25 @@
             </div>
         </div>
         
-        <div class="right-column">
-            <div class="intro">
-                <p class="intro-headline">Hello my name is Heuijee Yun</p>
-                <p class="intro-detail">I am a phd student and my research interest is in</p>
-                <p class="intro-emphasis">autonomous driving with Deep learning accelerator.</p>
-                <p class="intro-detail">I am currently looking for a research intern.</p>
-                <p class="intro-highlight">NO FUNDINGS NEEDED</p>
-                <p class="intro-highlight">ALL I NEED IS A CHAIR AND A DESK</p>
-            </div>
-            
-            <div class="action-buttons">
-                <a href="about.html" class="action-button">About</a>
-                <a href="contact.html" class="action-button">Contact me!</a>
+        <div class="content">
+            <h1 class="page-title animate-title">Research</h1>
+            <div class="research-content animate-content">
+                <div class="research-section">
+                    <h3 class="research-subtitle">• Research Interests</h3>
+                    <p class="research-text">- Area of Interest 1</p>
+                    <p class="research-text">- Area of Interest 2</p>
+                    <p class="research-text">- Area of Interest 3</p>
+                </div>
+
+                <div class="research-section">
+                    <h3 class="research-subtitle">• Current Research</h3>
+                    <p class="research-text">- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget lacus euismod, aliquam ligula vel, laoreet magna. Praesent euismod urna vel velit dictum, id sagittis elit euismod.</p>
+                </div>
+
+                <div class="research-section">
+                    <h3 class="research-subtitle">• Research Methods</h3>
+                    <p class="research-text">- Praesent blandit, lorem id aliquam fermentum, odio nunc fermentum arcu, eget placerat ligula enim vel enim. Curabitur eu aliquam lacus, et sagittis orci. Integer pharetra lobortis mauris ut gravida.</p>
+                </div>
             </div>
         </div>
     </main>
