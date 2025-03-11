@@ -1546,12 +1546,13 @@ body.contact-page .send-button-container {
     transition: filter 0.3s ease-in-out;
 }
 
-/* 반응형 디자인을 위한 미디어 쿼리 */
+/* 반응형 디자인을 위한 미디어 쿼리 개선 */
 @media screen and (max-width: 768px) {
     /* 기본 레이아웃 조정 */
     html, body {
-        padding: 0 20px;
-        overflow-y: auto;
+        padding: 0 15px;
+        overflow-y: auto !important;
+        height: auto !important;
     }
 
     /* 메인 레이아웃 조정 */
@@ -1559,36 +1560,50 @@ body.contact-page .send-button-container {
         flex-direction: column;
         gap: 20px;
         padding: 0;
+        overflow: visible !important;
+        height: auto !important;
     }
 
     /* 왼쪽/오른쪽 컬럼 조정 */
     .left-column, .sidebar,
     .right-column, .content {
         flex-basis: 100%;
-        height: auto;
-        padding: 20px 0;
+        height: auto !important;
+        padding: 15px 0;
+        overflow-y: visible !important;
     }
 
-    /* 프로필 사진 크기 조정 */
-    .profile-photo, .sidebar .profile-photo {
-        width: 60%;
-        max-width: 200px;
+    /* 헤더 조정 */
+    header {
+        padding: 20px 0;
     }
 
     /* 이름 크기 조정 */
     .name, .sidebar-name {
-        font-size: 32px;
+        font-size: 28px;
+    }
+    
+    /* 타이틀 조정 */
+    .title, .sidebar-title {
+        font-size: 16px;
+        margin-bottom: 10px;
     }
 
     /* 페이지 제목 크기 조정 */
     .page-title, .contact-title {
-        font-size: 32px;
-        margin-bottom: 20px;
+        font-size: 26px;
+        margin-bottom: 15px;
+    }
+
+    /* 메뉴 폰트 크기 조정 */
+    .main-menu ul li a {
+        font-size: 18px;
     }
 
     /* 블로그 리스트 조정 */
     .blog-item {
         padding: 15px;
+        margin-bottom: 10px;
     }
 
     .blog-title {
@@ -1606,7 +1621,9 @@ body.contact-page .send-button-container {
     }
 
     /* 이미지 최적화 */
-    #blog-post-content img {
+    #blog-post-content img,
+    .project-image img,
+    .research-details img {
         max-width: 100%;
         height: auto;
     }
@@ -1616,6 +1633,29 @@ body.contact-page .send-button-container {
         max-width: 100%;
         overflow-x: auto;
         padding: 10px;
+        white-space: pre-wrap;
+    }
+    
+    /* 프로젝트 리스트 조정 */
+    .project-item {
+        margin-bottom: 30px;
+    }
+    
+    /* 다운로드 CV 버튼 조정 */
+    .cv-button {
+        padding: 10px 15px;
+        font-size: 16px;
+    }
+    
+    /* 푸터 조정 */
+    footer {
+        padding: 20px 0;
+    }
+    
+    /* 모바일에서는 고정 높이 제거 */
+    .about-main, .contact-main, main,
+    .content, .contact-form-container {
+        height: auto !important;
     }
 }
 
@@ -1623,28 +1663,39 @@ body.contact-page .send-button-container {
 @media screen and (max-width: 480px) {
     /* 더 작은 여백 */
     html, body {
-        padding: 0 15px;
+        padding: 0 10px;
     }
 
     /* 더 작은 폰트 크기 */
     .name, .sidebar-name {
-        font-size: 28px;
+        font-size: 24px;
     }
 
     .title, .sidebar-title {
+        font-size: 14px;
+    }
+    
+    /* 메뉴 조정 */
+    .main-menu ul {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .main-menu ul li a {
         font-size: 16px;
     }
 
     /* 소셜 아이콘 크기 조정 */
     .social-icon, .sidebar .social-icon {
-        width: 35px;
-        height: 35px;
-        font-size: 18px;
+        width: 32px;
+        height: 32px;
+        font-size: 16px;
     }
 
     /* 블로그 리스트 추가 조정 */
     .blog-item {
-        padding: 12px;
+        padding: 10px;
     }
 
     .blog-title {
@@ -1653,5 +1704,10 @@ body.contact-page .send-button-container {
 
     .blog-excerpt {
         font-size: 14px;
+    }
+    
+    /* 헤더 글씨 크기 */
+    .site-name {
+        font-size: 20px;
     }
 }
