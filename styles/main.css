@@ -138,6 +138,12 @@ main {
     overflow: hidden;
 }
 
+body.about-page .content {
+    font-size: 20px; /* 기존보다 크기 증가 */
+    line-height: 1.8; /* 가독성을 높이기 위해 줄 간격도 조정 */
+}
+
+
 /* 프로필 사진 스타일 통일 */
 .profile-photo, .sidebar .profile-photo {
     width: 85%;
@@ -152,9 +158,9 @@ main {
 
 /* 이름 스타일 통일 */
 .name, .sidebar-name {
-    font-size: 30px;
+    font-size: 40px;
     font-weight: 700;
-    margin: 5px 0;
+    margin: 0px 0;
     letter-spacing: -0.02em;
 }
 
@@ -309,9 +315,10 @@ header {
 
 /* 다운로드 CV 버튼 */
 .download-cv {
-    position: absolute;
+    position: fixed;
     top: 120px;
     right: 190px;
+    z-index: 100;
 }
 
 .cv-button {
@@ -461,11 +468,143 @@ footer {
     padding-left: 10px;
 }
 
+
+
+
+/* 기존 Research 목록 숨기기 */
+#research-main {
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+/* 연구 상세 내용 기본적으로 숨김 */
+.research-details-container {
+    display: none;
+    opacity: 0;
+    transform: translateY(30px); /* 아래에서 올라오도록 설정 */
+    transition: opacity 2.5s ease-out, transform 1.5s ease-out;
+}
+
+/* 연구 상세 내용이 활성화될 때 애니메이션 효과 */
+.research-details-container.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 연구 상세 설명 기본적으로 숨김 */
+.research-details {
+    display: none;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+/* 연구 상세 내용 내부의 이미지 스타일 */
+.research-details img {
+    max-width: 90%; /* 부모 컨테이너 크기 내에서 조정 */
+    height: auto; /* 비율 유지하며 크기 조절 */
+    display: block; /* 중앙 정렬을 위해 block 요소로 변경 */
+    margin: 10px auto; /* 자동 중앙 정렬 */
+    border-radius: 8px; /* 모서리 둥글게 (선택 사항) */
+}
+
+
+/* 연구 상세 내용이 활성화될 때 개별 애니메이션 적용 */
+.research-details.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* 연구 항목 리스트 기본 스타일 */
+.research-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* 연구 항목 기본 스타일 */
+.research-item {
+    position: relative;
+    display: block; /*  세로로 나열되도록 설정 */
+    cursor: pointer;
+    text-decoration: none;
+    padding-bottom: 0.0px;
+    line-height: 0.0;
+    width: fit-content; /* 텍스트 길이만큼만 너비 지정 */
+}
+
+/* 가상 요소 (::after)를 사용하여 밑줄 생성 */
+.research-item::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 1px;
+    background-color: black;
+    transition: width 0.3s ease-out;
+}
+
+/* Hover 시 밑줄이 텍스트 길이만큼만 나타나도록 설정 */
+.research-item:hover::after {
+    width: 100%;
+}
+
+
+/* 논문 리스트 스타일 */
+.publication-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+/* 논문 리스트의 개별 항목 스타일 */
+.publication-list li {
+    margin-bottom: 1px;
+}
+
+/* 논문 제목 링크 스타일 */
+.publication-list li a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* 🔹 마우스를 올리면 색상 변경 */
+.publication-list li a:hover {
+    color: #000000;
+    text-decoration: underline;
+}
+
+
+/* ← 뒤로 가기 버튼 스타일 */
+.back-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+.back-button i {
+    font-size: 20px;
+}
+
+
+
+
 /* Publications 페이지 스타일 */
 .publications-content {
     line-height: 1.6;
     overflow-y: auto;
     padding-right: 15px;
+}
+
+.publication-section {
+    margin-bottom: 30px;
 }
 
 .publication-item {
@@ -479,18 +618,20 @@ footer {
     letter-spacing: -0.02em;
 }
 
+.publication-subtitle {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    letter-spacing: -0.02em;
+    color: #000;
+}
+
 .publication-authors {
     font-size: 18px;
     margin-bottom: 10px;
     letter-spacing: -0.01em;
 }
 
-.publication-abstract {
-    font-size: 18px;
-    margin-bottom: 10px;
-    letter-spacing: -0.01em;
-    line-height: 1.5;
-}
 
 .publication-links {
     margin-bottom: 10px;
@@ -509,48 +650,110 @@ footer {
     opacity: 0.7;
 }
 
-/* Projects 페이지 스타일 */
-.projects-grid {
-    width: 100%;
-    overflow-y: auto;
-    padding-right: 15px;
-}
 
-.project-row {
+
+/* 프로젝트 리스트 스타일 */
+.projects-list {
     display: flex;
-    gap: 30px;
-    margin-bottom: 30px;
+    flex-direction: column; /* 세로 정렬 */
+    gap: 20px; /* 각 프로젝트 항목 사이의 간격 */
+    max-height: calc(100vh - 250px); /* Set a maximum height for the container */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding-right: 15px; /* Add some padding for the scrollbar */
 }
 
+/* 페이지 타이틀 (Projects) 고정 */
+.content .page-title {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    z-index: 10;
+    transition: box-shadow 0.3s ease;
+}
+
+/* 스크롤 시 페이지 타이틀에 그림자 효과 추가 */
+.content .page-title.scrolled {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 개별 프로젝트 항목 스타일 */
 .project-item {
     display: flex;
-    width: 100%;
-    gap: 15px;
+    align-items: center;
+    gap: 20px; /* 이미지와 글 사이 간격 */
+    background-color: #ffffff; /* 배경색 유지 */
+    padding: 15px;
+    border-radius: 0px; /* 모서리 둥글게 */
+    border: 1px solid black; /* 🔥 검은색 테두리 추가 */
+    box-shadow: none; /* 🔥 그림자 제거 */
 }
 
-.project-image {
-    width: 140px;
-    height: 140px;
-    border: 1px solid #000;
-    flex-shrink: 0;
+/* 프로젝트 이미지 스타일 */
+.project-image img {
+    width: 150px; /* 이미지 크기 조정 */
+    height: auto;
+    border-radius: 8px;
 }
 
+/* 프로젝트 정보 스타일 */
 .project-info {
-    flex-grow: 1;
+    flex: 1; /* 남은 공간을 차지하도록 설정 */
 }
 
+/* 프로젝트 제목 스타일 */
 .project-title {
     font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 8px;
-    letter-spacing: -0.02em;
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 
+/* 프로젝트 설명 스타일 */
 .project-description {
     font-size: 18px;
-    letter-spacing: -0.01em;
+    color: #000000;
     line-height: 1.5;
 }
+
+
+
+/* 🔹 프로젝트 제목 & 설명 밑줄 애니메이션 효과 */
+.project-title,
+.project-description {
+    position: relative;
+}
+
+/* 🔹 Hover 시 밑줄 효과 */
+.project-item:hover .project-title::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    transition: width 0.3s ease-out;
+}
+
+/* 🔹 기본 상태에서는 밑줄 숨김 */
+.project-title::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 1px;
+    background-color: black;
+    transition: width 0.3s ease-out;
+}
+
+/* 🔹 Hover 시 밑줄이 텍스트 길이만큼 나타남 */
+.project-item:hover .project-title::after {
+    width: 100%;
+}
+
+
 
 /* 반응형 스타일 추가 */
 @media (max-width: 768px) {
@@ -711,51 +914,166 @@ footer {
 
 /* 본문 여백 조정 */
 .about-content, .research-content, .publications-content, .projects-grid, .blogs-content {
-    padding-right: 15px;
+    padding-right: 45px;
     padding-bottom: 30px;
-    line-height: 1.6;
+    line-height: 2.0;
 }
 
 /* Blogs 페이지 스타일 */
 .blogs-content {
-    width: 100%;
-    overflow-y: auto;
-    padding-right: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .blog-item {
     border: 1px solid #000;
     padding: 20px;
-    margin-bottom: 20px;
-    transition: all 0.3s ease;
-    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #ffffff;
 }
 
 .blog-item:hover {
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
 }
 
 .blog-date {
-    font-size: 18px;
-    margin-bottom: 10px;
-    letter-spacing: -0.01em;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
 }
 
 .blog-title {
-    font-size: 24px;
-    font-weight: 700;
+    font-size: 20px;
     margin: 0;
-    letter-spacing: -0.02em;
+    color: #000;
 }
 
 .blog-link {
     text-decoration: none;
     color: inherit;
-    display: block;
 }
 
 .blog-link:hover {
     text-decoration: none;
+}
+
+/* 새로운 블로그 포스트 스타일 */
+.blog-post-content {
+    padding: 20px 0;
+}
+
+.blog-post-header {
+    margin-bottom: 40px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+
+.blog-post-title {
+    font-size: 32px;
+    margin: 20px 0 10px;
+}
+
+.blog-post-meta {
+    display: flex;
+    gap: 20px;
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.blog-post-date:before {
+    content: "📅 ";
+}
+
+.blog-post-author:before {
+    content: "✍️ ";
+}
+
+.blog-post-excerpt {
+    font-size: 18px;
+    font-style: italic;
+    margin-bottom: 30px;
+    color: #444;
+    padding-left: 15px;
+    border-left: 3px solid #000;
+}
+
+#blog-post-content {
+    line-height: 1.8;
+}
+
+#blog-post-content img {
+    max-width: 100%;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    margin: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#blog-post-content code {
+    background-color: #f5f5f5;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+}
+
+#blog-post-content pre {
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+.loading-indicator {
+    text-align: center;
+    padding: 30px;
+    color: #666;
+    font-style: italic;
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #000;
+    font-size: 16px;
+    padding: 8px 15px;
+    border: 1px solid #000;
+    border-radius: 3px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.blog-excerpt {
+    margin-top: 5px;
+    color: #666;
+    font-size: 16px;
+}
+
+/* Error message styling */
+.error-message {
+    background-color: #fff8f8;
+    border: 1px solid #ffcccb;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px 0;
+    color: #cc0000;
+    text-align: center;
+}
+
+.error-message p {
+    margin: 10px 0;
+}
+
+.error-message p:first-child {
+    font-weight: bold;
+    font-size: 18px;
 }
 
 /* Send 버튼 스타일 */
@@ -901,6 +1219,7 @@ footer {
         position: static;
         margin: 20px auto;
         text-align: center;
+        z-index: 100;
     }
     
     main {
@@ -956,21 +1275,52 @@ body.homepage main {
     padding: 0;
 }
 
+/*  Index 페이지에서만 크기 증가 */
+body.homepage .profile-photo {
+    width: 130%; /* 기본보다 30% 더 크게 */
+    max-width: 320px; /* 최대 크기 제한 */
+    margin-bottom: 0px;
+}
+
+body.homepage .name {
+    font-size: 40px; /* 기존보다 크기 증가 */
+    margin-top: 0px;  /* 위쪽 간격 줄이기 */
+    margin-bottom: 0px; /* 아래쪽 간격 줄이기 */
+}
+
+body.homepage .title {
+    font-size: 24px; /* Ph.D Student 글자 크기 증가 */
+    margin-bottom: 0px;
+}
+
+body.homepage .social-icons {
+    font-size: 28px; /* 아이콘 크기 증가 */
+    margin-bottom: 0px;
+}
+
+body.homepage .social-icons a {
+    width: 48px; /* 아이콘 버튼 크기 증가 */
+    height: 48px;
+    
+}
+
+
+
 /* 모든 페이지에서 프로필 사진, 이름, 직함 통일 */
-.profile-photo, .sidebar .profile-photo {
+body:not(.homepage) .profile-photo, .sidebar .profile-photo {
     width: 85%;
     max-width: 250px;
-    margin: 0 auto 20px;
+    margin: 0 auto 10px;
 }
 
 /* index 페이지 오른쪽 컬럼 정렬 */
-.right-column {
+ .right-column {
     justify-content: center;
     padding-top: 0;
 }
 
 /* 모든 페이지 본문 스타일 통일 */
-.intro-headline, .intro-detail, .intro-emphasis, .intro-highlight {
+ .intro-headline, .intro-detail, .intro-emphasis, .intro-highlight {
     letter-spacing: -0.01em;
     line-height: 1.6;
 }
@@ -1165,4 +1515,33 @@ body.contact-page .send-button-container {
 
 .delay2::before {
     animation-delay: 1s;
+}
+
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 20px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+
+/* FontAwesome 아이콘 스타일 */
+.social-icons i {
+    color: white;
+}
+
+/* SVG 아이콘 스타일 */
+.social-icons img {
+    width: 20px;
+    height: 20px;
+    filter: invert(1); /* 아이콘 색상을 흰색으로 변경 */
+    transition: filter 0.3s ease-in-out;
 }
