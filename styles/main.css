@@ -1545,3 +1545,113 @@ body.contact-page .send-button-container {
     filter: invert(1); /* 아이콘 색상을 흰색으로 변경 */
     transition: filter 0.3s ease-in-out;
 }
+
+/* 반응형 디자인을 위한 미디어 쿼리 */
+@media screen and (max-width: 768px) {
+    /* 기본 레이아웃 조정 */
+    html, body {
+        padding: 0 20px;
+        overflow-y: auto;
+    }
+
+    /* 메인 레이아웃 조정 */
+    main {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0;
+    }
+
+    /* 왼쪽/오른쪽 컬럼 조정 */
+    .left-column, .sidebar,
+    .right-column, .content {
+        flex-basis: 100%;
+        height: auto;
+        padding: 20px 0;
+    }
+
+    /* 프로필 사진 크기 조정 */
+    .profile-photo, .sidebar .profile-photo {
+        width: 60%;
+        max-width: 200px;
+    }
+
+    /* 이름 크기 조정 */
+    .name, .sidebar-name {
+        font-size: 32px;
+    }
+
+    /* 페이지 제목 크기 조정 */
+    .page-title, .contact-title {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    /* 블로그 리스트 조정 */
+    .blog-item {
+        padding: 15px;
+    }
+
+    .blog-title {
+        font-size: 20px;
+    }
+
+    .blog-excerpt {
+        font-size: 16px;
+    }
+
+    /* 블로그 포스트 내용 조정 */
+    #blog-post-content {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    /* 이미지 최적화 */
+    #blog-post-content img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* 코드 블록 스크롤 처리 */
+    pre {
+        max-width: 100%;
+        overflow-x: auto;
+        padding: 10px;
+    }
+}
+
+/* 작은 모바일 화면을 위한 추가 조정 */
+@media screen and (max-width: 480px) {
+    /* 더 작은 여백 */
+    html, body {
+        padding: 0 15px;
+    }
+
+    /* 더 작은 폰트 크기 */
+    .name, .sidebar-name {
+        font-size: 28px;
+    }
+
+    .title, .sidebar-title {
+        font-size: 16px;
+    }
+
+    /* 소셜 아이콘 크기 조정 */
+    .social-icon, .sidebar .social-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+
+    /* 블로그 리스트 추가 조정 */
+    .blog-item {
+        padding: 12px;
+    }
+
+    .blog-title {
+        font-size: 18px;
+    }
+
+    .blog-excerpt {
+        font-size: 14px;
+    }
+}
