@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research - Heuijee Yun</title>
+    <title>Research — Heuijee Yun</title>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -17,170 +17,251 @@
   gtag('config', 'G-XFNRCNR44C');
 </script>
 <body class="research-page">
-    <header>
-        <div class="site-name"><a href="index.html">Heuijee Yun</a></div>
+    <header class="top-nav">
+        <a class="brand" href="index.html">heuijee<span class="brand-dot">.</span>yun</a>
         <nav class="main-menu">
             <ul>
                 <li><a href="about.html">About</a></li>
                 <li><a href="research.html" class="active">Research</a></li>
                 <li><a href="publications.html">Publications</a></li>
                 <li><a href="projects.html">Projects</a></li>
+                <li><a href="side-projects.html">Side Projects</a></li>
                 <li><a href="blogs.html">Blogs</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li class="nav-sep" aria-hidden="true">/</li>
+                <li><a href="focus-core.html" class="nav-trk trk-c">Core</a></li>
+                <li><a href="focus-memory.html" class="nav-trk trk-m">Memory</a></li>
+                <li><a href="focus-auto.html" class="nav-trk trk-a">Autonomy</a></li>
             </ul>
         </nav>
-        <div class="header-line"></div>
+        <a href="cv.html" class="cv-button"><i class="fas fa-file-lines"></i> CV</a>
     </header>
 
-    <div class="download-cv">
-        <a href="cv.pdf" class="cv-button">Download CV</a>
-    </div>
-    
-    <main class="about-main">
-        <div class="sidebar">
-            <div class="profile-photo animate-profile">
-                <img src="images/profile.jpg" alt="Heuijee Yun" class="profile-image">
+    <main class="page-main">
+        <span class="page-kicker animate-title">ONE ROOT · THREE BRANCHES · FROM ALGORITHM TO SILICON</span>
+        <h1 class="page-title animate-title">Research</h1>
+        <p class="page-lede animate-content">Everything grows from one root — <strong>energy-efficient AI</strong> — and branches into three targets: cores &amp; accelerators, memory &amp; compute-in-memory, and autonomous driving.</p>
+
+        <div class="interest-grid animate-content">
+            <div class="interest">
+                <span class="i-num">A</span>
+                <h3>Efficient AI Optimization</h3>
+                <p>Quantization, pruning, and dedicated accelerator design — squeezing models onto edge hardware without losing what matters.</p>
             </div>
-            <h2 class="sidebar-name animate-profile">Heuijee Yun</h2>
-            <p class="sidebar-title animate-profile">Ph.D Student</p>
-            <div class="social-icons animate-profile">
-                <a href="https://github.com/heuijee" class="social-icon"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/heuijee-yun-05b7b7315/" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://scholar.google.com/citations?user=i3x5dVoAAAAJ&hl=en" class="social-icon"><img src="icons/google-scholar.svg" alt="Google Scholar"></i></a>
-                <a href="https://www.researchgate.net/profile/Yun_Heuijee" class="social-icon"><img src="icons/researchgate.svg" alt="Google Scholar"></i></a>
-                <a href="https://orcid.org/my-orcid?orcid=0009-0001-3870-9002" class="social-icon"><img src="icons/orcid.svg" alt="Google Scholar"></i></a>
+            <div class="interest">
+                <span class="i-num">B</span>
+                <h3>Sensor Fusion Accelerators</h3>
+                <p>Deep learning-based fusion of camera, LiDAR, and thermal data, with accelerator architectures built for efficient real-time processing.</p>
+            </div>
+            <div class="interest">
+                <span class="i-num">C</span>
+                <h3>Accelerator Software Systems</h3>
+                <p>Optimization automation and analysis frameworks — compilers and toolchains that generate tuned hardware code automatically.</p>
             </div>
         </div>
-        
-        <div class="content">
-            <h1 class="page-title animate-title">Research</h1>
-            <div class="research-content animate-content">
-                <div class="research-section">
-                    <!-- 기존 Research 정보 (이 부분을 숨길 예정) -->
-                    <div id="research-main">
-                        <h3 class="research-subtitle">• Research Interests</h3>
-                        <ul>
-                            <li><p class="research-text">- Efficient AI deep learning optimization (quantization/pruning) and developing dedicated accelerators.</p></li>
-                            <li><p class="research-text">- Exploring deep learning-based sensor fusion and designing accelerators for efficient processing.</p></li>
-                            <li><p class="research-text">- Developing optimization automation and analytical software systems for AI accelerators.</p></li>
-                        </ul>
-                
-                        <h3 class="research-subtitle">• Current Research - 2025</h3>
-                        <ul>
-                            <ul id="research-list">
-                                <li class="research-item" data-research="S³A_NPU"><p class="research-text">- Hardware Accelerator for Spiking Self-Supervised Learning</p></li>
-                                <li class="research-item" data-research="Opti-SpiSSL"><p class="research-text">- End-to-End framework for Spiking Self-Supervised Learning</p></li>
-                            </ul>
-                        </ul>
-                
-                        <h3 class="research-subtitle">• Research Topics</h3>
-                        <ul id="research-list">
-                            <li class="research-item" data-research="thermal"><p class="research-text">- Thermal-RGB Data Fusion for Safe Automotive Driving</p></li>
-                            <li class="research-item" data-research="DSNN"><p class="research-text">- Runtime scheduler and optimization algorithms for SNN AI accelerator</p></li>
-                            <li class="research-item" data-research="pruning"><p class="research-text">- High-Speed Energy-Efficient Dynamic Pruning</p></li>
-                            <li class="research-item" data-research="simd"><p class="research-text">- Micro-SIMD On-Chip Implementation</p></li>
-                            <li class="research-item" data-research="overflow"><p class="research-text">- Mitigating Overflow of Object Detection Tasks</p></li>
+
+        <!-- ================= BRANCH 0 · CORE & ACCELERATOR ================= -->
+        <section class="branch b0 animate-content">
+            <div class="branch-head">
+                <span class="branch-num">BRANCH_0</span>
+                <h2 class="branch-name">Core &amp; Accelerator</h2>
+                <span class="branch-for">→ FOCUS-CORE</span>
+                <span class="branch-spine">└─ the spine compiled into silicon</span>
+            </div>
+
+            <details class="topic" open>
+                <summary>
+                    <span class="t-num">01</span>
+                    <span class="t-title">Hardware Accelerator for Spiking Self-Supervised Learning</span>
+                    <span class="t-year">2025 · ACTIVE</span>
+                    <span class="t-toggle">+</span>
+                </summary>
+                <div class="topic-body">
+                    <div class="topic-text">
+                        <p>Self-supervised learning (SSL) learns from unlabeled data brilliantly — but it's too heavy for edge devices. Spiking Neural Networks (SNNs) are the opposite: asynchronous, event-driven, extremely low-power. No accelerator combining the two existed, so we built one. <strong>S³A-NPU</strong> maximizes efficiency through data preprocessing, memory optimization, parallel processing, and pipelined structures that exploit both SNN and SSL characteristics.</p>
+                        <h4>Related publications</h4>
+                        <ul class="topic-pubs">
+                            <li><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=11010182" target="_blank">S³A-NPU — IEEE TVLSI, 2025</a></li>
+                            <li><a href="publications.html">Hybrid CNN-SNN Accelerator — IEEE COOLChips, 2025</a></li>
                         </ul>
                     </div>
-                
-                    <!-- 연구 상세 내용 (기본적으로 숨김) -->
-                    <div id="research-details-container" class="research-details-container">
-                        <div id="back-button" class="back-button">
-                            <i class="fas fa-arrow-left"></i> Back
-                        </div>
-
-                        <div id="S³A_NPU" class="research-details">
-                            <h3>Hardware Accelerator for Spiking Self-Supervised Learning</h3>
-                            <p>- Conventional self-supervised learning (SSL) models have demonstrated significant potential for efficiently learning from large-scale unstructured data. However, their high computational complexity and resource demands pose challenges for deployment on edge devices or hardware-constrained environments. In contrast, Spiking Neural Networks (SNNs), inspired by biological neurons, are characterized by low power consumption and asynchronous processing, making them highly efficient in resource-limited settings. Despite these advantages, no hardware accelerator currently exists that combines SSL models with SNNs, and research on optimization techniques integrating these two technologies remains insufficient. Therefore, we propose a high-performance hardware accelerator architecture for spiking SSL models along with corresponding hardware optimization methods. This architecture leverages the unique characteristics of both SNNs and SSL to maximize computational efficiency through data preprocessing, memory optimization, parallel processing, and pipelined structures.</p>
-                            <img src="images/2025_research2.jpg" alt="Thermal RGB Fusion">
-                            <h4>Related Publications</h4>
-                            <ul class="publication-list">
-                                <li><a href="" target="_blank">S³A-NPU: A High-Performance Hardware Accelerator for Spiking Self-Supervised Learning with Dynamic Adaptive Memory Optimization - IEEE Transactions on Very Large Scale Integration (VLSI) Systems</a></li>
-                                <li><a href="" target="_blank">A Power-Efficient Reconfigurable Hybrid CNN-SNN Accelerator for High Performance AI Applications - IEEE Symposium on Low-Power and High-Speed Chips and Systems (COOLChips), 2025</a></li>
-                            </ul>
-                        </div>
-                
-                        <div id="Opti-SpiSSL" class="research-details">
-                            <h3>End-to-End framework for Spiking Self-Supervised Learning</h3>
-                            <p>- Self-supervised learning (SSL) has gained attention as an efficient method for learning from large-scale, unstructured data without the need for labels. However, the high computational complexity and resource demands of SSL make it challenging to execute on conventional CPUs and GPUs. In contrast, Spiking Neural Networks (SNNs) leverage asynchronous, event-driven processing, enabling low power consumption and high computational efficiency. These characteristics suggest the potential for combining SSL with SNNs to develop a high-performance, energy-efficient framework. However, research on hardware accelerators supporting SNN-based SSL remains limited. To address this, we propose a reconfigurable framework that automates the optimization and hardware code generation for SNN-based SSL models across various hardware environments, including FPGA and ASIC platforms. This is the first comprehensive framework enabling automated optimization and hardware implementation of SNN-based SSL models, offering high efficiency and flexibility. By bridging the gap between hardware and software layers, this framework paves the way for the practical application of SNN-based SSL across diverse hardware platforms.  </p>
-                            <img src="images/2025_research1.jpg" alt="Dynamic Pruning">
-                            <h4>Related Publications</h4>
-                            <ul class="publication-list">
-                                <li><a href="" target="_blank">Opti-SpiSSL: A Highly Reconfigurable Hardware Generation Framework for Spiking Self-Supervised Learning on Heterogeneous SoC - DAC 2025 WIP</a></li>
-                            </ul>
-                        </div>
-
-
-                        <div id="thermal" class="research-details">
-                            <h3>Thermal-RGB Data Fusion for Safe Automotive Driving</h3>
-                            <p>- As the number of drivers increases, so do traffic fatalities. In Korea, pedestrian accidents made up 35.5% of traffic accidents over the past two years, with incidents involving children steadily rising. Current self-driving cars rely on lidar, which is limited to detecting distant obstacles, making it insufficient for accident prevention. We propose a solution using selective thermal data to identify pedestrians outside the visible range. RGB camera images are first used for object detection, and thermal data is selectively integrated to detect pedestrians in areas with higher obstacle density. This approach increased accuracy from 40.43% to 83.91%. On a PC, the algorithm runs at 2.7 FPS using 175.95 MB of memory, while on a Jetson Nano, it operates at 0.75 FPS with 140.08 MB, ensuring practical real-time performance.</p>
-                            <img src="images/2024_research2.jpg" alt="Thermal RGB Fusion">
-                            <h4>Related Publications</h4>
-                            <ul class="publication-list">
-                                <li><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10503400" target="_blank">Deep Learning based Human Detection using Thermal-RGB Data Fusion for Safe Automotive Guided-Driving - Percom 2024 - Pervehicle</a></li>
-                            </ul>
-                        </div>
-                
-                        <div id="DSNN" class="research-details">
-                            <h3>Runtime scheduler and optimization algorithms for SNN AI accelerator</h3>
-                            <p>- As deep learning models become commercialized, the size of datasets and training requirements have grown exponentially, demanding significant computational resources and energy. To address these challenges, Spiking Neural Networks (SNNs), which mimic the behavior of biological neurons, have gained attention. However, research on software frameworks and hardware optimization for SNNs remains in its early stages. Additionally, existing SNN simulators are limited in scope, supporting only restricted environments, and lack efficient optimization methods for diverse hardware platforms. To overcome these limitations, we propose a runtime hardware code generation and optimization framework for deep SNNs. This framework is based on the TVM deep learning compiler, supports various SNN frameworks such as SNNTorch and SpikingJelly, and automatically generates optimized code using techniques like pruning, quantization, and scheduling tailored to the target hardware.  </p>
-                            <img src="images/2024_research3.jpg" alt="Dynamic Pruning">
-                        </div>
-
-                        <div id="pruning" class="research-details">
-                            <h3>High-Speed Energy-Efficient Dynamic Pruning</h3>
-                            <p>- SNNs are a type of artificial neural network (ANN) that mimic the way brain neural networks process information. They use spikes as the unit of information, which propagate through a network of neurons and synapses. Spikes exchange only discrete information about whether a spike occurred in a specific neuron at a specific time, as opposed to tensors or floats in existing deep learning networks such as MLP, RNN, and CNN. The Convolutional Spiking Neural Network structure can operate with fewer electrical signals and is more energy efficient than deep neural networks (DNN) and convolutional neural networks (CNN) because it consumes less power. However, this comes at the cost of lower accuracy. To address this issue, we propose a structure that computes multiple convolutional layers in parallel by classifying them according to the patterns in the input dataset. This structure creates parallel layers based on the input class and prunes the processing element (PE) units to fit each input. The resulting structure is more accurate and can be trained on lightweight hardware. </p>
-                            <img src="images/2024_research1.jpg" alt="Dynamic Pruning">
-                            <h4>Related Publications</h4>
-                            <ul class="publication-list">
-                                <li><a href="https://koreascience.kr/article/JAKO202404861562545.pdf" target="_blank">High-Speed Energy-Efficient Model based Dynamic Pruning using Pattern-based Alignment for Convolutional Spiking Neural Network Hardware Accelerator - IEMEK 2024</a></li>
-                            </ul>
-                        </div>
-                
-                        <div id="simd" class="research-details">
-                            <h3>Micro-SIMD On-Chip Implementation</h3>
-                            <p>- Recently, it has become possible to train neural networks on MPUs to achieve high performance and reduce power consumption. However, analyzing and processing the massive amounts of data used in deep learning is only being done on better performing multicore microprocessors. ARM-based cores have introduced the concept of single instruction, multiple data (SIMD), which plays an important role in optimizing the performance of deep learning algorithms. SIMD is a parallel processing technique classified according to Flynn's taxonomy. However, SIMD is only available on certain ARM cores and compilers, and it increases the size of the bus because it sends and receives 128-bit data. It also requires vectorization of the input data, which requires resources for preprocessing. Therefore, we introduce an implementation of micro-SIMD on the ARM Cortex M0 structure. Although the original ARM Cortex M0 does not have a SIMD, we generated and executed 16-bit instructions directly. Neural network training algorithms such as CNNs require a huge number of loops and MAC operations for each training layer. The parallelism of micro-SIMD can be very effective in computations like this, where the same operations are performed repeatedly.</p>
-                            <img src="images/2023_research.jpg" alt="Micro-SIMD">
-                        </div>
-                
-                        <div id="overflow" class="research-details">
-                            <h3>Mitigating Overflow of Object Detection Tasks</h3>
-                            <p>- Currently, with the active development of autonomous driving, several technologies corresponding to it are developing. An essential technology to achieve a high level of autonomous driving is image processing technology. Since the camera input is an essential element, the key is how to implement it in a lightweight vehicle processor. Therefore, we study a lightweight image processing method using parallel processing so that it can be executed on a lightweight embedded board. There are two major algorithms required for lane recognition: Canny edge detection and Hough transformation. Hough transformation cannot be parallelized because all pixels must be read due to the nature of the algorithm, and Canny edge detection is parallelized. After completing the grayscale conversion, the gaussian smoothing, sobel operator, non-maximum suppression and hysteresis parts can be parallelized. Since this part requires filter operation, the corresponding pixel must be determined and parallelized. The pixels in each thread must be at least 5 wide because the Gaussian filter is 5x5. Through this parallelization, efficient results can be obtained in terms of memory and time, and accordingly, a lightweight lane recognition algorithm can be implemented.</p>
-                            <img src="images/2022_research.jpg" alt="Object Detection Overflow">
-                            <h4>Related Publications</h4>
-                            <ul class="publication-list">
-                                <li><a href="https://www.mdpi.com/1424-8220/22/22/8890/pdf?version=1668678009" target="_blank">Efficient Object Detection based on Masking Semantic Segmentation Region for Lightweight Embedded Processors - Sensors 2022</a></li>
-                                <li><a href="https://koreascience.kr/article/JAKO202218754069076.pdf" target="_blank">Efficient Object Recognition by Masking Semantic Pixel Difference Region of Vision Snapshot for Lightweight Embedded Systems - JKIICE 2022</a></li>
-                                <li><a href="https://www.mdpi.com/2079-9292/10/17/2102/pdf?version=1630464862" target="_blank">Virtualization of Self-Driving Algorithms by Interoperating Embedded Controllers on Game Engine for Digital Twining Autonomous Vehicle - Electronics, 2021</a></li>
-                            </ul>
-                        </div>
-                    </div>
+                    <img src="images/2025_research2.jpg" alt="Spiking SSL accelerator architecture">
                 </div>
-                
-                
-                
+            </details>
 
+            <details class="topic">
+                <summary>
+                    <span class="t-num">02</span>
+                    <span class="t-title">End-to-End Framework for Spiking Self-Supervised Learning</span>
+                    <span class="t-year">2025 · ACTIVE</span>
+                    <span class="t-toggle">+</span>
+                </summary>
+                <div class="topic-body">
+                    <div class="topic-text">
+                        <p>A great accelerator is useless if nobody can program it. <strong>Opti-SpiSSL</strong> automates optimization and hardware code generation for SNN-based SSL models across FPGA and ASIC platforms — the first comprehensive framework of its kind, bridging the hardware-software gap so spiking SSL can actually ship.</p>
+                        <h4>Related publications</h4>
+                        <ul class="topic-pubs">
+                            <li><a href="publications.html">Opti-SpiSSL — DAC 2025 WIP</a></li>
+                        </ul>
+                    </div>
+                    <img src="images/2025_research1.jpg" alt="Opti-SpiSSL framework">
+                </div>
+            </details>
 
+            <details class="topic">
+                <summary>
+                    <span class="t-num">03</span>
+                    <span class="t-title">Runtime Scheduler &amp; Optimization for SNN Accelerators</span>
+                    <span class="t-year">2024</span>
+                    <span class="t-toggle">+</span>
+                </summary>
+                <div class="topic-body">
+                    <div class="topic-text">
+                        <p>SNN software tooling is still early: existing simulators support only narrow environments and lack hardware-aware optimization. We built a runtime hardware code generation and optimization framework for deep SNNs on top of the TVM compiler stack — supporting SNNTorch and SpikingJelly, and automatically generating optimized code via pruning, quantization, and scheduling tailored to the target hardware.</p>
+                    </div>
+                    <img src="images/2024_research3.jpg" alt="SNN runtime scheduler">
+                </div>
+            </details>
+
+            <details class="topic">
+                <summary>
+                    <span class="t-num">04</span>
+                    <span class="t-title">High-Speed Energy-Efficient Dynamic Pruning</span>
+                    <span class="t-year">2024</span>
+                    <span class="t-toggle">+</span>
+                </summary>
+                <div class="topic-body">
+                    <div class="topic-text">
+                        <p>Convolutional SNNs consume far less power than CNNs but pay for it in accuracy. Our fix: classify inputs by pattern, compute multiple convolutional layers in parallel per class, and prune processing elements to fit each input. The result is more accurate <em>and</em> trainable on lightweight hardware.</p>
+                        <h4>Related publications</h4>
+                        <ul class="topic-pubs">
+                            <li><a href="https://koreascience.kr/article/JAKO202404861562545.pdf" target="_blank">Pattern-based Dynamic Pruning — IEMEK 2024</a></li>
+                        </ul>
+                    </div>
+                    <img src="images/2024_research1.jpg" alt="Dynamic pruning">
+                </div>
+            </details>
+
+            <details class="topic">
+                <summary>
+                    <span class="t-num">05</span>
+                    <span class="t-title">Micro-SIMD On-Chip Implementation</span>
+                    <span class="t-year">2023</span>
+                    <span class="t-toggle">+</span>
+                </summary>
+                <div class="topic-body">
+                    <div class="topic-text">
+                        <p>The Arm Cortex-M0 has no SIMD — so we gave it one. Standard SIMD needs 128-bit buses and heavy vectorization preprocessing; our micro-SIMD executes custom 16-bit instructions directly on the M0 pipeline. For the loop-heavy MAC workloads of CNN training, this tiny parallelism goes a very long way on a very small core.</p>
+                    </div>
+                    <img src="images/2023_research.jpg" alt="Micro-SIMD">
+                </div>
+            </details>
+        </section>
+
+        <!-- ================= BRANCH 1 · MEMORY & CIM ================= -->
+        <section class="branch b1 animate-content">
+            <div class="branch-head">
+                <span class="branch-num">BRANCH_1</span>
+                <h2 class="branch-name">Memory &amp; CIM</h2>
+                <span class="branch-for">→ FOCUS-MEMORY</span>
+                <span class="branch-spine">└─ the same spine, at the memory wall</span>
             </div>
-        </div>
+
+            <details class="topic" open>
+                <summary>
+                    <span class="t-num">06</span>
+                    <span class="t-title">Dynamic Adaptive On-Chip Memory Optimization</span>
+                    <span class="t-year">2025</span>
+                    <span class="t-toggle">+</span>
+                </summary>
+                <div class="topic-body">
+                    <div class="topic-text">
+                        <p>The headline contribution of S³A-NPU isn't the datapath — it's the <strong>memory subsystem</strong>. On-chip buffer allocation adapts at runtime to the workload phase of spiking SSL, cutting off-chip traffic and keeping the accelerator fed. The memory wall is where low-power AI is won or lost, and this is my main attack on it.</p>
+                        <h4>Related publications</h4>
+                        <ul class="topic-pubs">
+                            <li><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=11010182" target="_blank">S³A-NPU (Dynamic Adaptive Memory Optimization) — IEEE TVLSI, 2025</a></li>
+                        </ul>
+                    </div>
+                    <img src="images/Project1.png" alt="On-chip memory optimization">
+                </div>
+            </details>
+
+            <details class="topic">
+                <summary>
+                    <span class="t-num">07</span>
+                    <span class="t-title">SNN-based Compute-In-Memory (RRAM)</span>
+                    <span class="t-year">2023 · MPW</span>
+                    <span class="t-toggle">+</span>
+                </summary>
+                <div class="topic-body">
+                    <div class="topic-text">
+                        <p>If moving data costs the most energy, do the compute inside the memory. We designed an <strong>SNN-based compute-in-memory</strong> architecture with RRAM synaptic circuits — PSpice-modeled neurons, fabricated synapse arrays on an MPW shuttle. Neuromorphic computing where storage and processing are the same device.</p>
+                        <h4>See also</h4>
+                        <ul class="topic-pubs">
+                            <li><a href="projects.html">SNN CIM tape-out — interactive demo in Projects</a></li>
+                        </ul>
+                    </div>
+                    <img src="images/Project4.png" alt="SNN compute-in-memory">
+                </div>
+            </details>
+        </section>
+
+        <!-- ================= BRANCH 2 · AUTONOMOUS DRIVING ================= -->
+        <section class="branch b2 animate-content">
+            <div class="branch-head">
+                <span class="branch-num">BRANCH_2</span>
+                <h2 class="branch-name">Autonomous Driving</h2>
+                <span class="branch-for">→ FOCUS-AUTO</span>
+                <span class="branch-spine">└─ the same spine, on wheels</span>
+            </div>
+
+            <details class="topic" open>
+                <summary>
+                    <span class="t-num">08</span>
+                    <span class="t-title">Thermal-RGB Data Fusion for Safe Automotive Driving</span>
+                    <span class="t-year">2024</span>
+                    <span class="t-toggle">+</span>
+                </summary>
+                <div class="topic-body">
+                    <div class="topic-text">
+                        <p>Pedestrian accidents made up 35.5% of Korean traffic accidents over two years — and LiDAR alone can't prevent them. We fuse selective thermal data with RGB object detection: thermal is integrated only where obstacle density is high, catching pedestrians outside the visible range. Accuracy jumped from 40.43% to <strong>83.91%</strong>, running at 2.7 FPS / 175.95 MB on PC and 0.75 FPS / 140.08 MB on a Jetson Nano.</p>
+                        <h4>Related publications</h4>
+                        <ul class="topic-pubs">
+                            <li><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10503400" target="_blank">Thermal-RGB Human Detection — PerCom 2024 (PerVehicle)</a></li>
+                        </ul>
+                    </div>
+                    <img src="images/2024_research2.jpg" alt="Thermal RGB fusion">
+                </div>
+            </details>
+
+            <details class="topic">
+                <summary>
+                    <span class="t-num">09</span>
+                    <span class="t-title">Lightweight Object Detection &amp; Lane Recognition</span>
+                    <span class="t-year">2021 — 2024</span>
+                    <span class="t-toggle">+</span>
+                </summary>
+                <div class="topic-body">
+                    <div class="topic-text">
+                        <p>Perception has to run on the car, not the cloud. We parallelized Canny edge stages for lane recognition, masked semantic-difference regions to skip unchanged pixels, and built low-power lane detection units small enough for automotive microcontrollers — plus a GTA5 digital twin to validate self-driving algorithms safely before the road.</p>
+                        <h4>Related publications</h4>
+                        <ul class="topic-pubs">
+                            <li><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10378646" target="_blank">Low-Power Lane Detection Unit — IEEE Access 2024</a></li>
+                            <li><a href="https://www.mdpi.com/1424-8220/22/22/8890/pdf?version=1668678009" target="_blank">Masking Semantic Segmentation Region — Sensors 2022</a></li>
+                            <li><a href="https://www.mdpi.com/2079-9292/10/17/2102/pdf?version=1630464862" target="_blank">Digital Twin Autonomous Vehicle — Electronics 2021</a></li>
+                        </ul>
+                    </div>
+                    <img src="images/2022_research.jpg" alt="Lightweight object detection">
+                </div>
+            </details>
+        </section>
     </main>
-    
-    <footer>
-        <div class="copyright">
-            <p>&copy; 2025 Heuijee Yun</p>
-        </div>
-        <div class="contact-info">
-            <div class="contact-item">
-                <span class="contact-label">Phone</span>
-                <span class="contact-value">053-950-5548</span>
-            </div>
-            <div class="contact-item">
-                <span class="contact-label">email</span>
-                <span class="contact-value">heuijee@knu.ac.kr</span>
-            </div>
-        </div>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Heuijee Yun<span class="dot">·</span>Built with silicon &amp; coffee</p>
+        <p><a href="mailto:heuijee@knu.ac.kr">heuijee@knu.ac.kr</a><span class="dot">·</span>+82 53-950-5548</p>
     </footer>
 
     <script src="js/main.js"></script>
 </body>
-</html> 
+</html>

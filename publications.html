@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publications - Heuijee Yun</title>
+    <title>Publications — Heuijee Yun</title>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -17,170 +17,207 @@
   gtag('config', 'G-XFNRCNR44C');
 </script>
 <body class="publications-page">
-    <header>
-        <div class="site-name"><a href="index.html">Heuijee Yun</a></div>
+    <header class="top-nav">
+        <a class="brand" href="index.html">heuijee<span class="brand-dot">.</span>yun</a>
         <nav class="main-menu">
             <ul>
                 <li><a href="about.html">About</a></li>
                 <li><a href="research.html">Research</a></li>
                 <li><a href="publications.html" class="active">Publications</a></li>
                 <li><a href="projects.html">Projects</a></li>
+                <li><a href="side-projects.html">Side Projects</a></li>
                 <li><a href="blogs.html">Blogs</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li class="nav-sep" aria-hidden="true">/</li>
+                <li><a href="focus-core.html" class="nav-trk trk-c">Core</a></li>
+                <li><a href="focus-memory.html" class="nav-trk trk-m">Memory</a></li>
+                <li><a href="focus-auto.html" class="nav-trk trk-a">Autonomy</a></li>
             </ul>
         </nav>
-        <div class="header-line"></div>
+        <a href="cv.html" class="cv-button"><i class="fas fa-file-lines"></i> CV</a>
     </header>
 
-    <div class="download-cv">
-        <a href="cv.pdf" class="cv-button">Download CV</a>
-    </div>
-    
-    <main class="about-main">
-        <div class="sidebar">
-            <div class="profile-photo animate-profile">
-                <img src="images/profile.jpg" alt="Heuijee Yun" class="profile-image">
-            </div>
-            <h2 class="sidebar-name animate-profile">Heuijee Yun</h2>
-            <p class="sidebar-title animate-profile">Ph.D Student</p>
-            <div class="social-icons animate-profile">
-                <a href="https://github.com/heuijee" class="social-icon"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/heuijee-yun-05b7b7315/" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://scholar.google.com/citations?user=i3x5dVoAAAAJ&hl=en" class="social-icon"><img src="icons/google-scholar.svg" alt="Google Scholar"></i></a>
-                <a href="https://www.researchgate.net/profile/Yun_Heuijee" class="social-icon"><img src="icons/researchgate.svg" alt="Google Scholar"></i></a>
-                <a href="https://orcid.org/my-orcid?orcid=0009-0001-3870-9002" class="social-icon"><img src="icons/orcid.svg" alt="Google Scholar"></i></a>
-            </div>
+    <main class="page-main">
+        <span class="page-kicker animate-title">16 PAPERS · GROUPED BY BRANCH · 2021 — 2025</span>
+        <h1 class="page-title animate-title">Publications</h1>
+        <p class="page-lede animate-content">Same three branches as everything else — <strong>core &amp; accelerator</strong>, <strong>memory &amp; CIM</strong>, and <strong>autonomous driving</strong> — all growing from one root.</p>
+
+        <div class="pub-count animate-content">
+            <div><span class="n">6</span><span class="l">Journal articles</span></div>
+            <div><span class="n">10</span><span class="l">Conference papers</span></div>
+            <div><span class="n">15</span><span class="l">First-author</span></div>
         </div>
-        
-        <div class="content">
-            <h1 class="page-title animate-title">Publications</h1>
-            <div class="publications-content animate-content">
 
-                <div class="publication-item">
-                    <p class="publication-title">• S³A-NPU: A High-Performance Hardware Accelerator for Spiking Self-Supervised Learning with Dynamic Adaptive Memory Optimization </p>
-                    <p class="publication-authors">• Heuijee Yun and Daejin Park,  IEEE Transactions on Very Large Scale Integration (VLSI) Systems, 12:4339-4353, 2025.</p>
-                    <div class="publication-links">
-                        <p>• <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=11010182" class="pub-link">PDF</a> <a href="10.1109/TVLSI.2025.3566949" class="pub-link">DOI</a> <a href="https://scholar.googleusercontent.com/scholar.bib?q=info:_IqDx7yM8MYJ:scholar.google.com/&output=citation&scisdr=CgLeE65EEMru7fHTSHA:AAZF9b8AAAAAaE_VUHCOlpyau4sIccL4EhJGYKQ&scisig=AAZF9b8AAAAAaE_VUM0nrt3K1as9Ck6_rJuHFA8&scisf=4&ct=citation&cd=-1&hl=ko" class="pub-link">BibTeX</a></p>
+        <div class="animate-content">
+
+            <!-- ================= BRANCH 0 · CORE & ACCELERATOR ================= -->
+            <section class="branch b0">
+                <div class="branch-head">
+                    <span class="branch-num">BRANCH_0</span>
+                    <h2 class="branch-name">Core &amp; Accelerator</h2>
+                    <span class="branch-for">5 PAPERS</span>
+                    <span class="branch-spine">└─ SNN accelerators, frameworks, pruning</span>
+                </div>
+
+                <article class="pub">
+                    <div class="pub-top"><span class="pub-badge journal">IEEE TVLSI</span><span class="pub-y">2025</span></div>
+                    <h3 class="pub-title">S³A-NPU: A High-Performance Hardware Accelerator for Spiking Self-Supervised Learning with Dynamic Adaptive Memory Optimization</h3>
+                    <p class="pub-meta"><em>Heuijee Yun</em>, Daejin Park — IEEE Transactions on Very Large Scale Integration (VLSI) Systems</p>
+                    <div class="pub-links">
+                        <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=11010182" target="_blank">PDF</a>
+                        <a href="https://doi.org/10.1109/TVLSI.2025.3566949" target="_blank">DOI</a>
+                        <a href="https://scholar.googleusercontent.com/scholar.bib?q=info:_IqDx7yM8MYJ:scholar.google.com/&output=citation&scisdr=CgLeE65EEMru7fHTSHA:AAZF9b8AAAAAaE_VUHCOlpyau4sIccL4EhJGYKQ&scisig=AAZF9b8AAAAAaE_VUM0nrt3K1as9Ck6_rJuHFA8&scisf=4&ct=citation&cd=-1&hl=ko" target="_blank">BIB</a>
                     </div>
-                </div>
+                </article>
 
+                <article class="pub">
+                    <div class="pub-top"><span class="pub-badge conf">DAC</span><span class="pub-y">2025</span></div>
+                    <h3 class="pub-title">Opti-SpiSSL: A Highly Reconfigurable Hardware Generation Framework for Spiking Self-Supervised Learning on Heterogeneous SoC</h3>
+                    <p class="pub-meta"><em>Heuijee Yun</em>, Daejin Park — IEEE Design Automation Conference</p>
+                </article>
 
-                <div class="publication-item">
-                    <p class="publication-title">• High-Speed Energy-Efficient Model based Dynamic Pruning using Pattern-based Alignment for Convolutional Spiking Neural Network Hardware Accelerator </p>
-                    <p class="publication-authors">• Heuijee Yun and Daejin Park, IEMEK Journal of Embedded Systems and Applications, 12:4339-4353, 2024.</p>
-                    <div class="publication-links">
-                        <p>• <a href="https://koreascience.kr/article/JAKO202404861562545.pdf" class="pub-link">PDF</a> <a href="https://doi.org/10.14372/IEMEK.2024.19.6.267" class="pub-link">DOI</a> <a href="https://scholar.googleusercontent.com/scholar.bib?q=info:VTvpi_PJxCoJ:scholar.google.com/&output=citation&scisdr=ClErj_dEEMru4nEkJL4:AFWwaeYAAAAAZ88iPL4d8Ipf_VdG3M6HIWWnjKg&scisig=AFWwaeYAAAAAZ88iPLojf2nGncWrYl_VcvVejvM&scisf=4&ct=citation&cd=-1&hl=ko" class="pub-link">BibTeX</a></p>
+                <article class="pub">
+                    <div class="pub-top"><span class="pub-badge conf">COOLCHIPS</span><span class="pub-y">2025</span></div>
+                    <h3 class="pub-title">A Power-Efficient Reconfigurable Hybrid CNN-SNN Accelerator for High Performance AI Applications</h3>
+                    <p class="pub-meta"><em>Heuijee Yun</em>, Daejin Park — IEEE Symposium on Low-Power and High-Speed Chips and Systems</p>
+                </article>
+
+                <article class="pub">
+                    <div class="pub-top"><span class="pub-badge journal">IEMEK</span><span class="pub-y">2024</span></div>
+                    <h3 class="pub-title">High-Speed Energy-Efficient Model based Dynamic Pruning using Pattern-based Alignment for Convolutional Spiking Neural Network Hardware Accelerator</h3>
+                    <p class="pub-meta"><em>Heuijee Yun</em>, Daejin Park — IEMEK Journal of Embedded Systems and Applications</p>
+                    <div class="pub-links">
+                        <a href="https://koreascience.kr/article/JAKO202404861562545.pdf" target="_blank">PDF</a>
+                        <a href="https://doi.org/10.14372/IEMEK.2024.19.6.267" target="_blank">DOI</a>
                     </div>
+                </article>
+
+                <article class="pub">
+                    <div class="pub-top"><span class="pub-badge conf">MWSCAS</span><span class="pub-y">2023</span></div>
+                    <h3 class="pub-title">Dynamic MAC Unit Pruning Techniques in Runtime RTL Simulation for Area-Accuracy Efficient Implementation of Neural Network Accelerator</h3>
+                    <p class="pub-meta">Jisu Kwon, <em>Heuijee Yun</em>, Daejin Park — IEEE Midwest Symposium on Circuits and Systems</p>
+                </article>
+            </section>
+
+            <!-- ================= BRANCH 1 · MEMORY & CIM ================= -->
+            <section class="branch b1">
+                <div class="branch-head">
+                    <span class="branch-num">BRANCH_1</span>
+                    <h2 class="branch-name">Memory &amp; CIM</h2>
+                    <span class="branch-for">2 PAPERS · + CIM TAPE-OUT</span>
+                    <span class="branch-spine">└─ memory-efficient datapaths &amp; compute-in-memory</span>
                 </div>
 
-                <div class="publication-item">
-                    <p class="publication-title">•  Low-Power Lane Detection Unit with Sliding-based Parallel Segment Detection Accelerator for Lightweighted Automotive Microcontrollers </p>
-                    <p class="publication-authors">• Heuijee Yun and Daejin Park, IEEE Access, 12:4339-4353, 2024.</p>
-                    <div class="publication-links">
-                        <p>• <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10378646" class="pub-link">PDF</a> <a href="https://doi.org/10.1109/ACCESS.2023.3348478" class="pub-link">DOI</a> <a href="https://scholar.googleusercontent.com/scholar.bib?q=info:0gglgUZUk8oJ:scholar.google.com/&output=citation&scisdr=ClErj_dEEMru4nEn4N0:AFWwaeYAAAAAZ88h-N2qxzvQssOgr_z4zEO4txY&scisig=AFWwaeYAAAAAZ88h-C9V8QHf8aEJEwFBcaMdgOo&scisf=4&ct=citation&cd=-1&hl=ko" class="pub-link">BibTeX</a></p>
+                <article class="pub">
+                    <div class="pub-top"><span class="pub-badge journal">IEEE ACCESS</span><span class="pub-y">2024</span></div>
+                    <h3 class="pub-title">Low-Power Lane Detection Unit with Sliding-based Parallel Segment Detection Accelerator for Lightweighted Automotive Microcontrollers</h3>
+                    <p class="pub-meta"><em>Heuijee Yun</em>, Daejin Park — IEEE Access, 12:4339–4353 <span style="color:var(--gray)">· sliding buffer minimization</span></p>
+                    <div class="pub-links">
+                        <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10378646" target="_blank">PDF</a>
+                        <a href="https://doi.org/10.1109/ACCESS.2023.3348478" target="_blank">DOI</a>
                     </div>
+                </article>
+
+                <article class="pub">
+                    <div class="pub-top"><span class="pub-badge conf">ICCE</span><span class="pub-y">2023</span></div>
+                    <h3 class="pub-title">FPGA Realization of Lane Detection Unit using Sliding-based Parallel Segment Detection for Buffer Memory Reduction</h3>
+                    <p class="pub-meta"><em>Heuijee Yun</em>, Daejin Park — IEEE Int'l Conference on Consumer Electronics</p>
+                </article>
+
+                <article class="pub">
+                    <div class="pub-top"><span class="pub-badge conf">MPW TAPE-OUT</span><span class="pub-y">2023</span></div>
+                    <h3 class="pub-title">SNN-based Compute-In-Memory with RRAM Synaptic Circuits</h3>
+                    <p class="pub-meta"><em>Heuijee Yun</em>, Daejin Park — neuromorphic CIM · fabricated on MPW shuttle · <a href="projects.html" style="border-bottom:2px solid var(--line);font-weight:600;">interactive demo in Projects →</a></p>
+                </article>
+            </section>
+
+            <!-- ================= BRANCH 2 · AUTONOMOUS DRIVING ================= -->
+            <section class="branch b2">
+                <div class="branch-head">
+                    <span class="branch-num">BRANCH_2</span>
+                    <h2 class="branch-name">Autonomous Driving &amp; Vision</h2>
+                    <span class="branch-for">9 PAPERS</span>
+                    <span class="branch-spine">└─ sensor fusion, lane detection, embedded vision</span>
                 </div>
 
-                <div class="publication-item">
-                    <p class="publication-title">• Efficient Object Detection based on Masking Semantic Segmentation Region for Lightweight Embedded Processors </p>
-                    <p class="publication-authors">• Heuijee Yun and Daejin Park, Sensors, 22(22):8890-8911, 2022.</p>
-                    <div class="publication-links">
-                        <p>• <a href="https://www.mdpi.com/1424-8220/22/22/8890/pdf?version=1668678009" class="pub-link">PDF</a> <a href="https://doi.org/10.3390/s22228890" class="pub-link">DOI</a> <a href="https://scholar.googleusercontent.com/scholar.bib?q=info:Y784520XPKEJ:scholar.google.com/&output=citation&scisdr=ClErj_dEEMru4nEmA4c:AFWwaeYAAAAAZ88gG4copcnASR5GYXr81YyvlqA&scisig=AFWwaeYAAAAAZ88gG5z-T4duHB1xpz9flStGIl0&scisf=4&ct=citation&cd=-1&hl=ko" class="pub-link">BibTeX</a></p>
+                <article class="pub">
+                    <div class="pub-top"><span class="pub-badge conf">PERCOM</span><span class="pub-y">2024</span></div>
+                    <h3 class="pub-title">Deep Learning based Human Detection using Thermal-RGB Data Fusion for Safe Automotive Guided-Driving</h3>
+                    <p class="pub-meta"><em>Heuijee Yun</em>, Daejin Park — IEEE PerCom (PerVehicle Workshop)</p>
+                    <div class="pub-links">
+                        <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10503400" target="_blank">PDF</a>
                     </div>
-                </div>
+                </article>
 
-                <div class="publication-item">
-                    <p class="publication-title">• Efficient Object Recognition by Masking Semantic Pixel Difference Region of Vision Snapshot for Lightweight Embedded Systems </p>
-                    <p class="publication-authors">• Heuijee Yun and Daejin Park, Journal of the Korea Institute of Information and Communication Engineering, 26(6):813-826, 2022.</p>
-                    <div class="publication-links">
-                        <p>• <a href="https://koreascience.kr/article/JAKO202218754069076.pdf" class="pub-link">PDF</a> <a href="https://doi.org/10.6109/jkiice.2022.26.6.813" class="pub-link">DOI</a> <a href="https://scholar.googleusercontent.com/scholar.bib?q=info:zBZRgIRLn5sJ:scholar.google.com/&output=citation&scisdr=ClErj_dEEMru4nEZsZ0:AFWwaeYAAAAAZ88fqZ2gZa-ia03Qf3XeQ_SEK24&scisig=AFWwaeYAAAAAZ88fqZF8u4XShsVuolJEAH0xpmM&scisf=4&ct=citation&cd=-1&hl=ko" class="pub-link">BibTeX</a></p>
+                <article class="pub">
+                    <div class="pub-top"><span class="pub-badge conf">ICEIC</span><span class="pub-y">2024</span></div>
+                    <h3 class="pub-title">Parallel Processing of 3D Object Recognition by Fusion of 2D Images and LiDAR for Autonomous Driving</h3>
+                    <p class="pub-meta"><em>Heuijee Yun</em>, Daejin Park — Int'l Conference on Electronics, Information, and Communication</p>
+                </article>
+
+                <article class="pub">
+                    <div class="pub-top"><span class="pub-badge conf">COOLCHIPS</span><span class="pub-y">2023</span></div>
+                    <h3 class="pub-title">Low-Power Parallel Lane Detection Unit for Lightweight Automotive Processors</h3>
+                    <p class="pub-meta"><em>Heuijee Yun</em>, Daejin Park — IEEE Symposium on Low-Power and High-Speed Chips and Systems</p>
+                </article>
+
+                <article class="pub">
+                    <div class="pub-top"><span class="pub-badge journal">SENSORS</span><span class="pub-y">2022</span></div>
+                    <h3 class="pub-title">Efficient Object Detection based on Masking Semantic Segmentation Region for Lightweight Embedded Processors</h3>
+                    <p class="pub-meta"><em>Heuijee Yun</em>, Daejin Park — Sensors, 22(22):8890–8911</p>
+                    <div class="pub-links">
+                        <a href="https://www.mdpi.com/1424-8220/22/22/8890/pdf?version=1668678009" target="_blank">PDF</a>
+                        <a href="https://doi.org/10.3390/s22228890" target="_blank">DOI</a>
                     </div>
-                </div>
+                </article>
 
-                <div class="publication-item">
-                    <p class="publication-title">• Virtualization of Self-Driving Algorithms by Interoperating Embedded Controllers on Game Engine for Digital Twining Autonomous Vehicle</p>
-                    <p class="publication-authors">• Heuijee Yun and Daejin Park, Electronics, 2021.</p>
-                    <div class="publication-links">
-                        <p>• <a href="https://www.mdpi.com/2079-9292/10/17/2102/pdf?version=1630464862" class="pub-link">PDF</a> <a href="https://doi.org/10.3390/electronics10172102" class="pub-link">DOI</a> <a href="https://scholar.googleusercontent.com/scholar.bib?q=info:oPVi8urW_jwJ:scholar.google.com/&output=citation&scisdr=ClErj_dEEMru4nEYhao:AFWwaeYAAAAAZ88enaryLCgFxBvWqEfv27EdxdM&scisig=AFWwaeYAAAAAZ88enfoUJ2Wkhkwth0euV8zDCss&scisf=4&ct=citation&cd=-1&hl=ko" class="pub-link">BibTeX</a></p>
+                <article class="pub">
+                    <div class="pub-top"><span class="pub-badge journal">JKIICE</span><span class="pub-y">2022</span></div>
+                    <h3 class="pub-title">Efficient Object Recognition by Masking Semantic Pixel Difference Region of Vision Snapshot for Lightweight Embedded Systems</h3>
+                    <p class="pub-meta"><em>Heuijee Yun</em>, Daejin Park — J. of the Korea Institute of Information and Communication Engineering, 26(6):813–826</p>
+                    <div class="pub-links">
+                        <a href="https://koreascience.kr/article/JAKO202218754069076.pdf" target="_blank">PDF</a>
+                        <a href="https://doi.org/10.6109/jkiice.2022.26.6.813" target="_blank">DOI</a>
                     </div>
-                </div>
-                
+                </article>
 
-            </div>
+                <article class="pub">
+                    <div class="pub-top"><span class="pub-badge conf">ICAIIC</span><span class="pub-y">2022</span></div>
+                    <h3 class="pub-title">Mitigating Overflow of Object Detection Tasks Based on Masking Semantic Difference Region of Vision Snapshot for High Efficiency</h3>
+                    <p class="pub-meta"><em>Heuijee Yun</em>, Daejin Park — IEEE Int'l Conference on AI in Information and Communication</p>
+                </article>
 
-            <h1 class="page-title animate-title">Conferences</h1>
-            <div class="publications-content animate-content">
+                <article class="pub">
+                    <div class="pub-top"><span class="pub-badge journal">ELECTRONICS</span><span class="pub-y">2021</span></div>
+                    <h3 class="pub-title">Virtualization of Self-Driving Algorithms by Interoperating Embedded Controllers on Game Engine for Digital Twining Autonomous Vehicle</h3>
+                    <p class="pub-meta"><em>Heuijee Yun</em>, Daejin Park — Electronics, 10(17):2102</p>
+                    <div class="pub-links">
+                        <a href="https://www.mdpi.com/2079-9292/10/17/2102/pdf?version=1630464862" target="_blank">PDF</a>
+                        <a href="https://doi.org/10.3390/electronics10172102" target="_blank">DOI</a>
+                    </div>
+                </article>
 
-                <div class="publication-item">
-                    <p class="publication-title">• Opti-SpiSSL: A Highly Reconfigurable Hardware Generation Framework for Spiking Self-Supervised Learning on Heterogeneous SoC</p>
-                    <p class="publication-authors">• Heuijee Yun and Daejin Park, IEEE Design Automation Conference (DAC 2025), 2025.</p>
-                </div>
+                <article class="pub">
+                    <div class="pub-top"><span class="pub-badge conf">ISPACS</span><span class="pub-y">2021</span></div>
+                    <h3 class="pub-title">Yolo-based Realtime Object Detection using Interleaved Redirection of Time-Multiplexed Streamline of Vision Snapshot for Lightweighted Embedded Processors</h3>
+                    <p class="pub-meta"><em>Heuijee Yun</em>, Daejin Park — Int'l Symposium on Intelligent Signal Processing and Communication Systems</p>
+                </article>
 
-                <div class="publication-item">
-                    <p class="publication-title">• A Power-Efficient Reconfigurable Hybrid CNN-SNN Accelerator for High Performance AI Applications</p>
-                    <p class="publication-authors">• Heuijee Yun and Daejin Park, IEEE Symposium on Low-Power and High-Speed Chips and Systems (COOLChips), 2025.</p>
-                </div>
+                <article class="pub">
+                    <div class="pub-top"><span class="pub-badge conf">ICEIC</span><span class="pub-y">2021</span></div>
+                    <h3 class="pub-title">Simulation of Self-driving System by implementing Digital Twin with GTA5</h3>
+                    <p class="pub-meta"><em>Heuijee Yun</em>, Daejin Park — Int'l Conference on Electronics, Information, and Communication</p>
+                </article>
+            </section>
 
-                <div class="publication-item">
-                    <p class="publication-title">• Deep Learning based Human Detection using Thermal-RGB Data Fusion for Safe Automotive Guided-Driving</p>
-                    <p class="publication-authors">• Heuijee Yun and Daejin Park, IEEE International Conference on Pervasive Computing and Communication (Percom 2024 - Pervehicle), 2024.</p>
-                </div>
-
-                <div class="publication-item">
-                    <p class="publication-title">• Parallel Processing of 3D Object Recognition by Fusion of 2D Images and LiDAR for Autonomous Driving</p>
-                    <p class="publication-authors">• Heuijee Yun and Daejin Park, International Conference on Electronics, Information, and Communication (ICEIC), 2024.</p>
-                </div>
-
-                <div class="publication-item">
-                    <p class="publication-title">• Dynamic MAC Unit Pruning Techniques in Runtime RTL Simulation for Area-Accuracy Efficient Implementation of Neural Network Accelerator</p>
-                    <p class="publication-authors">• Jisu Kwon, Heuijee Yun, and Daejin Park, IEEE MWSCAS 2023.</p>
-                </div>
-
-                <div class="publication-item">
-                    <p class="publication-title">• Low-Power Parallel Lane Detection Unit for Lightweight Automotive Processors</p>
-                    <p class="publication-authors">• Heuijee Yun and Daejin Park, IEEE COOLChips 2023.</p>
-                </div>
-
-                <div class="publication-item">
-                    <p class="publication-title">• FPGA Realization of Lane Detection Unit using Sliding-based Parallel Segment Detection for Buffer Memory Reduction</p>
-                    <p class="publication-authors">• Heuijee Yun and Daejin Park, IEEE ICCE 2023.</p>
-                </div>
-
-                <div class="publication-item">
-                    <p class="publication-title">• Mitigating Overflow of Object Detection Tasks Based on Masking Semantic Difference Region of Vision Snapshot for High Efficiency</p>
-                    <p class="publication-authors">• Heuijee Yun and Daejin Park, IEEE International Conference on Artificial Intelligence in Information and Communication (ICAIIC), 2022.</p>
-                </div>
-
-                <div class="publication-item">
-                    <p class="publication-title">• Yolo-based Realtime Object Detection using Interleaved Redirection of Time-Multiplxed Streamline of Vision Snapshot for Lightweighted Embedded Processors</p>
-                    <p class="publication-authors">• Heuijee Yun and Daejin Park, International Symposium on Intelligent Signal Processing and Communication Systems (ISPACS), 2021.</p>
-                </div>
-
-                <div class="publication-item">
-                    <p class="publication-title">• Simulation of Self-driving System by implementing Digital Twin with GTA5</p>
-                    <p class="publication-authors">• Heuijee Yun and Daejin Park, IEEE ICEIC 2021.</p>
-                </div>
-
-            </div>
         </div>
     </main>
-    
-    <footer>
-        <div class="copyright">
-            <p>&copy; 2025 Heuijee Yun</p>
-        </div>
-        <div class="contact-info">
-            <div class="contact-item">
-                <span class="contact-label">Phone</span>
-                <span class="contact-value">053-950-5548</span>
-            </div>
-            <div class="contact-item">
-                <span class="contact-label">Email</span>
-                <span class="contact-value">heuijee@knu.ac.kr</span>
-            </div>
-        </div>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Heuijee Yun<span class="dot">·</span>Built with silicon &amp; coffee</p>
+        <p><a href="mailto:heuijee@knu.ac.kr">heuijee@knu.ac.kr</a><span class="dot">·</span>+82 53-950-5548</p>
     </footer>
 
     <script src="js/main.js"></script>
 </body>
-</html> 
+</html>

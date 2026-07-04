@@ -3,9 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Heuijee Yun</title>
+    <title>CV — Heuijee Yun</title>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .cv-main { max-width: 900px; margin: 0 auto; padding: clamp(32px, 6vh, 64px) var(--pad-x) 80px; position: relative; }
+        .cv-sheet { background: var(--white); border: 2px solid var(--ink); box-shadow: var(--shadow); padding: clamp(28px, 5vw, 56px); position: relative; z-index: 1; }
+        .cv-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; border-bottom: 3px solid var(--ink); padding-bottom: 24px; margin-bottom: 30px; }
+        .cv-name { font-size: clamp(36px, 5vw, 56px); font-weight: 900; text-transform: uppercase; letter-spacing: -0.03em; line-height: 0.95; }
+        .cv-role { font-family: var(--font-mono); font-size: 13px; font-weight: 700; color: var(--blue); margin-top: 10px; }
+        .cv-contact { text-align: right; font-family: var(--font-mono); font-size: 12px; color: var(--gray); line-height: 2; white-space: nowrap; }
+        .cv-contact a { color: var(--ink); border-bottom: 1.5px solid var(--line); }
+        .cv-section { margin-bottom: 30px; }
+        .cv-h {
+            font-family: var(--font-mono); font-size: 12px; font-weight: 700; letter-spacing: 0.24em;
+            text-transform: uppercase; display: flex; align-items: center; gap: 12px; margin-bottom: 14px;
+        }
+        .cv-h::before { content: ''; width: 12px; height: 12px; flex-shrink: 0; }
+        .cv-section:nth-of-type(1) .cv-h::before { background: var(--blue); }
+        .cv-section:nth-of-type(2) .cv-h::before { background: var(--orange); }
+        .cv-section:nth-of-type(3) .cv-h::before { background: var(--yellow); }
+        .cv-section:nth-of-type(4) .cv-h::before { background: var(--blue); }
+        .cv-section:nth-of-type(5) .cv-h::before { background: var(--orange); }
+        .cv-section:nth-of-type(6) .cv-h::before { background: var(--yellow); }
+        .cv-h::after { content: ''; flex: 1; height: 2px; background: var(--ink); }
+        .cv-row { display: grid; grid-template-columns: 150px 1fr; gap: 16px; padding: 10px 0; }
+        .cv-row + .cv-row { border-top: 1px solid var(--line); }
+        .cv-when { font-family: var(--font-mono); font-size: 12px; font-weight: 700; color: var(--gray); padding-top: 2px; }
+        .cv-what h3 { font-size: 15.5px; font-weight: 700; }
+        .cv-what p { font-size: 13.5px; color: var(--gray); margin-top: 2px; }
+        .cv-pub { padding: 8px 0; font-size: 13.5px; }
+        .cv-pub + .cv-pub { border-top: 1px solid var(--line); }
+        .cv-pub b { display: block; font-size: 14px; color: var(--ink); line-height: 1.45; }
+        .cv-pub span { color: var(--gray); }
+        .cv-pub .vtag { font-family: var(--font-mono); font-size: 10px; font-weight: 700; background: var(--ink); color: var(--white); padding: 2px 8px; margin-right: 8px; }
+        .cv-skills { display: flex; flex-wrap: wrap; gap: 8px; }
+        .cv-skills span {
+            font-family: var(--font-mono); font-size: 11.5px; font-weight: 600;
+            border: 1.5px solid var(--ink); padding: 4px 12px; background: var(--paper);
+        }
+        .cv-actions { display: flex; gap: 14px; margin-bottom: 28px; }
+        .cv-main .shape-half { top: 10px; right: -14px; background: var(--yellow); }
+        .cv-main .shape-dots { bottom: 60px; left: -10px; }
+        @media (max-width: 700px) {
+            .cv-head { flex-direction: column; }
+            .cv-contact { text-align: left; white-space: normal; }
+            .cv-row { grid-template-columns: 1fr; gap: 2px; }
+        }
+        @media print {
+            header.top-nav, .site-footer, .cv-actions, .shape { display: none !important; }
+            body { padding-top: 0; background: #fff !important; color: #000 !important; }
+            body::before, body::after { display: none !important; }
+            .cv-main { padding: 0; max-width: none; }
+            .cv-sheet { border: none; box-shadow: none; padding: 24px; background: #fff !important; }
+            .cv-name, .cv-what h3, .cv-pub b, .cv-h, .branch-name { color: #000 !important; }
+            .cv-when, .cv-what p, .cv-contact, .cv-contact a, .cv-pub span, .cv-role { color: #333 !important; }
+            .cv-contact a, .cv-row + .cv-row, .cv-pub + .cv-pub, .cv-h::after { border-color: #ccc !important; }
+            .cv-skills span { background: #fff !important; border-color: #000 !important; color: #000 !important; }
+            .cv-h::before { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            .pub, .cv-pub { break-inside: avoid; }
+        }
+    </style>
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XFNRCNR44C"></script>
@@ -16,114 +74,141 @@
 
   gtag('config', 'G-XFNRCNR44C');
 </script>
-<body>
-    <header class="site-header">
-        <div class="container">
-            <h1 class="site-title"><a href="index.html">Heuijee Yun</a></h1>
-            <nav class="main-nav">
-                <div class="nav-container">
-                    <ul>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="research.html">Research</a></li>
-                        <li><a href="publications.html">Publications</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="cv.html" class="active">CV</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
+<body class="cv-page">
+    <header class="top-nav">
+        <a class="brand" href="index.html">heuijee<span class="brand-dot">.</span>yun</a>
+        <nav class="main-menu">
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="side-projects.html">Side Projects</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="nav-sep" aria-hidden="true">/</li>
+                <li><a href="focus-core.html" class="nav-trk trk-c">Core</a></li>
+                <li><a href="focus-memory.html" class="nav-trk trk-m">Memory</a></li>
+                <li><a href="focus-auto.html" class="nav-trk trk-a">Autonomy</a></li>
+            </ul>
+        </nav>
+        <a href="cv.pdf" class="cv-button" target="_blank"><i class="fas fa-download"></i> PDF</a>
     </header>
 
-    <section class="page-section cv">
-        <div class="container">
-            <h2 class="section-title">Curriculum Vitae</h2>
-            <div class="cv-content">
-                <div class="cv-download">
-                    <a href="#" class="btn btn-large"><i class="fas fa-download"></i> Download CV (PDF)</a>
+    <main class="cv-main">
+        <div class="shape shape-half" aria-hidden="true"></div>
+        <div class="shape shape-dots" aria-hidden="true"></div>
+
+        <div class="cv-actions animate-title">
+            <button class="action-button primary" onclick="window.print()"><i class="fas fa-print"></i> Print / Save as PDF</button>
+            <a class="action-button ghost" href="cv.pdf" target="_blank"><i class="fas fa-download"></i> Download cv.pdf</a>
+        </div>
+
+        <div class="cv-sheet animate-content">
+            <div class="cv-head">
+                <div>
+                    <h1 class="cv-name">Heuijee<br>Yun</h1>
+                    <p class="cv-role">PH.D. STUDENT · AI HARDWARE / SOC DESIGN</p>
                 </div>
-                
-                <div class="cv-section">
-                    <h3>Education</h3>
-                    <div class="cv-item">
-                        <div class="cv-item-header">
-                            <h4>Ph.D. in Computer Science</h4>
-                            <span class="cv-date">2020 - Present</span>
-                        </div>
-                        <p>University Name, Department, Location</p>
-                        <p>Thesis: "Title of Your Thesis"</p>
-                        <p>Advisor: Prof. Name</p>
-                    </div>
-                    
-                    <div class="cv-item">
-                        <div class="cv-item-header">
-                            <h4>M.S. in Computer Science</h4>
-                            <span class="cv-date">2018 - 2020</span>
-                        </div>
-                        <p>University Name, Department, Location</p>
-                        <p>Thesis: "Title of Your Master's Thesis"</p>
-                    </div>
-                    
-                    <div class="cv-item">
-                        <div class="cv-item-header">
-                            <h4>B.S. in Computer Science</h4>
-                            <span class="cv-date">2014 - 2018</span>
-                        </div>
-                        <p>University Name, Department, Location</p>
-                    </div>
+                <div class="cv-contact">
+                    <p>Daegu, South Korea</p>
+                    <p><a href="mailto:heuijee@knu.ac.kr">heuijee@knu.ac.kr</a></p>
+                    <p><a href="https://heuijee.github.io">heuijee.github.io</a></p>
+                    <p><a href="https://github.com/heuijee">github.com/heuijee</a></p>
+                    <p><a href="https://scholar.google.com/citations?user=i3x5dVoAAAAJ&hl=en">Google Scholar</a> · <a href="https://orcid.org/0009-0001-3870-9002">ORCID</a></p>
                 </div>
-                
-                <div class="cv-section">
-                    <h3>Professional Experience</h3>
-                    <div class="cv-item">
-                        <div class="cv-item-header">
-                            <h4>Research Assistant</h4>
-                            <span class="cv-date">2020 - Present</span>
-                        </div>
-                        <p>Laboratory Name, University, Location</p>
-                        <ul>
-                            <li>Research project 1 description</li>
-                            <li>Research project 2 description</li>
-                            <li>Research project 3 description</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="cv-item">
-                        <div class="cv-item-header">
-                            <h4>Teaching Assistant</h4>
-                            <span class="cv-date">2018 - 2020</span>
-                        </div>
-                        <p>Department, University, Location</p>
-                        <ul>
-                            <li>Course 1: Course Name</li>
-                            <li>Course 2: Course Name</li>
-                            <li>Course 3: Course Name</li>
-                        </ul>
+            </div>
+
+            <div class="cv-section">
+                <h2 class="cv-h">Profile</h2>
+                <p style="font-size:14.5px; color:var(--gray);">Ph.D. student designing <strong style="color:var(--ink);">low-power AI accelerators</strong> — from spiking neural network architectures and self-supervised learning down to tape-out. Four chip tape-outs (Samsung 28nm ×2, SK keyfoundry 130nm, MPW), 16+ peer-reviewed publications including IEEE TVLSI and DAC. Also builds custom PCBs, 3D-printed devices, and self-hosted AI systems for fun.</p>
+            </div>
+
+            <div class="cv-section">
+                <h2 class="cv-h">Education</h2>
+                <div class="cv-row">
+                    <span class="cv-when">2022 — PRESENT</span>
+                    <div class="cv-what">
+                        <h3>Ph.D. Student, Electronics and Electrical Engineering</h3>
+                        <p>Kyungpook National University · AI-S²oC Lab · Advisor: Prof. Daejin Park</p>
                     </div>
                 </div>
-                
-                <div class="cv-section">
-                    <h3>Skills</h3>
-                    <div class="skills-list cv-skills">
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">Java</span>
-                        <span class="skill-tag">C++</span>
-                        <span class="skill-tag">Machine Learning</span>
-                        <span class="skill-tag">Data Analysis</span>
-                        <span class="skill-tag">Web Development</span>
-                        <span class="skill-tag">Project Management</span>
+                <div class="cv-row">
+                    <span class="cv-when">2018 — 2022</span>
+                    <div class="cv-what">
+                        <h3>B.S. in Electronics Engineering</h3>
+                        <p>Kyungpook National University</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cv-section">
+                <h2 class="cv-h">Chip Tape-outs</h2>
+                <div class="cv-row">
+                    <span class="cv-when">2025 · 28NM</span>
+                    <div class="cv-what">
+                        <h3>RISC-V Adaptive Clock Control + Sparsity-Aware Transformer Accelerator</h3>
+                        <p>Samsung 28nm — zero-skip datapaths, runtime clock gating via RISC-V controller, MMIO control</p>
+                    </div>
+                </div>
+                <div class="cv-row">
+                    <span class="cv-when">2024 · 28NM</span>
+                    <div class="cv-what">
+                        <h3>HAB-1 — Reconfigurable Host-Accelerator Bridge</h3>
+                        <p>Samsung 28nm — multi-channel MPI interface, reconfigurable CNN accelerator</p>
+                    </div>
+                </div>
+                <div class="cv-row">
+                    <span class="cv-when">2023 · 130NM</span>
+                    <div class="cv-what">
+                        <h3>ARMuP — Cortex-M0+ Compatible Core with Custom µSIMD</h3>
+                        <p>SK keyfoundry 130nm — custom ISA, µSIMD instructions, tile-SoC memory interface</p>
+                    </div>
+                </div>
+                <div class="cv-row">
+                    <span class="cv-when">2023 · MPW</span>
+                    <div class="cv-what">
+                        <h3>SNN-based Compute-In-Memory</h3>
+                        <p>RRAM synaptic circuits, PSpice neuron modeling, neuromorphic architecture</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cv-section">
+                <h2 class="cv-h">Selected Publications <span style="letter-spacing:0.05em;">(6 J / 10 C total)</span></h2>
+                <div class="cv-pub"><b><span class="vtag">TVLSI 2025</span>S³A-NPU: A High-Performance Hardware Accelerator for Spiking Self-Supervised Learning with Dynamic Adaptive Memory Optimization</b><span>Heuijee Yun, Daejin Park — IEEE Trans. on VLSI Systems</span></div>
+                <div class="cv-pub"><b><span class="vtag">DAC 2025</span>Opti-SpiSSL: A Highly Reconfigurable Hardware Generation Framework for Spiking SSL on Heterogeneous SoC</b><span>Heuijee Yun, Daejin Park — IEEE Design Automation Conference</span></div>
+                <div class="cv-pub"><b><span class="vtag">ACCESS 2024</span>Low-Power Lane Detection Unit with Sliding-based Parallel Segment Detection Accelerator</b><span>Heuijee Yun, Daejin Park — IEEE Access</span></div>
+                <div class="cv-pub"><b><span class="vtag">PERCOM 2024</span>Deep Learning based Human Detection using Thermal-RGB Data Fusion for Safe Automotive Guided-Driving</b><span>Heuijee Yun, Daejin Park — IEEE PerCom (PerVehicle)</span></div>
+                <div class="cv-pub"><b><span class="vtag">SENSORS 2022</span>Efficient Object Detection based on Masking Semantic Segmentation Region for Lightweight Embedded Processors</b><span>Heuijee Yun, Daejin Park — Sensors</span></div>
+                <p style="font-family:var(--font-mono); font-size:11.5px; color:var(--gray); margin-top:10px;">→ full list at <a href="publications.html" style="border-bottom:1.5px solid var(--line);">heuijee.github.io/publications</a></p>
+            </div>
+
+            <div class="cv-section">
+                <h2 class="cv-h">Skills</h2>
+                <div class="cv-skills">
+                    <span>Verilog / RTL</span><span>ASIC flow (28nm–130nm)</span><span>FPGA</span><span>RISC-V</span><span>Arm Cortex-M</span><span>TVM</span><span>PyTorch</span><span>SNNTorch / SpikingJelly</span><span>C / C++</span><span>Python</span><span>OpenCV</span><span>PCB design</span><span>Embedded Linux</span><span>3D printing</span>
+                </div>
+            </div>
+
+            <div class="cv-section">
+                <h2 class="cv-h">Awards</h2>
+                <div class="cv-row">
+                    <span class="cv-when">2024</span>
+                    <div class="cv-what">
+                        <h3>KNU-EE Funded Excellence Ph.D. Award</h3>
+                        <p>10,000,000 KRW scholarship</p>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 Heuijee Yun. All Rights Reserved.</p>
-        </div>
+    <footer class="site-footer">
+        <p>&copy; 2026 Heuijee Yun<span class="dot">·</span>Built with silicon &amp; coffee</p>
+        <p><a href="mailto:heuijee@knu.ac.kr">heuijee@knu.ac.kr</a><span class="dot">·</span>+82 53-950-5548</p>
     </footer>
 
     <script src="js/main.js"></script>
 </body>
-</html> 
+</html>

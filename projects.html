@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - Heuijee Yun</title>
+    <title>Projects — Heuijee Yun</title>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -17,131 +17,206 @@
   gtag('config', 'G-XFNRCNR44C');
 </script>
 <body class="projects-page">
-    <header>
-        <div class="site-name"><a href="index.html">Heuijee Yun</a></div>
+    <header class="top-nav">
+        <a class="brand" href="index.html">heuijee<span class="brand-dot">.</span>yun</a>
         <nav class="main-menu">
             <ul>
                 <li><a href="about.html">About</a></li>
                 <li><a href="research.html">Research</a></li>
                 <li><a href="publications.html">Publications</a></li>
                 <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="side-projects.html">Side Projects</a></li>
                 <li><a href="blogs.html">Blogs</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li class="nav-sep" aria-hidden="true">/</li>
+                <li><a href="focus-core.html" class="nav-trk trk-c">Core</a></li>
+                <li><a href="focus-memory.html" class="nav-trk trk-m">Memory</a></li>
+                <li><a href="focus-auto.html" class="nav-trk trk-a">Autonomy</a></li>
             </ul>
         </nav>
-        <div class="header-line"></div>
+        <a href="cv.html" class="cv-button"><i class="fas fa-file-lines"></i> CV</a>
     </header>
 
-    <div class="download-cv">
-        <a href="cv.pdf" class="cv-button">Download CV</a>
-    </div>
-    
-    <main class="about-main">
-        <div class="sidebar">
-            <div class="profile-photo animate-profile">
-                <img src="images/profile.jpg" alt="Heuijee Yun" class="profile-image">
+    <main class="projects-main">
+        <span class="page-kicker animate-title">4 TAPE-OUTS · GROUPED BY BRANCH · LIVE DEMOS</span>
+        <h1 class="page-title animate-title">Projects</h1>
+        <p class="projects-lede animate-content">Real silicon, sorted by the same three branches. Don't just read them — <strong>every project has a live interactive demo</strong>.</p>
+
+        <!-- ================= BRANCH 0 · CORE & ACCELERATOR ================= -->
+        <section class="branch b0 animate-content">
+            <div class="branch-head">
+                <span class="branch-num">BRANCH_0</span>
+                <h2 class="branch-name">Core &amp; Accelerator</h2>
+                <span class="branch-for">→ FOCUS-CORE</span>
+                <span class="branch-spine">└─ cores &amp; accelerators that shipped to silicon</span>
             </div>
-            <h2 class="sidebar-name animate-profile">Heuijee Yun</h2>
-            <p class="sidebar-title animate-profile">Ph.D Student</p>
-            <div class="social-icons animate-profile">
-                <a href="https://github.com/heuijee" class="social-icon"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/heuijee-yun-05b7b7315/" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://scholar.google.com/citations?user=i3x5dVoAAAAJ&hl=en" class="social-icon"><img src="icons/google-scholar.svg" alt="Google Scholar"></i></a>
-                <a href="https://www.researchgate.net/profile/Yun_Heuijee" class="social-icon"><img src="icons/researchgate.svg" alt="Google Scholar"></i></a>
-                <a href="https://orcid.org/my-orcid?orcid=0009-0001-3870-9002" class="social-icon"><img src="icons/orcid.svg" alt="Google Scholar"></i></a>
+
+            <article class="project-card">
+                <div class="project-head">
+                    <div>
+                        <span class="project-year">2025 · SAMSUNG 28nm TAPE-OUT</span>
+                        <h3 class="project-title">RISC-V Adaptive Clock Control + Sparsity-Aware Transformer Accelerator</h3>
+                    </div>
+                    <img class="project-thumb" src="images/Project5.png" alt="Chip layout">
+                </div>
+                <div class="demo-stage">
+                    <span class="demo-chip"><i class="fas fa-bolt"></i> LIVE DEMO</span>
+                    <canvas id="demo-sparsity" class="demo-canvas"></canvas>
+                    <div class="demo-controls">
+                        <label class="demo-label">Weight sparsity
+                            <input type="range" id="sparsity-slider" min="0" max="90" value="60" step="10">
+                            <span id="sparsity-value" class="demo-readout">60%</span>
+                        </label>
+                        <span class="demo-readout" id="sparsity-stats"></span>
+                    </div>
+                    <p class="demo-note">Dark cells are zero weights — the accelerator <strong>skips</strong> them and the RISC-V controller gates the clock down. Drag the slider and watch the power drop.</p>
+                </div>
+                <div class="project-info">
+                    <p class="project-description">RISC-V controller tunes clock gating in real time using sparsity and queue depth.</p>
+                    <p class="project-description">Accelerator supports weight sparsity and zero-skip paths with MMIO controls.</p>
+                    <p class="project-description">Achieves strict latency with deterministic dense-fallback and policy logging.</p>
+                    <div class="project-tags">
+                        <span class="tag">RISC-V</span><span class="tag">Transformer</span><span class="tag">Sparsity</span><span class="tag">Clock Gating</span><span class="tag">28nm ASIC</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-head">
+                    <div>
+                        <span class="project-year">2023 · SK KEYFOUNDRY 130nm TAPE-OUT</span>
+                        <h3 class="project-title">ARMuP — Cortex-M0+ Compatible Core with µSIMD</h3>
+                    </div>
+                    <img class="project-thumb" src="images/Project2.png" alt="ARMuP chip">
+                </div>
+                <div class="demo-stage">
+                    <span class="demo-chip"><i class="fas fa-bolt"></i> LIVE DEMO</span>
+                    <canvas id="demo-simd" class="demo-canvas"></canvas>
+                    <div class="demo-controls">
+                        <button class="demo-btn" id="simd-replay"><i class="fas fa-rotate-right"></i> Replay race</button>
+                        <span class="demo-readout" id="simd-stats"></span>
+                    </div>
+                    <p class="demo-note">Same MAC workload, two cores: plain scalar Cortex-M0+ vs. ARMuP with custom µSIMD instructions crunching 4 elements per cycle.</p>
+                </div>
+                <div class="project-info">
+                    <p class="project-description">Custom ISA compatible with Arm Cortex-M0+.</p>
+                    <p class="project-description">Custom µSIMD instruction support for enhanced performance.</p>
+                    <p class="project-description">Scalable memory &amp; tile-SoC interface for accelerator control.</p>
+                    <div class="project-tags">
+                        <span class="tag">Cortex-M0+</span><span class="tag">Custom ISA</span><span class="tag">µSIMD</span><span class="tag">130nm ASIC</span>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- ================= BRANCH 1 · MEMORY & CIM ================= -->
+        <section class="branch b1 animate-content">
+            <div class="branch-head">
+                <span class="branch-num">BRANCH_1</span>
+                <h2 class="branch-name">Memory &amp; CIM</h2>
+                <span class="branch-for">→ FOCUS-MEMORY</span>
+                <span class="branch-spine">└─ data movement &amp; compute-in-memory</span>
             </div>
-        </div>
-        
-        <div class="content">
-            <h1 class="page-title animate-title">Projects</h1>
 
-
-            
-            <div class="projects-list animate-content">
-
-                <div class="project-item">
-                    <div class="project-image">
-                        <img src="images/Project5.png" alt="Project 1">
+            <article class="project-card">
+                <div class="project-head">
+                    <div>
+                        <span class="project-year">2024 · SAMSUNG 28nm TAPE-OUT</span>
+                        <h3 class="project-title">HAB-1 — Reconfigurable Host-Accelerator Bridge</h3>
                     </div>
-                    <div class="project-info">
-                        <h3 class="project-title">[2025] Samsung 28nm- RISCV-based adaptive clock control with Sparsity aware transformer accelerator </h3>
-                        <p class="project-description">- RISC-V controller tunes clock gating in real time using sparsity, queue depth.</p>
-                        <p class="project-description">- Accelerator supports weight sparsity and zero-skip paths with MMIO controls.</p>
-                        <p class="project-description">- Achieves strict latency with deterministic dense-fallback and policy logging.</p>
+                    <img class="project-thumb" src="images/Project1.png" alt="HAB-1 chip">
+                </div>
+                <div class="demo-stage">
+                    <span class="demo-chip"><i class="fas fa-bolt"></i> LIVE DEMO</span>
+                    <canvas id="demo-hab" class="demo-canvas"></canvas>
+                    <div class="demo-controls">
+                        <button class="demo-btn" id="hab-reconfig"><i class="fas fa-shuffle"></i> Reconfigure channels</button>
+                        <span class="demo-readout" id="hab-stats"></span>
                     </div>
-                </div>    
-
-
-                <div class="project-item">
-                    <div class="project-image">
-                        <img src="images/Project1.png" alt="Project 2">
-                    </div>
-                    <div class="project-info">
-                        <h3 class="project-title">[2024] Samsung 28nm- HAB-1</h3>
-                        <p class="project-description">- Reconfigurable Bridge for Host-Accelerator Communication</p>
-                        <p class="project-description">- Scalable Multi-Channel MPI Interface for Accelerator Control</p>
-                        <p class="project-description">- Reconfigurable CNN Accelerator for Adaptive AI Workloads</p>
+                    <p class="demo-note">Packets stream from the host CPU through the reconfigurable bridge into the CNN accelerator. Reconfigure the MPI channels and watch throughput scale.</p>
+                </div>
+                <div class="project-info">
+                    <p class="project-description">Reconfigurable bridge for host–accelerator communication.</p>
+                    <p class="project-description">Scalable multi-channel MPI interface for accelerator control.</p>
+                    <p class="project-description">Reconfigurable CNN accelerator for adaptive AI workloads.</p>
+                    <div class="project-tags">
+                        <span class="tag">SoC Bridge</span><span class="tag">Multi-Channel MPI</span><span class="tag">CNN Accelerator</span><span class="tag">28nm ASIC</span>
                     </div>
                 </div>
-        
-                
-                <div class="project-item">
-                    <div class="project-image">
-                        <img src="images/Project2.png" alt="Project 3">
+            </article>
+
+            <article class="project-card">
+                <div class="project-head">
+                    <div>
+                        <span class="project-year">2023 · MPW TAPE-OUT</span>
+                        <h3 class="project-title">SNN-based Compute-In-Memory (CIM)</h3>
                     </div>
-                    <div class="project-info">
-                        <h3 class="project-title">[2023] SK Key 130nm- ARMuP</h3>
-                        <p class="project-description">- Custom ISA Compatible with Arm Cortex-M0+</p>
-                        <p class="project-description">- Custom uSIMD Instruction Support for Enhanced Performance</p>
-                        <p class="project-description">- Scalable Memory & Tile-SoC Interface for Accelerator Control</p>
+                    <img class="project-thumb" src="images/Project4.png" alt="SNN CIM chip">
+                </div>
+                <div class="demo-stage">
+                    <span class="demo-chip"><i class="fas fa-bolt"></i> LIVE DEMO</span>
+                    <canvas id="demo-snn" class="demo-canvas"></canvas>
+                    <div class="demo-controls">
+                        <button class="demo-btn" id="snn-inject"><i class="fas fa-bolt-lightning"></i> Inject spikes</button>
+                        <span class="demo-readout" id="snn-stats"></span>
+                    </div>
+                    <p class="demo-note">Input spikes flow through an RRAM crossbar; each output neuron integrates charge until its membrane potential crosses threshold — then it fires. Click the canvas to stimulate.</p>
+                </div>
+                <div class="project-info">
+                    <p class="project-description">SNN-based compute-in-memory architecture for energy-efficient neuromorphic computing.</p>
+                    <p class="project-description">PSpice-based SNN neuron circuit simulation for accurate synaptic behavior modeling.</p>
+                    <p class="project-description">RRAM-based synaptic circuit fabrication for low-power AI acceleration.</p>
+                    <div class="project-tags">
+                        <span class="tag">SNN</span><span class="tag">Compute-In-Memory</span><span class="tag">RRAM</span><span class="tag">Neuromorphic</span>
                     </div>
                 </div>
+            </article>
+        </section>
 
-                <div class="project-item">
-                    <div class="project-image">
-                        <img src="images/Project4.png" alt="Project 4">
-                    </div>
-                    <div class="project-info">
-                        <h3 class="project-title">[2023] SNN-based CIM MPW</h3>
-                        <p class="project-description">- SNN-based Compute-In-Memory (CIM) architecture for energy-efficient neuromorphic computing</p>
-                        <p class="project-description">- PSpice-based SNN neuron circuit simulation for accurate synaptic behavior modeling</p>
-                        <p class="project-description">- RRAM-based synaptic circuit fabrication for low-power AI acceleration</p>
-                    </div>
-                </div>
-
-
-                <div class="project-item">
-                    <div class="project-image">
-                        <img src="images/Project3.png" alt="Project 5">
-                    </div>
-                    <div class="project-info">
-                        <h3 class="project-title">[2020] Autonomous Vehicle Simulation with GTA5</h3>
-                        <p class="project-description">- Digital twin simulation for autonomous driving using the GTA5 game engine</p>
-                        <p class="project-description">- Real-time object detection and avoidance with OpenCV, YOLOv4, and TensorFlow</p>
-                        <p class="project-description">- Lane detection and tracking using Canny edge detection for vehicle navigation</p>
-                    </div>
-                </div>
-
+        <!-- ================= BRANCH 2 · AUTONOMOUS DRIVING ================= -->
+        <section class="branch b2 animate-content">
+            <div class="branch-head">
+                <span class="branch-num">BRANCH_2</span>
+                <h2 class="branch-name">Autonomous Driving</h2>
+                <span class="branch-for">→ FOCUS-AUTO</span>
+                <span class="branch-spine">└─ perception, validated before the road</span>
             </div>
-        </div>
+
+            <article class="project-card">
+                <div class="project-head">
+                    <div>
+                        <span class="project-year">2020 · DIGITAL TWIN</span>
+                        <h3 class="project-title">Autonomous Vehicle Simulation with GTA5</h3>
+                    </div>
+                    <img class="project-thumb" src="images/Project3.png" alt="GTA5 simulation">
+                </div>
+                <div class="demo-stage">
+                    <span class="demo-chip"><i class="fas fa-bolt"></i> LIVE DEMO</span>
+                    <canvas id="demo-lane" class="demo-canvas"></canvas>
+                    <div class="demo-controls">
+                        <button class="demo-btn" id="lane-toggle"><i class="fas fa-eye"></i> Toggle detection</button>
+                        <span class="demo-readout" id="lane-stats"></span>
+                    </div>
+                    <p class="demo-note">A miniature version of the pipeline: Canny-style lane detection plus YOLO-style bounding boxes running over a moving road scene.</p>
+                </div>
+                <div class="project-info">
+                    <p class="project-description">Digital-twin simulation for autonomous driving using the GTA5 game engine.</p>
+                    <p class="project-description">Real-time object detection and avoidance with OpenCV, YOLOv4, and TensorFlow.</p>
+                    <p class="project-description">Lane detection and tracking using Canny edge detection for vehicle navigation.</p>
+                    <div class="project-tags">
+                        <span class="tag">Digital Twin</span><span class="tag">YOLOv4</span><span class="tag">OpenCV</span><span class="tag">Lane Detection</span>
+                    </div>
+                </div>
+            </article>
+        </section>
     </main>
-    
-    <footer>
-        <div class="copyright">
-            <p>&copy; 2025 Heuijee Yun</p>
-        </div>
-        <div class="contact-info">
-            <div class="contact-item">
-                <span class="contact-label">Phone</span>
-                <span class="contact-value">053-950-5548</span>
-            </div>
-            <div class="contact-item">
-                <span class="contact-label">Email</span>
-                <span class="contact-value">heuijee@knu.ac.kr</span>
-            </div>
-        </div>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Heuijee Yun<span class="dot">·</span>Built with silicon &amp; coffee</p>
+        <p><a href="mailto:heuijee@knu.ac.kr">heuijee@knu.ac.kr</a><span class="dot">·</span>+82 53-950-5548</p>
     </footer>
 
     <script src="js/main.js"></script>
+    <script src="js/demos.js"></script>
 </body>
-</html> 
+</html>

@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node --check js/hero3d.js)",
+      "Bash(node --check js/main.js)"
+    ]
+  }
+}

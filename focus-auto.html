@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track 03 · Autonomous Driving — Heuijee Yun</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .focus-hero { position: relative; padding: clamp(48px, 9vh, 100px) var(--pad-x) 56px; overflow: hidden; }
+        .focus-kicker {
+            font-family: var(--font-mono); font-size: 12px; font-weight: 700;
+            letter-spacing: 0.26em; color: var(--base); background: var(--via);
+            border: 1px solid var(--via);
+            display: inline-block; padding: 5px 16px; margin-bottom: 22px;
+        }
+        .focus-title { font-size: clamp(44px, 8vw, 104px); font-weight: 900; text-transform: uppercase; letter-spacing: -0.03em; line-height: 0.95; margin-bottom: 22px; }
+        .focus-title em { font-style: normal; color: transparent; -webkit-text-stroke: 2.5px var(--ink); }
+        .focus-lede { font-size: 18px; color: var(--gray); max-width: 62ch; }
+        .focus-lede strong { color: var(--ink); font-weight: 700; }
+        .focus-hero .shape-half { background: var(--yellow); top: 40px; right: 8%; transform: rotate(180deg); }
+        .focus-hero .shape-tri { border-bottom-color: var(--ink); bottom: 30px; right: 22%; }
+
+        .die-stage { border-top: 2px solid var(--ink); border-bottom: 2px solid var(--ink); background: #0d0d0d; position: relative; }
+        #road-canvas { display: block; width: 100%; height: 340px; }
+        .die-hud {
+            position: absolute; top: 14px; left: var(--pad-x);
+            font-family: var(--font-mono); font-size: 11px; font-weight: 700;
+            letter-spacing: 0.18em; color: #9a978f; pointer-events: none;
+        }
+        .hud-btn {
+            position: absolute; bottom: 14px; left: var(--pad-x);
+            font-family: var(--font-mono); font-size: 11.5px; font-weight: 700;
+            color: var(--base); background: var(--via); border: 1px solid var(--via);
+            padding: 6px 14px; cursor: pointer; z-index: 2;
+        }
+        .hud-btn:hover { background: var(--base); color: var(--via); box-shadow: var(--glow-via); }
+
+        .why { max-width: 1160px; margin: 0 auto; padding: 56px var(--pad-x) 30px; }
+        .why .section-label::before { background: var(--yellow); }
+        .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+        .why-card { background: var(--white); border: 2px solid var(--ink); box-shadow: var(--shadow); padding: 26px 24px; }
+        .why-card .k { font-family: var(--font-mono); font-size: 26px; font-weight: 700; color: var(--ink); background: var(--yellow); display: inline-block; padding: 0 8px; margin-bottom: 12px; }
+        .why-card h3 { font-size: 18px; font-weight: 900; margin-bottom: 10px; line-height: 1.3; }
+        .why-card p { font-size: 14.5px; color: var(--gray); }
+
+        .evidence { max-width: 1160px; margin: 0 auto; padding: 20px var(--pad-x) 60px; }
+        .evidence .section-label::before { background: var(--yellow); }
+        .ev-row {
+            display: grid; grid-template-columns: 130px 1fr auto; gap: 20px; align-items: center;
+            background: var(--white); border: 2px solid var(--ink); box-shadow: var(--shadow-sm);
+            padding: 18px 22px; margin-bottom: 14px; transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+        .ev-row:hover { transform: translate(2px,2px); box-shadow: 1px 1px 0 var(--ink); }
+        .ev-tag { font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: var(--ink); background: var(--yellow); border: 1.5px solid var(--ink); padding: 3px 9px; text-align: center; }
+        .ev-row h3 { font-size: 16.5px; font-weight: 800; line-height: 1.35; }
+        .ev-row p { font-size: 13.5px; color: var(--gray); }
+        .ev-link { font-family: var(--font-mono); font-size: 12px; font-weight: 700; border: 2px solid var(--ink); padding: 6px 14px; white-space: nowrap; }
+        .ev-link:hover { background: var(--yellow); }
+
+        .focus-cta { background: var(--panel-2); color: var(--text); padding: 56px var(--pad-x); text-align: center; border-top: 1px solid var(--line-strong); border-bottom: 1px solid var(--line-strong); }
+        .focus-cta h2 { font-size: clamp(28px, 4vw, 48px); font-weight: 900; text-transform: uppercase; margin-bottom: 12px; }
+        .focus-cta h2 em { font-style: normal; color: var(--yellow); }
+        .focus-cta p { font-family: var(--font-mono); font-size: 13px; color: #9a978f; margin-bottom: 28px; }
+        .focus-cta .action-buttons { justify-content: center; }
+        .back-track { font-family: var(--font-mono); font-size: 12px; font-weight: 700; letter-spacing: 0.14em; display: inline-block; margin-bottom: 18px; border-bottom: 2px solid var(--line); }
+        .back-track:hover { border-color: var(--ink); }
+        @media (max-width: 900px) {
+            .why-grid { grid-template-columns: 1fr; }
+            .ev-row { grid-template-columns: 1fr; gap: 8px; }
+            .ev-tag { justify-self: start; }
+        }
+    </style>
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XFNRCNR44C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XFNRCNR44C');
+</script>
+<body class="focus-page">
+    <header class="top-nav">
+        <a class="brand" href="index.html">heuijee<span class="brand-dot">.</span>yun</a>
+        <nav class="main-menu">
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="side-projects.html">Side Projects</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="nav-sep" aria-hidden="true">/</li>
+                <li><a href="focus-core.html" class="nav-trk trk-c">Core</a></li>
+                <li><a href="focus-memory.html" class="nav-trk trk-m">Memory</a></li>
+                <li><a href="focus-auto.html" class="nav-trk trk-a active">Autonomy</a></li>
+            </ul>
+        </nav>
+        <a href="cv.html" class="cv-button"><i class="fas fa-file-lines"></i> CV</a>
+    </header>
+
+    <main>
+        <section class="focus-hero">
+            <div class="shape shape-half" aria-hidden="true"></div>
+            <div class="shape shape-tri" aria-hidden="true"></div>
+            <a class="back-track" href="index.html">← ALL TRACKS</a><br>
+            <span class="spine-link animate-title">ROOT ▮ ENERGY-EFFICIENT AI <span class="br b-auto">BRANCH_2 OF ONE SPINE</span></span><br>
+            <span class="focus-kicker animate-title">TRACK 03 — FOR HYUNDAI · TESLA FOLKS</span>
+            <h1 class="focus-title animate-title">Perception that fits<br><em>in the car</em>.</h1>
+            <p class="focus-lede animate-content">Autonomy fails at the edge, not in the data center. My work makes perception run on <strong>automotive-grade silicon</strong>: thermal-RGB fusion that finds pedestrians cameras miss, lane detection units small enough for microcontrollers, and a GTA5 digital twin to test it all safely.</p>
+        </section>
+
+        <div class="die-stage">
+            <span class="die-hud">LIVE — PERCEPTION HUD · LANE + OBJECT + THERMAL</span>
+            <canvas id="road-canvas"></canvas>
+            <button class="hud-btn" id="road-mode">SWITCH SENSOR : RGB</button>
+        </div>
+
+        <section class="why">
+            <h2 class="section-label">WHY ME FOR THIS TRACK</h2>
+            <div class="why-grid">
+                <div class="why-card animate-content">
+                    <span class="k">FUSE</span>
+                    <h3>Multi-modal is my default</h3>
+                    <p>Camera + LiDAR + thermal. Selective thermal fusion lifted pedestrian detection from 40.4% to 83.9% — published at IEEE PerCom.</p>
+                </div>
+                <div class="why-card animate-content">
+                    <span class="k">EDGE</span>
+                    <h3>I ship to embedded targets</h3>
+                    <p>Jetson Nano deployments with measured FPS and memory budgets; lane detection units that fit lightweight automotive MCUs (IEEE Access).</p>
+                </div>
+                <div class="why-card animate-content">
+                    <span class="k">SIM</span>
+                    <h3>Digital twin before the road</h3>
+                    <p>Built a GTA5-based digital twin interoperating with real embedded controllers to validate self-driving algorithms safely.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="evidence">
+            <h2 class="section-label">EVIDENCE</h2>
+            <div class="ev-row">
+                <span class="ev-tag">PERCOM 24</span>
+                <div><h3>Thermal-RGB Fusion for Pedestrian Safety</h3><p>40.43% → 83.91% accuracy · 2.7 FPS PC / 0.75 FPS Jetson Nano, 140 MB</p></div>
+                <a class="ev-link" href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10503400" target="_blank">PDF →</a>
+            </div>
+            <div class="ev-row">
+                <span class="ev-tag">ACCESS 24</span>
+                <div><h3>Low-Power Lane Detection Unit for Automotive MCUs</h3><p>Sliding-based parallel segment detection accelerator — journal publication</p></div>
+                <a class="ev-link" href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10378646" target="_blank">PDF →</a>
+            </div>
+            <div class="ev-row">
+                <span class="ev-tag">ICEIC 24</span>
+                <div><h3>2D Image + LiDAR Fusion for 3D Object Recognition</h3><p>Parallel processing pipeline for real-time 3D perception</p></div>
+                <a class="ev-link" href="publications.html">PAPER →</a>
+            </div>
+            <div class="ev-row">
+                <span class="ev-tag">2020–21</span>
+                <div><h3>GTA5 Digital Twin for Autonomous Driving</h3><p>Game-engine simulation interoperating with embedded controllers — Electronics 2021</p></div>
+                <a class="ev-link" href="projects.html">DEMO →</a>
+            </div>
+        </section>
+
+        <section class="focus-cta">
+            <h2>Perception, but<br><em>production-grade</em>.</h2>
+            <p>OPEN TO RESEARCH INTERNSHIPS — ADAS / AUTONOMY / PERCEPTION HW TEAMS</p>
+            <div class="action-buttons">
+                <a href="contact.html" class="action-button primary">Contact me</a>
+                <a href="cv.html" class="action-button ghost">Read my CV</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Heuijee Yun<span class="dot">·</span>TRACK 03 / AUTONOMY</p>
+        <p><a href="mailto:heuijee@knu.ac.kr">heuijee@knu.ac.kr</a></p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+    (function () {
+        const canvas = document.getElementById('road-canvas');
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+        const modeBtn = document.getElementById('road-mode');
+        let w = 0, h = 0;
+        function resize() {
+            const dpr = Math.min(window.devicePixelRatio || 1, 2);
+            w = canvas.clientWidth; h = canvas.clientHeight;
+            canvas.width = w * dpr; canvas.height = h * dpr;
+            ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        }
+        resize();
+        window.addEventListener('resize', resize);
+
+        const MODES = ['RGB', 'THERMAL'];
+        let mode = 0;
+        if (modeBtn) modeBtn.addEventListener('click', () => {
+            mode = (mode + 1) % MODES.length;
+            modeBtn.textContent = 'SWITCH SENSOR : ' + MODES[mode];
+        });
+
+        function draw(now) {
+            const t = now / 1000;
+            const thermal = MODES[mode] === 'THERMAL';
+
+            ctx.fillStyle = thermal ? '#050505' : '#101010';
+            ctx.fillRect(0, 0, w, h * 0.45);
+            ctx.fillStyle = thermal ? '#080808' : '#0c0c0c';
+            ctx.fillRect(0, h * 0.45, w, h * 0.55);
+
+            const horizon = h * 0.45, cx = w / 2;
+            const rb = w * 0.36, rt = w * 0.03;
+
+            ctx.fillStyle = thermal ? '#0b0b0b' : '#171717';
+            ctx.beginPath();
+            ctx.moveTo(cx - rt, horizon);
+            ctx.lineTo(cx + rt, horizon);
+            ctx.lineTo(cx + rb, h);
+            ctx.lineTo(cx - rb, h);
+            ctx.closePath();
+            ctx.fill();
+
+            // moving dashes
+            const phase = (t * 0.9) % 1;
+            ctx.strokeStyle = 'rgba(255,255,255,0.4)';
+            ctx.lineWidth = 3;
+            for (let k = 0; k < 8; k++) {
+                let a = (k + phase) / 8, b = a + 0.045;
+                a *= a; b *= b;
+                if (b > 1) continue;
+                ctx.beginPath();
+                ctx.moveTo(cx, horizon + a * (h - horizon));
+                ctx.lineTo(cx, horizon + b * (h - horizon));
+                ctx.stroke();
+            }
+
+            // detected lanes (yellow overlay)
+            const jit = () => (Math.random() - 0.5) * 1.5;
+            ctx.strokeStyle = '#e0b36a';
+            ctx.lineWidth = 3;
+            [[-1], [1]].forEach(([s]) => {
+                ctx.beginPath();
+                ctx.moveTo(cx + s * rt * 1.7 + jit(), horizon + 6);
+                ctx.lineTo(cx + s * rb * 0.86 + jit(), h - 4);
+                ctx.stroke();
+            });
+
+            // vehicle ahead
+            const sway = Math.sin(t * 0.7) * w * 0.03;
+            const cwc = w * 0.075, chc = cwc * 0.62;
+            const carX = cx + sway - cwc / 2;
+            const carY = horizon + (h - horizon) * 0.22;
+            ctx.fillStyle = thermal ? '#3a3a3a' : '#2c2c2c';
+            ctx.fillRect(carX, carY, cwc, chc);
+            if (thermal) { // hot exhaust + engine
+                const g = ctx.createRadialGradient(carX + cwc / 2, carY + chc, 2, carX + cwc / 2, carY + chc, 26);
+                g.addColorStop(0, 'rgba(255,255,255,0.9)');
+                g.addColorStop(1, 'rgba(255,255,255,0)');
+                ctx.fillStyle = g;
+                ctx.fillRect(carX - 20, carY - 10, cwc + 40, chc + 40);
+            }
+            ctx.strokeStyle = '#e0b36a';
+            ctx.setLineDash([5, 4]);
+            ctx.strokeRect(carX - 5, carY - 6, cwc + 10, chc + 12);
+            ctx.setLineDash([]);
+            ctx.fillStyle = '#e0b36a';
+            ctx.font = '10px "JetBrains Mono", monospace';
+            ctx.fillText('CAR 0.9' + Math.floor(2 + Math.abs(Math.sin(t * 2)) * 6), carX - 5, carY - 11);
+
+            // pedestrian near roadside — only visible in thermal
+            const px = w * 0.18 + Math.sin(t * 0.4) * 10;
+            const py = h * 0.62;
+            if (thermal) {
+                function blob(x, y, r, a) {
+                    const g = ctx.createRadialGradient(x, y, 0, x, y, r);
+                    g.addColorStop(0, 'rgba(255,255,255,' + a + ')');
+                    g.addColorStop(1, 'rgba(255,255,255,0)');
+                    ctx.fillStyle = g;
+                    ctx.beginPath();
+                    ctx.arc(x, y, r, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+                blob(px, py, 16, 0.95);       // torso
+                blob(px, py - 20, 9, 0.95);   // head
+                ctx.strokeStyle = '#e0b36a';
+                ctx.setLineDash([5, 4]);
+                ctx.strokeRect(px - 16, py - 34, 32, 54);
+                ctx.setLineDash([]);
+                ctx.fillStyle = '#e0b36a';
+                ctx.fillText('PEDESTRIAN 36.9°C', px - 16, py - 40);
+            } else {
+                // barely visible in RGB — the whole point
+                ctx.fillStyle = 'rgba(255,255,255,0.06)';
+                ctx.beginPath();
+                ctx.arc(px, py - 20, 8, 0, Math.PI * 2);
+                ctx.arc(px, py, 14, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.fillStyle = 'rgba(255,196,0,0.85)';
+                ctx.font = '10px "JetBrains Mono", monospace';
+                ctx.fillText('LOW-LIGHT PEDESTRIAN MISSED — TRY THERMAL', 12, h - 14);
+            }
+
+            ctx.fillStyle = '#e0b36a';
+            ctx.font = '10px "JetBrains Mono", monospace';
+            ctx.fillText('SENSOR: ' + MODES[mode] + (thermal ? ' · FUSION ACTIVE' : ''), 12, 22);
+            requestAnimationFrame(draw);
+        }
+        requestAnimationFrame(draw);
+    })();
+    </script>
+</body>
+</html>

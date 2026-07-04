@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blogs - Heuijee Yun</title>
+    <title>Blogs — Heuijee Yun</title>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Add highlight.js for code syntax highlighting -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github.min.css">
-    <!-- Add GitHub Markdown CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown.min.css">
+    <!-- highlight.js dark theme for code blocks -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark.min.css">
+    <!-- GitHub Markdown CSS (dark) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown-dark.min.css">
 </head>
-
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XFNRCNR44C"></script>
 <script>
@@ -22,50 +21,51 @@
   gtag('config', 'G-XFNRCNR44C');
 </script>
 <body class="blogs-page">
-    <header>
-        <div class="site-name"><a href="index.html">Heuijee Yun</a></div>
+    <header class="top-nav">
+        <a class="brand" href="index.html">heuijee<span class="brand-dot">.</span>yun</a>
         <nav class="main-menu">
             <ul>
                 <li><a href="about.html">About</a></li>
                 <li><a href="research.html">Research</a></li>
                 <li><a href="publications.html">Publications</a></li>
                 <li><a href="projects.html">Projects</a></li>
+                <li><a href="side-projects.html">Side Projects</a></li>
                 <li><a href="blogs.html" class="active">Blogs</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li class="nav-sep" aria-hidden="true">/</li>
+                <li><a href="focus-core.html" class="nav-trk trk-c">Core</a></li>
+                <li><a href="focus-memory.html" class="nav-trk trk-m">Memory</a></li>
+                <li><a href="focus-auto.html" class="nav-trk trk-a">Autonomy</a></li>
             </ul>
         </nav>
-        <div class="header-line"></div>
+        <a href="cv.html" class="cv-button"><i class="fas fa-file-lines"></i> CV</a>
     </header>
 
-    <div class="download-cv">
-        <a href="cv.pdf" class="cv-button">Download CV</a>
-    </div>
-    
     <main class="about-main">
-        <div class="sidebar">
-            <div class="profile-photo animate-profile">
-                <img src="images/profile.jpg" alt="Heuijee Yun" class="profile-image">
+        <aside class="sidebar">
+            <div class="profile-card animate-profile">
+                <div class="profile-photo"><img src="images/profile.jpg" alt="Heuijee Yun" class="profile-image"></div>
+                <h2 class="sidebar-name">Heuijee Yun</h2>
+                <p class="sidebar-title">Ph.D. Student · AI-S²oC Lab</p>
+                <p class="sidebar-loc"><i class="fas fa-map-marker-alt"></i>Kyungpook Nat'l Univ., Daegu</p>
+                <div class="social-icons">
+                    <a href="https://github.com/heuijee" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/heuijee-yun-05b7b7315/" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://scholar.google.com/citations?user=i3x5dVoAAAAJ&hl=en" class="social-icon" aria-label="Google Scholar"><img src="icons/google-scholar.svg" alt="Google Scholar"></a>
+                    <a href="https://www.researchgate.net/profile/Yun_Heuijee" class="social-icon" aria-label="ResearchGate"><img src="icons/researchgate.svg" alt="ResearchGate"></a>
+                    <a href="https://orcid.org/0009-0001-3870-9002" class="social-icon" aria-label="ORCID"><img src="icons/orcid.svg" alt="ORCID"></a>
+                </div>
             </div>
-            <h2 class="sidebar-name animate-profile">Heuijee Yun</h2>
-            <p class="sidebar-title animate-profile">Ph.D Student</p>
-            <div class="social-icons animate-profile">
-                <a href="https://github.com/heuijee" class="social-icon"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/heuijee-yun-05b7b7315/" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://scholar.google.com/citations?user=i3x5dVoAAAAJ&hl=en" class="social-icon"><img src="icons/google-scholar.svg" alt="Google Scholar"></i></a>
-                <a href="https://www.researchgate.net/profile/Yun_Heuijee" class="social-icon"><img src="icons/researchgate.svg" alt="Google Scholar"></i></a>
-                <a href="https://orcid.org/my-orcid?orcid=0009-0001-3870-9002" class="social-icon"><img src="icons/orcid.svg" alt="Google Scholar"></i></a>
-            </div>
-        </div>
-        
+        </aside>
+
         <div class="content">
             <h1 class="page-title animate-title">Blogs</h1>
-            
+
             <!-- Blog List View -->
             <div id="blog-list" class="blogs-content animate-content">
-                <!-- Blog posts will be dynamically loaded here -->
-                <div class="loading-indicator">Loading blog posts... Please wait a moment</div>
+                <div class="loading-indicator">Loading blog posts…</div>
             </div>
-            
+
             <!-- Blog Post View (initially hidden) -->
             <div id="blog-post" class="blog-post-content animate-content markdown-body" style="display: none;">
                 <div class="blog-post-header">
@@ -82,30 +82,17 @@
             </div>
         </div>
     </main>
-    
-    <footer>
-        <div class="copyright">
-            <p>&copy; 2025 Heuijee Yun</p>
-        </div>
-        <div class="contact-info">
-            <div class="contact-item">
-                <span class="contact-label">Phone</span>
-                <span class="contact-value">053-950-5548</span>
-            </div>
-            <div class="contact-item">
-                <span class="contact-label">Email</span>
-                <span class="contact-value">heuijee@knu.ac.kr</span>
-            </div>
-        </div>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Heuijee Yun<span class="dot">·</span>Built with silicon &amp; coffee</p>
+        <p><a href="mailto:heuijee@knu.ac.kr">heuijee@knu.ac.kr</a><span class="dot">·</span>+82 53-950-5548</p>
     </footer>
 
-    <!-- Add Markdown parser -->
+    <!-- Markdown parser -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
-    <!-- Add highlight.js for code syntax highlighting -->
+    <!-- highlight.js for code syntax highlighting -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
-    <!-- Add core site JavaScript -->
     <script src="js/main.js"></script>
-    <!-- Add blog specific JavaScript -->
     <script src="js/blog.js"></script>
 </body>
-</html> 
+</html>

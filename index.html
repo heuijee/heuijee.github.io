@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heuijee Yun</title>
+    <title>Heuijee Yun — AI Hardware Researcher</title>
+    <meta name="description" content="Heuijee Yun — Ph.D. student researching low-power AI accelerators, spiking neural networks, and autonomous driving at AI-S²oC Lab, Kyungpook National University.">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -18,73 +19,104 @@
 </script>
 
 <body class="homepage">
-    <header>
-        <div class="site-name"><a href="index.html">Heuijee Yun</a></div>
+    <header class="top-nav">
+        <a class="brand" href="index.html">heuijee<span class="brand-dot">.</span>yun</a>
         <nav class="main-menu">
             <ul>
                 <li><a href="about.html">About</a></li>
                 <li><a href="research.html">Research</a></li>
                 <li><a href="publications.html">Publications</a></li>
                 <li><a href="projects.html">Projects</a></li>
+                <li><a href="side-projects.html">Side Projects</a></li>
                 <li><a href="blogs.html">Blogs</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li class="nav-sep" aria-hidden="true">/</li>
+                <li><a href="focus-core.html" class="nav-trk trk-c">Core</a></li>
+                <li><a href="focus-memory.html" class="nav-trk trk-m">Memory</a></li>
+                <li><a href="focus-auto.html" class="nav-trk trk-a">Autonomy</a></li>
             </ul>
         </nav>
-        <div class="header-line"></div>
+        <a href="cv.html" class="cv-button"><i class="fas fa-file-lines"></i> CV</a>
     </header>
 
-    <div class="download-cv">
-        <a href="cv.pdf" class="cv-button">Download CV</a>
-    </div>
-    
-    <main>
-        <div class="left-column">
-            <div class="profile-photo">
-                <img src="images/profile.jpg" alt="Heuijee Yun" class="profile-image">
-            </div>
-            <h1 class="name">Heuijee Yun</h1>
-            <p class="title">Ph.D Student</p>
-            <div class="social-icons">
-                <a href="https://github.com/heuijee" class="social-icon"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/heuijee-yun-05b7b7315/" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://scholar.google.com/citations?user=i3x5dVoAAAAJ&hl=en" class="social-icon"><img src="icons/google-scholar.svg" alt="Google Scholar"></i></a>
-                <a href="https://www.researchgate.net/profile/Yun_Heuijee" class="social-icon"><img src="icons/researchgate.svg" alt="Google Scholar"></i></a>
-                <a href="https://orcid.org/my-orcid?orcid=0009-0001-3870-9002" class="social-icon"><img src="icons/orcid.svg" alt="Google Scholar"></i></a>
-            </div>
-        </div>
-        
-        <div class="right-column">
-            <div class="intro">
-                <p class="intro-headline">Hello my name is Heuijee Yun</p>
-                <p class="intro-detail">I am a Ph.D. student in <a href="https://ai-soc.github.io/" target="_blank">AI-S²oC Lab</a> with a research focus on</p>
-                <p class="intro-emphasis">Autonomous driving and Deep learning accelerators.</p>
-                <p class="intro-highlight">I am currently seeking a <span class="highlight">research internship opportunity</span>.</p>
-                
-            </div>
-            
-            <div class="action-buttons">
-                <a href="about.html" class="action-button">About</a>
-                <a href="contact.html" class="action-button">Contact me!</a>
-            </div>
+    <!-- Two columns: left = me (photo + intro on top, branches at bottom) · right = big 3D stack -->
+    <main class="die-wrap">
+        <div class="die">
+            <span class="corner c-tl" aria-hidden="true"></span>
+            <span class="corner c-tr" aria-hidden="true"></span>
+            <span class="corner c-bl" aria-hidden="true"></span>
+            <span class="corner c-br" aria-hidden="true"></span>
+
+            <!-- LEFT column -->
+            <section class="blk blk-id">
+                <div class="id-head">
+                    <img class="id-photo" src="images/profile.jpg" alt="Heuijee Yun">
+                    <div class="id-headtext">
+                        <span class="id-eyebrow">PH.D. STUDENT · AI-S²OC LAB · KNU</span>
+                        <h1 class="id-name">Heuijee <span class="outline">Yun</span></h1>
+                    </div>
+                </div>
+                <div class="id-body">
+                <p class="intro-big">I design <strong>low-power AI hardware</strong> — from spiking neural network accelerators and self-supervised learning to autonomous-driving perception — carrying ideas <strong>from algorithm all the way to silicon</strong>. Four chip tape-outs, 16+ publications, and a home lab full of soldering irons.</p>
+                <div class="id-stats">
+                    <span class="s1"><b>16+</b> PUBLICATIONS</span>
+                    <span class="s2"><b>4</b> TAPE-OUTS</span>
+                    <span class="badge-open"><span class="pulse-dot"></span>OPEN TO INTERNSHIPS</span>
+                </div>
+                <div class="id-bottom">
+                    <div class="social-icons">
+                        <a href="https://github.com/heuijee" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/heuijee-yun-05b7b7315/" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://scholar.google.com/citations?user=i3x5dVoAAAAJ&hl=en" class="social-icon" aria-label="Google Scholar"><img src="icons/google-scholar.svg" alt="Google Scholar"></a>
+                        <a href="https://www.researchgate.net/profile/Yun_Heuijee" class="social-icon" aria-label="ResearchGate"><img src="icons/researchgate.svg" alt="ResearchGate"></a>
+                        <a href="https://orcid.org/0009-0001-3870-9002" class="social-icon" aria-label="ORCID"><img src="icons/orcid.svg" alt="ORCID"></a>
+                    </div>
+                    <a class="id-mail" href="mailto:heuijee@knu.ac.kr">heuijee@knu.ac.kr</a>
+                </div>
+                </div>
+
+                <!-- branches pinned to the bottom of the left column -->
+                <div class="branch-wrap">
+                    <div class="root-cap"><span class="rc-dot"></span>ONE ROOT · THREE BRANCHES — SAME SPINE, DIFFERENT TARGETS</div>
+                    <nav class="branch-rows" aria-label="Research branches">
+                        <a class="brow b-auto" data-branch="auto" href="focus-auto.html">
+                            <span class="brow-k">01</span><span class="brow-n">Autonomy</span><span class="brow-f">Hyundai · Tesla</span><span class="brow-go">↗</span>
+                        </a>
+                        <a class="brow b-mem" data-branch="memory" href="focus-memory.html">
+                            <span class="brow-k">02</span><span class="brow-n">Memory &amp; CIM</span><span class="brow-f">Samsung · SK</span><span class="brow-go">↗</span>
+                        </a>
+                        <a class="brow b-core" data-branch="core" href="focus-core.html">
+                            <span class="brow-k">03</span><span class="brow-n">Core &amp; Accelerator</span><span class="brow-f">AMD · Arm · Nvidia</span><span class="brow-go">↗</span>
+                        </a>
+                    </nav>
+                </div>
+            </section>
+
+            <!-- RIGHT column — big interactive 3D stack -->
+            <section class="blk blk-3d">
+                <span class="blk-label">FULL STACK — DRAG TO ROTATE · CLICK A LAYER</span>
+                <canvas id="hero3d"></canvas>
+                <span class="hero3d-hint"><i class="fas fa-hand-pointer"></i> CLICK A LAYER TO EXPLORE THAT BRANCH</span>
+            </section>
         </div>
     </main>
-    
-    <footer>
-        <div class="copyright">
-            <p>&copy; 2025 Heuijee Yun</p>
-        </div>
-        <div class="contact-info">
-            <div class="contact-item">
-                <span class="contact-label">Phone</span>
-                <span class="contact-value">053-950-5548</span>
-            </div>
-            <div class="contact-item">
-                <span class="contact-label">Email</span>
-                <span class="contact-value">heuijee@knu.ac.kr</span>
-            </div>
-        </div>
-    </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/three@0.147.0/build/three.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/hero3d.js"></script>
+    <script>
+        // Wire the branch rows to the 3D stack highlight (bidirectional).
+        (function () {
+            const rows = Array.from(document.querySelectorAll('[data-branch]'));
+            window.__onStackHover = function (key) {
+                rows.forEach(r => r.classList.toggle('hot', !!key && r.dataset.branch === key));
+            };
+            rows.forEach(r => {
+                const k = r.dataset.branch;
+                r.addEventListener('mouseenter', () => { if (window.__stackSetForced) window.__stackSetForced(k); window.__onStackHover(k); });
+                r.addEventListener('mouseleave', () => { if (window.__stackSetForced) window.__stackSetForced(null); window.__onStackHover(null); });
+            });
+        })();
+    </script>
 </body>
-</html> 
+</html>
