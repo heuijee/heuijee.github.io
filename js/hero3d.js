@@ -14,7 +14,7 @@
     const canvas = document.getElementById('hero3d');
     if (!canvas || typeof THREE === 'undefined') return;
 
-    const CYAN = 0x56c2d6, ROSE = 0xcf82a8, GOLD = 0xe0b36a;
+    const CYAN = 0x8fabba, ROSE = 0xc19cae, GOLD = 0xcbb389;
     const cGold = new THREE.Color(GOLD), cRose = new THREE.Color(ROSE), cCyan = new THREE.Color(CYAN);
     const tmpA = new THREE.Color(), tmpB = new THREE.Color();
     function flowColor(f, out) {
@@ -22,7 +22,8 @@
         tmpA.copy(cRose); tmpB.copy(cCyan); return out.copy(tmpA).lerp(tmpB, (f - 0.5) / 0.5);
     }
 
-    const URLS = { auto: 'focus-auto.html', memory: 'focus-memory.html', core: 'focus-core.html' };
+    // click a layer → scroll to that section of the narrative
+    const SCROLL = { auto: 'l-application', memory: 'l-memory', core: 'l-architecture' };
 
     const renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true });
     renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
@@ -166,7 +167,7 @@
     canvas.addEventListener('pointerup', e => {
         dragging = false;
         const k = hitTest(e.clientX, e.clientY);
-        if (moved < 6 && k) { window.location.href = URLS[k]; return; }
+        if (moved < 6 && k) { const t = document.getElementById(SCROLL[k]); if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' }); return; }
         setTimeout(() => { autoSpin = true; }, 2600);
     });
     canvas.addEventListener('pointerleave', () => setHover(null));

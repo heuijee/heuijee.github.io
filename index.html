@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heuijee Yun — AI Hardware Researcher</title>
-    <meta name="description" content="Heuijee Yun — Ph.D. student researching low-power AI accelerators, spiking neural networks, and autonomous driving at AI-S²oC Lab, Kyungpook National University.">
+    <title>Heuijee Yun — From Frontend to Silicon</title>
+    <meta name="description" content="Heuijee Yun — Ph.D. researcher taking AI from application to silicon: autonomous-driving perception, spiking neural networks, accelerators, compute-in-memory, and four chip tape-outs.">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -14,11 +14,10 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-XFNRCNR44C');
 </script>
 
-<body class="homepage">
+<body class="home">
     <header class="top-nav">
         <a class="brand" href="index.html">heuijee<span class="brand-dot">.</span>yun</a>
         <nav class="main-menu">
@@ -30,93 +29,227 @@
                 <li><a href="side-projects.html">Side Projects</a></li>
                 <li><a href="blogs.html">Blogs</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li class="nav-sep" aria-hidden="true">/</li>
-                <li><a href="focus-core.html" class="nav-trk trk-c">Core</a></li>
-                <li><a href="focus-memory.html" class="nav-trk trk-m">Memory</a></li>
-                <li><a href="focus-auto.html" class="nav-trk trk-a">Autonomy</a></li>
             </ul>
         </nav>
         <a href="cv.html" class="cv-button"><i class="fas fa-file-lines"></i> CV</a>
     </header>
 
-    <!-- Two columns: left = me (photo + intro on top, branches at bottom) · right = big 3D stack -->
-    <main class="die-wrap">
-        <div class="die">
-            <span class="corner c-tl" aria-hidden="true"></span>
-            <span class="corner c-tr" aria-hidden="true"></span>
-            <span class="corner c-bl" aria-hidden="true"></span>
-            <span class="corner c-br" aria-hidden="true"></span>
-
-            <!-- LEFT column -->
-            <section class="blk blk-id">
-                <div class="id-head">
-                    <img class="id-photo" src="images/profile.jpg" alt="Heuijee Yun">
-                    <div class="id-headtext">
-                        <span class="id-eyebrow">PH.D. STUDENT · AI-S²OC LAB · KNU</span>
-                        <h1 class="id-name">Heuijee <span class="outline">Yun</span></h1>
+    <main>
+        <!-- ============================ HERO ============================ -->
+        <section class="hero-lp">
+            <div class="hero-lp-text">
+                <div class="hero-id reveal">
+                    <img class="hero-avatar" src="images/profile.jpg" alt="Heuijee Yun">
+                    <div>
+                        <p class="hero-name">Heuijee Yun</p>
+                        <p class="eyebrow">PH.D. RESEARCHER · AI-S²OC LAB · KNU</p>
                     </div>
                 </div>
-                <div class="id-body">
-                <p class="intro-big">I design <strong>low-power AI hardware</strong> — from spiking neural network accelerators and self-supervised learning to autonomous-driving perception — carrying ideas <strong>from algorithm all the way to silicon</strong>. Four chip tape-outs, 16+ publications, and a home lab full of soldering irons.</p>
-                <div class="id-stats">
-                    <span class="s1"><b>16+</b> PUBLICATIONS</span>
-                    <span class="s2"><b>4</b> TAPE-OUTS</span>
-                    <span class="badge-open"><span class="pulse-dot"></span>OPEN TO INTERNSHIPS</span>
+                <h1 class="hero-lp-title reveal">From <span class="hl">frontend</span><br>to <span class="hl">silicon</span>.</h1>
+                <p class="hero-lp-sub reveal">I take AI down the whole stack — perception, model, architecture, memory, silicon. <strong>One obsession: efficient intelligence.</strong></p>
+                <div class="hero-lp-actions reveal">
+                    <a href="#stack" class="action-button primary">See the stack</a>
+                    <a href="contact.html" class="action-button ghost">Get in touch</a>
                 </div>
-                <div class="id-bottom">
-                    <div class="social-icons">
-                        <a href="https://github.com/heuijee" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/heuijee-yun-05b7b7315/" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://scholar.google.com/citations?user=i3x5dVoAAAAJ&hl=en" class="social-icon" aria-label="Google Scholar"><img src="icons/google-scholar.svg" alt="Google Scholar"></a>
-                        <a href="https://www.researchgate.net/profile/Yun_Heuijee" class="social-icon" aria-label="ResearchGate"><img src="icons/researchgate.svg" alt="ResearchGate"></a>
-                        <a href="https://orcid.org/0009-0001-3870-9002" class="social-icon" aria-label="ORCID"><img src="icons/orcid.svg" alt="ORCID"></a>
-                    </div>
-                    <a class="id-mail" href="mailto:heuijee@knu.ac.kr">heuijee@knu.ac.kr</a>
+                <div class="social-icons hero-social reveal">
+                    <a href="https://github.com/heuijee" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/heuijee-yun-05b7b7315/" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://scholar.google.com/citations?user=i3x5dVoAAAAJ&hl=en" class="social-icon" aria-label="Google Scholar"><img src="icons/google-scholar.svg" alt="Google Scholar"></a>
+                    <a href="https://www.researchgate.net/profile/Yun_Heuijee" class="social-icon" aria-label="ResearchGate"><img src="icons/researchgate.svg" alt="ResearchGate"></a>
+                    <a href="https://orcid.org/0009-0001-3870-9002" class="social-icon" aria-label="ORCID"><img src="icons/orcid.svg" alt="ORCID"></a>
                 </div>
+            </div>
+            <div class="hero-lp-visual reveal">
+                <div class="hero-stage">
+                    <canvas id="hero3d"></canvas>
+                    <span class="hero-stage-hint"><i class="fas fa-hand-pointer"></i> drag · click a layer</span>
                 </div>
+            </div>
+            <a href="#thesis" class="scroll-cue reveal" aria-label="Scroll down"><span></span></a>
+        </section>
 
-                <!-- branches pinned to the bottom of the left column -->
-                <div class="branch-wrap">
-                    <div class="root-cap"><span class="rc-dot"></span>ONE ROOT · THREE BRANCHES — SAME SPINE, DIFFERENT TARGETS</div>
-                    <nav class="branch-rows" aria-label="Research branches">
-                        <a class="brow b-auto" data-branch="auto" href="focus-auto.html">
-                            <span class="brow-k">01</span><span class="brow-n">Autonomy</span><span class="brow-f">Hyundai · Tesla</span><span class="brow-go">↗</span>
-                        </a>
-                        <a class="brow b-mem" data-branch="memory" href="focus-memory.html">
-                            <span class="brow-k">02</span><span class="brow-n">Memory &amp; CIM</span><span class="brow-f">Samsung · SK</span><span class="brow-go">↗</span>
-                        </a>
-                        <a class="brow b-core" data-branch="core" href="focus-core.html">
-                            <span class="brow-k">03</span><span class="brow-n">Core &amp; Accelerator</span><span class="brow-f">AMD · Arm · Nvidia</span><span class="brow-go">↗</span>
-                        </a>
-                    </nav>
-                </div>
-            </section>
+        <!-- ============================ THESIS ============================ -->
+        <section class="thesis" id="thesis">
+            <p class="thesis-line reveal">
+                <em>How do you make AI efficient enough to run everywhere —</em>
+                from the car's cockpit to the last transistor?
+            </p>
+        </section>
 
-            <!-- RIGHT column — big interactive 3D stack -->
-            <section class="blk blk-3d">
-                <span class="blk-label">FULL STACK — DRAG TO ROTATE · CLICK A LAYER</span>
-                <canvas id="hero3d"></canvas>
-                <span class="hero3d-hint"><i class="fas fa-hand-pointer"></i> CLICK A LAYER TO EXPLORE THAT BRANCH</span>
-            </section>
-        </div>
+        <!-- ============================ THE STACK ============================ -->
+        <section class="stack" id="stack">
+            <div class="stack-inner">
+                <aside class="stack-rail" aria-hidden="true">
+                    <span class="rail-cap">THE STACK</span>
+                    <ol>
+                        <li data-rail="l-application"><i>01</i> Application</li>
+                        <li data-rail="l-model"><i>02</i> Model</li>
+                        <li data-rail="l-architecture"><i>03</i> Architecture</li>
+                        <li data-rail="l-memory"><i>04</i> Memory</li>
+                        <li data-rail="l-silicon"><i>05</i> Silicon</li>
+                    </ol>
+                    <span class="rail-arrow">frontend<br>↓<br>silicon</span>
+                </aside>
+
+                <div class="layers">
+                    <!-- 01 APPLICATION -->
+                    <article class="layer reveal" id="l-application">
+                        <span class="layer-num">01</span>
+                        <p class="layer-label"><i class="fas fa-car-side"></i> APPLICATION</p>
+                        <h2 class="layer-title">Perception that keeps a car safe.</h2>
+                        <p class="layer-lead">Camera + LiDAR + thermal fusion — so a vehicle sees what a camera alone can't, on hardware that fits in the car.</p>
+                        <div class="layer-metrics">
+                            <div class="metric"><span class="metric-n">83.9<em>%</em></span><span class="metric-l">pedestrian detection<br>up from 40.4%</span></div>
+                            <div class="metric"><span class="metric-n">2.7<em>fps</em></span><span class="metric-l">real-time on<br>Jetson Nano</span></div>
+                        </div>
+                        <div class="chips">
+                            <span class="chip">Thermal-RGB fusion</span><span class="chip">LiDAR + 2D</span><span class="chip">Lane detection</span><span class="chip">GTA5 digital twin</span>
+                        </div>
+                        <div class="layer-foot">
+                            <span class="layer-proof">PerCom · IEEE Access · Sensors</span>
+                            <span class="companies"><span class="co">Hyundai</span><span class="co">Tesla</span></span>
+                        </div>
+                    </article>
+
+                    <!-- 02 MODEL -->
+                    <article class="layer reveal" id="l-model">
+                        <span class="layer-num">02</span>
+                        <p class="layer-label"><i class="fas fa-diagram-project"></i> MODEL &amp; SOFTWARE</p>
+                        <h2 class="layer-title">Learning that costs almost nothing.</h2>
+                        <p class="layer-lead">Spiking neural networks meet self-supervised learning — plus the compiler that turns a model into tuned hardware code, automatically.</p>
+                        <div class="layer-metrics">
+                            <div class="metric"><span class="metric-n">1<em>st</em></span><span class="metric-l">comprehensive SNN-SSL<br>hardware framework</span></div>
+                            <div class="metric"><span class="metric-n">FPGA<em>+ASIC</em></span><span class="metric-l">auto-generated<br>from one model</span></div>
+                        </div>
+                        <div class="chips">
+                            <span class="chip">Spiking NN</span><span class="chip">Self-supervised</span><span class="chip">Pruning</span><span class="chip">Quantization</span><span class="chip">TVM codegen</span>
+                        </div>
+                        <div class="layer-foot">
+                            <span class="layer-proof">DAC · IEMEK · MWSCAS</span>
+                            <span class="companies"><span class="co">NVIDIA</span><span class="co">ETRI</span></span>
+                        </div>
+                    </article>
+
+                    <!-- 03 ARCHITECTURE -->
+                    <article class="layer reveal" id="l-architecture">
+                        <span class="layer-num">03</span>
+                        <p class="layer-label"><i class="fas fa-microchip"></i> ARCHITECTURE</p>
+                        <h2 class="layer-title">Cores &amp; accelerators, designed — not just used.</h2>
+                        <p class="layer-lead">I design the datapath and the control: a spiking NPU, a RISC-V clock controller, a custom Cortex-M0+ core with my own µSIMD.</p>
+                        <div class="layer-metrics">
+                            <div class="metric"><span class="metric-n">4<em>×</em></span><span class="metric-l">MAC throughput<br>via custom µSIMD</span></div>
+                            <div class="metric"><span class="metric-n">IEEE<em>TVLSI</em></span><span class="metric-l">S³A-NPU<br>journal paper</span></div>
+                        </div>
+                        <div class="chips">
+                            <span class="chip">Spiking NPU</span><span class="chip">RISC-V control</span><span class="chip">Custom ISA / µSIMD</span><span class="chip">Sparsity zero-skip</span>
+                        </div>
+                        <div class="layer-foot">
+                            <span class="layer-proof">TVLSI · COOLChips · custom ISA</span>
+                            <span class="companies"><span class="co">Arm</span><span class="co">AMD</span><span class="co">NVIDIA</span></span>
+                        </div>
+                    </article>
+
+                    <!-- 04 MEMORY -->
+                    <article class="layer reveal" id="l-memory">
+                        <span class="layer-num">04</span>
+                        <p class="layer-label"><i class="fas fa-layer-group"></i> MEMORY &amp; CIM</p>
+                        <h2 class="layer-title">Win at the memory wall.</h2>
+                        <p class="layer-lead">Moving data costs the most energy — so I attack it directly: on-chip memory that adapts in real time, and compute done <em>inside</em> the memory with RRAM.</p>
+                        <div class="layer-metrics">
+                            <div class="metric"><span class="metric-n">RRAM</span><span class="metric-l">compute-in-memory<br>fabricated (MPW)</span></div>
+                            <div class="metric"><span class="metric-n">runtime</span><span class="metric-l">adaptive on-chip<br>memory allocation</span></div>
+                        </div>
+                        <div class="chips">
+                            <span class="chip">Compute-in-memory</span><span class="chip">Adaptive on-chip mem</span><span class="chip">Buffer minimization</span>
+                        </div>
+                        <div class="layer-foot">
+                            <span class="layer-proof">RRAM CIM tape-out · IEEE Access · ICCE</span>
+                            <span class="companies"><span class="co">Samsung</span><span class="co">SK hynix</span></span>
+                        </div>
+                    </article>
+
+                    <!-- 05 SILICON -->
+                    <article class="layer reveal" id="l-silicon">
+                        <span class="layer-num">05</span>
+                        <p class="layer-label"><i class="fas fa-industry"></i> SILICON</p>
+                        <h2 class="layer-title">It's not real until it's fabricated.</h2>
+                        <p class="layer-lead">Every idea above ends here — a taped-out chip, a hand-routed PCB, a physical device. RTL to GDS.</p>
+                        <div class="layer-metrics">
+                            <div class="metric"><span class="metric-n">4</span><span class="metric-l">chip<br>tape-outs</span></div>
+                            <div class="metric"><span class="metric-n">3</span><span class="metric-l">process nodes<br>28nm · 130nm · MPW</span></div>
+                        </div>
+                        <div class="chips">
+                            <span class="chip">RTL → GDS</span><span class="chip">Samsung 28nm ×2</span><span class="chip">SK 130nm</span><span class="chip">Custom PCB</span><span class="chip">3D printing</span>
+                        </div>
+                        <div class="layer-foot">
+                            <span class="layer-proof">Full ASIC flow · home lab</span>
+                            <span class="companies"><span class="co">Every silicon team</span></span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================ NUMBERS ============================ -->
+        <section class="numbers reveal">
+            <div class="stat"><span class="stat-n" data-count="16">0</span><span class="stat-suffix">+</span><span class="stat-l">Publications<br><i>incl. IEEE TVLSI, DAC</i></span></div>
+            <div class="stat"><span class="stat-n" data-count="4">0</span><span class="stat-l">Chip tape-outs<br><i>28nm ×2 · 130nm · MPW</i></span></div>
+            <div class="stat"><span class="stat-n" data-count="5">0</span><span class="stat-suffix">+</span><span class="stat-l">Years of research<br><i>algorithm → silicon</i></span></div>
+            <div class="stat"><span class="stat-n" data-count="5">0</span><span class="stat-l">Layers of the stack<br><i>end to end</i></span></div>
+        </section>
+
+        <!-- ============================ EXPLORE ============================ -->
+        <section class="explore">
+            <h2 class="section-head reveal">Go deeper</h2>
+            <div class="work-grid">
+                <a class="work-card reveal" href="research.html">
+                    <span class="wc-k">01</span><h3>Research</h3>
+                    <p>Spiking SSL, sensor fusion, accelerator toolchains.</p>
+                    <span class="wc-go">Explore <i class="fas fa-arrow-right"></i></span>
+                </a>
+                <a class="work-card reveal" href="publications.html">
+                    <span class="wc-k">02</span><h3>Publications</h3>
+                    <p>16 papers — TVLSI, DAC, PerCom, Sensors.</p>
+                    <span class="wc-go">Read <i class="fas fa-arrow-right"></i></span>
+                </a>
+                <a class="work-card reveal" href="projects.html">
+                    <span class="wc-k">03</span><h3>Projects</h3>
+                    <p>Four tape-outs, each with a live demo.</p>
+                    <span class="wc-go">Play <i class="fas fa-arrow-right"></i></span>
+                </a>
+                <a class="work-card reveal" href="side-projects.html">
+                    <span class="wc-k">04</span><h3>Side Projects</h3>
+                    <p>Voice-cloned hardware, self-hosted AI, spy glasses.</p>
+                    <span class="wc-go">Peek <i class="fas fa-arrow-right"></i></span>
+                </a>
+            </div>
+        </section>
+
+        <!-- ============================ CLOSING ============================ -->
+        <section class="closing">
+            <p class="closing-line reveal">Whether you design <b>cores</b>, stack <b>memory</b>, drive <b>autonomy</b>, or fund the <b>research</b> —</p>
+            <h2 class="closing-big reveal">one researcher, the whole stack, all the way to silicon.</h2>
+            <div class="closing-actions reveal">
+                <a href="contact.html" class="action-button primary">Contact me</a>
+                <a href="cv.html" class="action-button ghost">Read my CV</a>
+            </div>
+            <div class="social-icons reveal">
+                <a href="https://github.com/heuijee" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/heuijee-yun-05b7b7315/" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://scholar.google.com/citations?user=i3x5dVoAAAAJ&hl=en" class="social-icon" aria-label="Google Scholar"><img src="icons/google-scholar.svg" alt="Google Scholar"></a>
+                <a href="https://www.researchgate.net/profile/Yun_Heuijee" class="social-icon" aria-label="ResearchGate"><img src="icons/researchgate.svg" alt="ResearchGate"></a>
+                <a href="https://orcid.org/0009-0001-3870-9002" class="social-icon" aria-label="ORCID"><img src="icons/orcid.svg" alt="ORCID"></a>
+            </div>
+        </section>
     </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Heuijee Yun<span class="dot">·</span>From frontend to silicon</p>
+        <p><a href="mailto:heuijee@knu.ac.kr">heuijee@knu.ac.kr</a><span class="dot">·</span>+82 53-950-5548</p>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/three@0.147.0/build/three.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/hero3d.js"></script>
-    <script>
-        // Wire the branch rows to the 3D stack highlight (bidirectional).
-        (function () {
-            const rows = Array.from(document.querySelectorAll('[data-branch]'));
-            window.__onStackHover = function (key) {
-                rows.forEach(r => r.classList.toggle('hot', !!key && r.dataset.branch === key));
-            };
-            rows.forEach(r => {
-                const k = r.dataset.branch;
-                r.addEventListener('mouseenter', () => { if (window.__stackSetForced) window.__stackSetForced(k); window.__onStackHover(k); });
-                r.addEventListener('mouseleave', () => { if (window.__stackSetForced) window.__stackSetForced(null); window.__onStackHover(null); });
-            });
-        })();
-    </script>
 </body>
 </html>

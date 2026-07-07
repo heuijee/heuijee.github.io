@@ -13,10 +13,9 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-XFNRCNR44C');
 </script>
-<body class="side-projects-page gadget-page">
+<body class="side-projects-page">
     <header class="top-nav">
         <a class="brand" href="index.html">heuijee<span class="brand-dot">.</span>yun</a>
         <nav class="main-menu">
@@ -28,37 +27,48 @@
                 <li><a href="side-projects.html" class="active">Side Projects</a></li>
                 <li><a href="blogs.html">Blogs</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li class="nav-sep" aria-hidden="true">/</li>
-                <li><a href="focus-core.html" class="nav-trk trk-c">Core</a></li>
-                <li><a href="focus-memory.html" class="nav-trk trk-m">Memory</a></li>
-                <li><a href="focus-auto.html" class="nav-trk trk-a">Autonomy</a></li>
             </ul>
         </nav>
         <a href="cv.html" class="cv-button"><i class="fas fa-file-lines"></i> CV</a>
     </header>
 
-    <main class="gadget-main">
-        <div class="gadget-hero">
-            <div class="shape shape-ring" aria-hidden="true"></div>
-            <div class="shape shape-dots" aria-hidden="true"></div>
-            <span class="gadget-kicker animate-title">HOME LAB · OFF THE RECORD · EYES ONLY</span>
-            <h1 class="gadget-mega animate-title">Gadgets<span class="cursor">_</span></h1>
-            <p class="gadget-lede animate-content">Three devices from my home lab. Designed, <strong>PCB'd</strong>, printed, and shipped by one person. Hover the <span class="redacted">classified bits</span> to declassify.</p>
+    <main class="inv-main">
+        <div class="inv-head">
+            <span class="inv-kicker">HOME LAB · FIELD KIT</span>
+            <h1 class="inv-title">Side Projects</h1>
+            <p class="inv-lede">Off-the-record builds from my home lab. Select an item to inspect it.</p>
         </div>
 
-        <!-- ==================== 001 EGG ==================== -->
-        <section class="gadget animate-content" id="g-egg">
-            <div class="gadget-head">
-                <span class="g-num">001</span>
-                <div>
-                    <h2 class="g-name">Egg</h2>
-                    <p class="g-tag">VOICE-CLONED TTS COMPANION · FOR MOM</p>
-                </div>
-                <span class="g-status">● DEPLOYED — MOM'S ROOM</span>
+        <div class="inv">
+            <!-- inventory list -->
+            <div class="inv-list" role="tablist" aria-label="Gadgets">
+                <button class="inv-slot active" data-item="egg" role="tab" aria-selected="true">
+                    <span class="s-ic"><i class="fas fa-egg"></i></span>
+                    <span class="s-body"><span class="s-idx">ITEM 001</span><span class="s-name">Egg</span><span class="s-tag">Voice-cloned TTS · for Mom</span></span>
+                    <span class="s-dot deployed" title="Deployed"></span>
+                </button>
+                <button class="inv-slot" data-item="miniai" role="tab" aria-selected="false">
+                    <span class="s-ic"><i class="fas fa-terminal"></i></span>
+                    <span class="s-body"><span class="s-idx">ITEM 002</span><span class="s-name">Mini AI</span><span class="s-tag">Self-hosted assistant</span></span>
+                    <span class="s-dot operational" title="Operational"></span>
+                </button>
+                <button class="inv-slot" data-item="clearsight" role="tab" aria-selected="false">
+                    <span class="s-ic"><i class="fas fa-glasses"></i></span>
+                    <span class="s-body"><span class="s-idx">ITEM 003</span><span class="s-name">Clearsight</span><span class="s-tag">Through-wall spy glasses</span></span>
+                    <span class="s-dot planning" title="In planning"></span>
+                </button>
             </div>
 
-            <div class="gadget-stages two">
-                <div>
+            <!-- detail -->
+            <div class="inv-detail">
+                <!-- EGG -->
+                <section class="inv-panel active" id="item-egg" role="tabpanel">
+                    <div class="p-head">
+                        <h2>Egg</h2>
+                        <span class="p-tag">VOICE-CLONED TTS COMPANION</span>
+                        <span class="p-status deployed">DEPLOYED · MOM'S ROOM</span>
+                    </div>
+                    <p class="p-lead">A palm-sized, egg-shaped speaker that talks to my mom in <strong>my own cloned voice</strong> — reminders, greetings, daily check-ins, fully offline. The browser demo uses your system's Korean TTS instead.</p>
                     <div class="demo-stage">
                         <span class="demo-chip"><i class="fas fa-cube"></i> 3D — DRAG TO ROTATE</span>
                         <canvas id="demo-egg" class="demo-canvas demo-canvas-tall"></canvas>
@@ -67,47 +77,22 @@
                             <span class="demo-readout" id="egg-status">tap the egg or the button</span>
                         </div>
                     </div>
-                    <p class="stage-caption">FIG.1 — PRODUCT · 3D-PRINTED ENCLOSURE</p>
-                </div>
-                <div>
-                    <div class="demo-stage">
-                        <span class="demo-chip"><i class="fas fa-microchip"></i> BOARD VIEWER</span>
-                        <canvas id="demo-pcb" class="demo-canvas demo-canvas-tall"></canvas>
-                        <div class="demo-controls">
-                            <button class="demo-btn" id="pcb-layer"><i class="fas fa-layer-group"></i> Cycle layer</button>
-                            <span class="demo-readout" id="pcb-stats"></span>
-                        </div>
+                    <dl class="spec-grid">
+                        <div class="spec"><dt>Mission</dt><dd>Daily reminders &amp; greetings for one very important person</dd></div>
+                        <div class="spec"><dt>Voice</dt><dd>TTS fine-tuned on recordings of my own voice</dd></div>
+                        <div class="spec"><dt>Board</dt><dd>Custom PCB — audio amp, battery charging, touch sensing</dd></div>
+                        <div class="spec"><dt>Enclosure</dt><dd>3D-printed egg shell, weighted for one hand</dd></div>
+                    </dl>
+                </section>
+
+                <!-- MINI AI -->
+                <section class="inv-panel" id="item-miniai" role="tabpanel">
+                    <div class="p-head">
+                        <h2>Mini AI</h2>
+                        <span class="p-tag">SELF-HOSTED ASSISTANT</span>
+                        <span class="p-status">OPERATIONAL · 24/7</span>
                     </div>
-                    <p class="stage-caption">FIG.2 — MAINBOARD EGG-01 REV.B · DESIGNED FROM SCRATCH</p>
-                </div>
-            </div>
-            <p class="gadget-note">The field unit speaks with <strong>my own cloned voice</strong> — the browser demo falls back to your system's Korean TTS. The board viewer walks through the actual PCB stackup I designed: copper, silkscreen, and drill.</p>
-
-            <dl class="spec-grid">
-                <div class="spec"><dt>Mission</dt><dd>Daily check-ins, medication reminders, and greetings for one very important person</dd></div>
-                <div class="spec"><dt>Voice</dt><dd>TTS model fine-tuned on recordings of my own voice, fully offline</dd></div>
-                <div class="spec"><dt>Mainboard</dt><dd>Custom PCB — audio amp, battery charging, touch sensing</dd></div>
-                <div class="spec"><dt>Enclosure</dt><dd>3D-printed egg shell, weighted to sit in one hand</dd></div>
-                <div class="spec"><dt>Compute</dt><dd>Embedded Linux board</dd></div>
-                <div class="spec"><dt>Connectivity</dt><dd>Local network only — <span class="redacted">no cloud, ever</span></dd></div>
-                <div class="spec"><dt>Battery</dt><dd>Li-Po with charging base dock</dd></div>
-                <div class="spec"><dt>Status</dt><dd>Deployed &amp; loved ♥</dd></div>
-            </dl>
-        </section>
-
-        <!-- ==================== 002 MINI AI ==================== -->
-        <section class="gadget animate-content" id="g-miniai">
-            <div class="gadget-head">
-                <span class="g-num">002</span>
-                <div>
-                    <h2 class="g-name">Mini AI</h2>
-                    <p class="g-tag">SELF-HOSTED PERSONAL ASSISTANT · 24/7</p>
-                </div>
-                <span class="g-status">● OPERATIONAL</span>
-            </div>
-
-            <div class="gadget-stages">
-                <div>
+                    <p class="p-lead">A compact always-on AI server running quantized local LLMs — <strong>no cloud, no API keys</strong>. Inference, memory, and voice all stay in the house.</p>
                     <div class="demo-stage">
                         <span class="demo-chip"><i class="fas fa-terminal"></i> SECURE TERMINAL</span>
                         <canvas id="demo-miniai" class="demo-canvas"></canvas>
@@ -116,79 +101,62 @@
                             <span class="demo-readout" id="miniai-stats"></span>
                         </div>
                     </div>
-                    <p class="stage-caption">FIG.1 — LIVE RECREATION · LOCAL LLM INFERENCE</p>
-                </div>
-            </div>
+                    <dl class="spec-grid">
+                        <div class="spec"><dt>Model</dt><dd>Quantized local LLMs, tuned to fit small silicon</dd></div>
+                        <div class="spec"><dt>Privacy</dt><dd>Air-gapped inference · cloud calls: 0</dd></div>
+                        <div class="spec"><dt>Network</dt><dd>Serves the household — including the Egg — over LAN</dd></div>
+                        <div class="spec"><dt>Compute</dt><dd>Low-power always-on board</dd></div>
+                    </dl>
+                </section>
 
-            <dl class="spec-grid">
-                <div class="spec"><dt>Mission</dt><dd>Household intelligence — answers, memory, voice — with zero packets leaving the house</dd></div>
-                <div class="spec"><dt>Model</dt><dd>Quantized local LLMs, tuned to fit small silicon</dd></div>
-                <div class="spec"><dt>Privacy</dt><dd>Air-gapped inference · no API keys · cloud calls: 0</dd></div>
-                <div class="spec"><dt>Network</dt><dd>Serves the household — including EGG-01 — over LAN</dd></div>
-            </dl>
-        </section>
-
-        <!-- ==================== 003 CLEARSIGHT ==================== -->
-        <section class="gadget animate-content" id="g-clearsight">
-            <div class="gadget-head">
-                <span class="g-num">003</span>
-                <div>
-                    <h2 class="g-name">Clearsight</h2>
-                    <p class="g-tag">AR SPY GLASSES · THROUGH-WALL HOLOGRAM · REMOTE · CONCEPT</p>
-                </div>
-                <span class="g-status planning">◌ IN PLANNING</span>
-            </div>
-
-            <p class="gadget-note">The goal: look at a wall through the glasses and see <strong>a holographic reconstruction of the person on the other side</strong>. Sensing is split by distance — mmWave radar (near), WiFi CSI (far), RF scan (ambient) — fused into a body pose that's drawn as a hologram on the lens. A <strong>handheld remote</strong> switches the view between full hologram, skeleton, and an x-ray build-up scan.</p>
-
-            <!-- data flow -->
-            <div class="flow">
-                <div class="flow-col">
-                    <span class="flow-node l1">L1 · mmWave RADAR<small>near range — presence &amp; motion</small></span>
-                    <span class="flow-node l2">L2 · WiFi SENSING (CSI)<small>far range — through-wall silhouettes</small></span>
-                    <span class="flow-node l3">L3 · RF SCAN (SDR)<small>ambient — devices &amp; signals nearby</small></span>
-                </div>
-                <span class="flow-arrow">▶</span>
-                <div class="flow-node fuse">FUSION<small>phone / PC · merge by confidence × distance</small></div>
-                <span class="flow-arrow">BLE ▶</span>
-                <div class="flow-node hud">GLASSES HUD<small>Frame / Halo · holographic overlay</small></div>
-            </div>
-
-            <div class="gadget-stages">
-                <div>
+                <!-- CLEARSIGHT -->
+                <section class="inv-panel" id="item-clearsight" role="tabpanel">
+                    <div class="p-head">
+                        <h2>Clearsight</h2>
+                        <span class="p-tag">THROUGH-WALL SPY GLASSES</span>
+                        <span class="p-status">◌ IN PLANNING</span>
+                    </div>
+                    <p class="p-lead">AR glasses that reconstruct <strong>a holographic person through the wall</strong> from distance-split sensing — near = radar, far = WiFi, ambient = RF — fused into one HUD, driven by a handheld remote. Use the on-screen remote to switch views.</p>
                     <div class="demo-stage">
-                        <span class="demo-chip"><i class="fas fa-glasses"></i> AR GLASSES VIEW — THROUGH-WALL HOLOGRAM</span>
+                        <span class="demo-chip"><i class="fas fa-glasses"></i> AR GLASSES VIEW</span>
                         <canvas id="demo-xray" class="demo-canvas demo-canvas-tall"></canvas>
                         <div class="demo-controls">
                             <button class="demo-btn" id="xray-mode"><i class="fas fa-satellite-dish"></i> Remote &#9656; HOLOGRAM</button>
                             <span class="demo-readout" id="xray-stats"></span>
                         </div>
                     </div>
-                    <p class="stage-caption">FIG.1 — WHAT YOU SEE THROUGH THE GLASSES · A HOLOGRAPHIC PERSON BEHIND THE WALL, SWITCHED BY THE ON-SCREEN REMOTE</p>
-                </div>
+                    <dl class="spec-grid">
+                        <div class="spec"><dt>Sensing</dt><dd>mmWave radar (near) · WiFi CSI (far) · SDR RF scan (ambient)</dd></div>
+                        <div class="spec"><dt>Fusion</dt><dd>Phone / PC merges layers into a <span class="redacted">body pose</span> estimate</dd></div>
+                        <div class="spec"><dt>Display</dt><dd>Brilliant Labs Frame / Halo — open SDK, drawn on the lens</dd></div>
+                        <div class="spec"><dt>Status</dt><dd>Concept &amp; feasibility · <span class="redacted">grant pending</span></dd></div>
+                    </dl>
+                </section>
             </div>
-
-            <dl class="spec-grid">
-                <div class="spec"><dt>L1 · Near</dt><dd>mmWave radar (ESP32-fed) — presence &amp; micro-motion within a few meters</dd></div>
-                <div class="spec"><dt>L2 · Far</dt><dd>WiFi CSI sensing — coarse through-wall silhouettes at longer range</dd></div>
-                <div class="spec"><dt>L3 · Ambient</dt><dd>SDR RF scan — nearby devices, BLE beacons, 2.4 GHz activity</dd></div>
-                <div class="spec"><dt>Fusion</dt><dd>Phone / PC merges layers into a <span class="redacted">body pose &amp; distance</span> estimate</dd></div>
-                <div class="spec"><dt>Hologram</dt><dd>Pose rendered as a translucent through-wall figure on the lens</dd></div>
-                <div class="spec"><dt>Remote</dt><dd>Handheld BLE remote cycles HOLO / SKELETON / X-RAY scan</dd></div>
-                <div class="spec"><dt>Display</dt><dd>Brilliant Labs Frame / Halo — open SDK, HUD drawn directly</dd></div>
-                <div class="spec"><dt>Status</dt><dd>Concept &amp; feasibility — sensors, fusion logic, long parts wishlist</dd></div>
-                <div class="spec"><dt>ETA</dt><dd><span class="redacted">when the grant money appears</span></dd></div>
-            </dl>
-        </section>
+        </div>
     </main>
 
     <footer class="site-footer">
-        <p>&copy; 2026 Heuijee Yun<span class="dot">·</span>This page will self-destruct in ∞ seconds</p>
+        <p>&copy; 2026 Heuijee Yun<span class="dot">·</span>From frontend to silicon</p>
         <p><a href="mailto:heuijee@knu.ac.kr">heuijee@knu.ac.kr</a><span class="dot">·</span>+82 53-950-5548</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/three@0.147.0/build/three.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/demos.js"></script>
+    <script>
+        // inventory: select an item → show its detail panel
+        (function () {
+            const slots = Array.from(document.querySelectorAll('.inv-slot'));
+            const panels = Array.from(document.querySelectorAll('.inv-panel'));
+            slots.forEach(slot => slot.addEventListener('click', () => {
+                const id = slot.dataset.item;
+                slots.forEach(s => { const on = s === slot; s.classList.toggle('active', on); s.setAttribute('aria-selected', on); });
+                panels.forEach(p => p.classList.toggle('active', p.id === 'item-' + id));
+                // let the newly-visible canvas measure & start its demo
+                window.dispatchEvent(new Event('resize'));
+            }));
+        })();
+    </script>
 </body>
 </html>

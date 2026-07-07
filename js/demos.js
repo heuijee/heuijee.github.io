@@ -755,7 +755,7 @@
         const btn = document.getElementById('xray-mode');
         const statsEl = document.getElementById('xray-stats');
 
-        const HOLO = '86,194,214';        // soft cyan hologram
+        const HOLO = '143,171,186';        // soft cyan hologram
         const MODES = ['HOLOGRAM', 'SKELETON', 'X-RAY SCAN'];
         const RLBL = ['HOLO', 'SKEL', 'SCAN'];
         let mode = 0;

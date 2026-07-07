@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         .cv-main { max-width: 900px; margin: 0 auto; padding: clamp(32px, 6vh, 64px) var(--pad-x) 80px; position: relative; }
-        .cv-sheet { background: var(--white); border: 2px solid var(--ink); box-shadow: var(--shadow); padding: clamp(28px, 5vw, 56px); position: relative; z-index: 1; }
-        .cv-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; border-bottom: 3px solid var(--ink); padding-bottom: 24px; margin-bottom: 30px; }
+        .cv-sheet { background: var(--white); border: 1px solid var(--line-strong); box-shadow: var(--shadow); padding: clamp(28px, 5vw, 56px); position: relative; z-index: 1; }
+        .cv-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; border-bottom: 2px solid var(--text); padding-bottom: 24px; margin-bottom: 30px; }
         .cv-name { font-size: clamp(36px, 5vw, 56px); font-weight: 900; text-transform: uppercase; letter-spacing: -0.03em; line-height: 0.95; }
-        .cv-role { font-family: var(--font-mono); font-size: 13px; font-weight: 700; color: var(--blue); margin-top: 10px; }
+        .cv-role { font-family: var(--font-mono); font-size: 13px; font-weight: 700; color: var(--metal); margin-top: 10px; }
         .cv-contact { text-align: right; font-family: var(--font-mono); font-size: 12px; color: var(--gray); line-height: 2; white-space: nowrap; }
         .cv-contact a { color: var(--ink); border-bottom: 1.5px solid var(--line); }
         .cv-section { margin-bottom: 30px; }
@@ -20,13 +20,13 @@
             text-transform: uppercase; display: flex; align-items: center; gap: 12px; margin-bottom: 14px;
         }
         .cv-h::before { content: ''; width: 12px; height: 12px; flex-shrink: 0; }
-        .cv-section:nth-of-type(1) .cv-h::before { background: var(--blue); }
-        .cv-section:nth-of-type(2) .cv-h::before { background: var(--orange); }
-        .cv-section:nth-of-type(3) .cv-h::before { background: var(--yellow); }
-        .cv-section:nth-of-type(4) .cv-h::before { background: var(--blue); }
-        .cv-section:nth-of-type(5) .cv-h::before { background: var(--orange); }
-        .cv-section:nth-of-type(6) .cv-h::before { background: var(--yellow); }
-        .cv-h::after { content: ''; flex: 1; height: 2px; background: var(--ink); }
+        .cv-section:nth-of-type(1) .cv-h::before { background: var(--metal); }
+        .cv-section:nth-of-type(2) .cv-h::before { background: var(--metal); }
+        .cv-section:nth-of-type(3) .cv-h::before { background: var(--metal); }
+        .cv-section:nth-of-type(4) .cv-h::before { background: var(--metal); }
+        .cv-section:nth-of-type(5) .cv-h::before { background: var(--metal); }
+        .cv-section:nth-of-type(6) .cv-h::before { background: var(--metal); }
+        .cv-h::after { content: ''; flex: 1; height: 1px; background: var(--line-strong); }
         .cv-row { display: grid; grid-template-columns: 150px 1fr; gap: 16px; padding: 10px 0; }
         .cv-row + .cv-row { border-top: 1px solid var(--line); }
         .cv-when { font-family: var(--font-mono); font-size: 12px; font-weight: 700; color: var(--gray); padding-top: 2px; }
@@ -36,14 +36,14 @@
         .cv-pub + .cv-pub { border-top: 1px solid var(--line); }
         .cv-pub b { display: block; font-size: 14px; color: var(--ink); line-height: 1.45; }
         .cv-pub span { color: var(--gray); }
-        .cv-pub .vtag { font-family: var(--font-mono); font-size: 10px; font-weight: 700; background: var(--ink); color: var(--white); padding: 2px 8px; margin-right: 8px; }
+        .cv-pub .vtag { font-family: var(--font-mono); font-size: 10px; font-weight: 700; background: var(--metal-soft); color: var(--metal); padding: 2px 8px; margin-right: 8px; }
         .cv-skills { display: flex; flex-wrap: wrap; gap: 8px; }
         .cv-skills span {
             font-family: var(--font-mono); font-size: 11.5px; font-weight: 600;
-            border: 1.5px solid var(--ink); padding: 4px 12px; background: var(--paper);
+            border: 1px solid var(--line-strong); padding: 4px 12px; background: var(--paper);
         }
         .cv-actions { display: flex; gap: 14px; margin-bottom: 28px; }
-        .cv-main .shape-half { top: 10px; right: -14px; background: var(--yellow); }
+        .cv-main .shape-half { top: 10px; right: -14px; background: var(--metal); }
         .cv-main .shape-dots { bottom: 60px; left: -10px; }
         @media (max-width: 700px) {
             .cv-head { flex-direction: column; }
@@ -86,10 +86,6 @@
                 <li><a href="side-projects.html">Side Projects</a></li>
                 <li><a href="blogs.html">Blogs</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li class="nav-sep" aria-hidden="true">/</li>
-                <li><a href="focus-core.html" class="nav-trk trk-c">Core</a></li>
-                <li><a href="focus-memory.html" class="nav-trk trk-m">Memory</a></li>
-                <li><a href="focus-auto.html" class="nav-trk trk-a">Autonomy</a></li>
             </ul>
         </nav>
         <a href="cv.pdf" class="cv-button" target="_blank"><i class="fas fa-download"></i> PDF</a>

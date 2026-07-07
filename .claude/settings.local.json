@@ -2,7 +2,11 @@
   "permissions": {
     "allow": [
       "Bash(node --check js/hero3d.js)",
-      "Bash(node --check js/main.js)"
+      "Bash(node --check js/main.js)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:api.github.com)",
+      "Bash(mkdir -p .claude/skills)",
+      "Bash(cp -r __TRACKED_VAR__/.claude/skills/. .claude/skills/)"
     ]
   }
 }
